@@ -263,33 +263,6 @@ const MoviePage = () => {
                             <div className={classes.similarMoviesRightArrowContainer} onClick={handleNextClick} ref={rightArrow}>
                                 <FaChevronRight className={classes.similarMoviesRightArrow}/>
                             </div>
-                            {/*{similarMovies.length <= 5
-                                ? <div className={classes.movies}>
-                                    {similarMovies.map(movie =>
-                                        <MovieCard name={movie.name} src={movie.poster.previewUrl} rating={movie.rating}
-                                                   type={movie.type}
-                                                   year={movie.year} movieLength={movie.movieLength}
-                                                   key={`${movie.name}:${movie.id}:${movie.year}`} width={254}
-                                                   height={381} id={movie.id}
-                                                   alt={movie.name} isMoviePage={imageProps.isMoviePage}
-                                                   isFavouritePage={imageProps.isFavouritePage}
-                                                   isNewMoviesPage={imageProps.isNewMoviesPage}
-                                                   isSerialsPage={imageProps.isSerialsPage}
-                                                   backdrop={movie.backdrop} genres={movie.genres}
-                                                   shortDescription={movie.shortDescription} countries={movie.countries}
-                                                   budget={movie.budget} fees={movie.fees}
-                                                   similarMovies={movie.similarMovies} ageRating={movie.ageRating}
-                                                   videos={movie.videos}
-                                                   description={movie.description} persons={movie.persons}
-                                                   slogan={movie.slogan} seasonsInfo={movie.seasonsInfo}
-                                                   premiere={movie.premiere} logo={movie.logo}
-                                                   setImageProps={setImageProps} isPropsFromMoviePage={true}
-                                        />)}
-                                </div>
-                                : <div className={classes.carousel}>
-                                    <MyCarousel listOfMovies={similarMovies} setImageProps={setImageProps}
-                                                isPropsFromMoviePage={true}/>
-                                </div>}*/}
                         </div>
                     }
                 </div>
