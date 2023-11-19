@@ -15,7 +15,7 @@ import { FaChevronLeft } from "react-icons/fa";
 const MoviePage = () => {
     const navigate = useNavigate()
     const params = useParams();
-    const [imageProps, setImageProps] = useState(JSON.parse(localStorage.getItem(`${decodeURIComponent(window.location.pathname).split('/').slice(2).join('/')}`)))
+    const [imageProps, setImageProps] = useState(JSON.parse(localStorage.getItem(`${decodeURIComponent(window.location.pathname).split('/').slice(3).join('/')}`)))
     const {setCurrentProps} = useImageProps()
     const {isFavourite, toggleFavourite} = useFavourites();
     const [similarMovies, setSimilarMovies] = useState([])
@@ -35,7 +35,7 @@ const MoviePage = () => {
         return fetchedMovies
     }
     useEffect(() => {
-     setImageProps(JSON.parse(localStorage.getItem(`${decodeURIComponent(window.location.pathname).split('/').slice(2).join('/')}`)))
+     setImageProps(JSON.parse(localStorage.getItem(`${decodeURIComponent(window.location.pathname).split('/').slice(3).join('/')}`)))
     }, [params.name]);
     useEffect(() => {
         setIsLoading(true)
@@ -129,7 +129,7 @@ const MoviePage = () => {
                                 </svg>
                             </div>
                             <div className={classes.exitArrow}
-                                 onClick={() => imageProps.type === 'movie' ? navigate("/films") : navigate("/serials")}>
+                                 onClick={() => imageProps.type === 'movie' ? navigate("/movie-app/films") : navigate("/movie-app/serials")}>
                                 {imageProps.type === 'movie'
                                     ? <>
                                         <p style={{color: '#49c5b6'}}>Фильмы</p>
@@ -161,7 +161,7 @@ const MoviePage = () => {
                             <div className={classes.backdropMovieLogo}>
                                 {imageProps.logo?.url
                                     ? <img src={imageProps.logo?.url ? imageProps.logo.url : imageProps.logo} alt="Лого"
-                                           className={classes.logo} loading={'eager'}/>
+                                           className={classes.logo} loading={'lazy'}/>
                                     : <span style={{
                                         color: "hsla(0,0%,100%,.9)",
                                         fontSize: "47px",

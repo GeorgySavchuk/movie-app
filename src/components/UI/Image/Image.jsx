@@ -16,7 +16,7 @@ const Image = (props) => {
     };
     const handleImageClick = () => {
         setImageProps(props);
-        navigate(`/movies/${props.name}`);
+        navigate(`/movie-app/movies/${props.name}`);
     };
 
 

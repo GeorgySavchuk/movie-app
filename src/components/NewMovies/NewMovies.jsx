@@ -40,7 +40,6 @@ const NewMovies = ({type, currentPage}) => {
                     />
                 </div>
                 : <MovieSlider movies={listOfMovies} isPropsFromMoviePage={false}/>
-                // <MyCarousel listOfMovies={listOfMovies} isPropsFromMoviePage={false}/>
             }
         </div>
 

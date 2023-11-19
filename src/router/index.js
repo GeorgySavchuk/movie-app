@@ -5,9 +5,9 @@ import Favourites from "../components/Favourites/Favourites";
 import MoviePage from "../components/MoviePage/MoviePage";
 
 export const routes = [
-    {path: "/", element: <Home/>},
-    {path: "/films", element: <Films/>},
-    {path: "/serials", element: <Serials/>},
-    {path: "/favourites", element: <Favourites/>},
-    {path: "/movies/:name", element: <MoviePage/>},
+    {path: "/movie-app", element: <Home/>},
+    {path: "/movie-app/films", element: <Films/>},
+    {path: "/movie-app/serials", element: <Serials/>},
+    {path: "/movie-app/favourites", element: <Favourites/>},
+    {path: "/movie-app/movies/:name", element: <MoviePage/>},
 ]

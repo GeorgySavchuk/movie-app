@@ -28,7 +28,7 @@ const Home = () => {
             alt: movie.name
         }))
         const encodedName = encodeURIComponent(movie.name)
-        navigate(`/movies/${encodedName}`);
+        navigate(`/movie-app/movies/${encodedName}`);
     };
     useEffect(() => {
         document.title = `Мир Кино | Главная`

@@ -47,10 +47,9 @@ const Input = (props) => {
     const handleSubmit = (props) => {
         setIsVisible('hidden')
         localStorage.setItem(`${props.name}`, JSON.stringify(props))
-        // localStorage.setItem('imageProps', JSON.stringify(props))
         if(currentProps.hasOwnProperty("isPropsFromMoviePage")) currentProps.setImageProps(JSON.parse(localStorage.getItem(`${props.name}`)))
         const encodedName = encodeURIComponent(props.name)
-        navigate(`/movies/${encodedName}`);
+        navigate(`/movie-app/movies/${encodedName}`);
         setInput('')
         closeModal()
     }

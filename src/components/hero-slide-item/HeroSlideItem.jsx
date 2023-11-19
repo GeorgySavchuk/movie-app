@@ -16,12 +16,6 @@ const HeroSlideItem = props => {
                         <button className="movie__btn1" onClick={() => props.handleMovieClick(item)}>
                             <span>Подробнее</span>
                         </button>
-                        {/*<button className="movie__btn1" onClick={() => props.handleMovieClick(item)}>*/}
-                        {/*    {`Смотреть ${item.type === 'movie' ? 'фильм' : 'сериал'}`}*/}
-                        {/*</button>*/}
-                        {/*<button className="movie__btn2" onClick={() => props.openModal(item)}>*/}
-                        {/*    Трейлер*/}
-                        {/*</button>*/}
                     </div>
                 </div>
             </div>

@@ -5,16 +5,16 @@ const DropDownItem = ({img, text, onClick, isOpen, isActive}) => {
     let path;
     switch(text) {
         case "Главная":
-            path = "/";
+            path = "/movie-app";
             break;
         case "Фильмы":
-            path = "/films";
+            path = "/movie-app/films";
             break;
         case "Сериалы":
-            path = "/serials";
+            path = "/movie-app/serials";
             break;
         case "Избранное":
-            path = "/favourites";
+            path = "/movie-app/favourites";
             break;
     }
     return (

@@ -37,7 +37,7 @@ const NavBar = () => {
             <div className={classes.navBar}>
                 <div className={classes.visibleMenu}>
                     <Hamburger color="#49c5b6" direction="right" toggled={isOpen} size="32" rounded toggle={setIsOpen} onToggle={setIsOpen}/>
-                    <Link to="/" style={{textDecoration: 'none'}}><h1 className={classes.title}>Мир Кино</h1></Link>
+                    <Link to="/movie-app" style={{textDecoration: 'none'}}><h1 className={classes.title}>Мир Кино</h1></Link>
                 </div>
                 {isOpen && <NavigationMenu onClick={setIsOpen} isOpen={isOpen}/>}
                 <div className={classes.gridContainer}>

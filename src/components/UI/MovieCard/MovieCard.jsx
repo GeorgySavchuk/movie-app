@@ -22,10 +22,9 @@ const MovieCard = (props) => {
     const handleImageClick = () => {
         window.scroll(0, 0)
         localStorage.setItem(`${props.name}`, JSON.stringify(props))
-        // localStorage.setItem('imageProps', JSON.stringify(props))
         if(props.isPropsFromMoviePage) props.setImageProps(JSON.parse(localStorage.getItem(`${props.name}`)))
         const encodedName = encodeURIComponent(props.name)
-        navigate(`/movies/${encodedName}`);
+        navigate(`/movie-app/movies/${encodedName}`);
     };
     return (
         <div className="movie__card" style={{width: props.width, height: props.height}}>
