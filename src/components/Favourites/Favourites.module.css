@@ -1,0 +1,10 @@
+.favourites {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.container {
+    padding-left: 35px;
+    padding-top: 35px;
+    color: white;
+}

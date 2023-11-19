@@ -1,0 +1,32 @@
+.dropDownItem{
+    padding: 10px 0;
+    border-top: 1px solid white;
+    margin-bottom: 5px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    position: relative;
+}
+.dropDownItem span {
+    display: none;
+}
+.dropDownItem:hover img + * {
+    opacity: 0.8;
+}
+@media (max-width: 768px) {
+    .dropDownItem {
+        border: none;
+        margin-bottom: 15px;
+    }
+    .dropDownItem img {
+        display: none;
+    }
+    .dropDownItem span {
+        display: inline-block;
+        position: absolute;
+        left: -15px;
+        height: 100%;
+        width: 4px;
+        background: #49c5b6;
+    }
+}

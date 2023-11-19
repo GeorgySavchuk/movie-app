@@ -1,0 +1,10 @@
+.searchMovieList {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #ffffff;
+    /*overflow-x: hidden;*/
+}

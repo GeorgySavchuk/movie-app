@@ -1,0 +1,58 @@
+.image {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    object-fit: cover;
+}
+
+.gridItemInner {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 254px;
+    height: 381px;
+}
+.gridItemInner:hover .overlay{
+    opacity: 1;
+    transform: translateZ(2px);
+}
+.gridItemInner:hover .image{
+    filter: brightness(.5);
+}
+
+.overlay {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 23px 20px;
+    gap: 50px;
+    color: white;
+    opacity: 0;
+    width: 200px;
+    transition: transform 0.2s ease;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+.bottomTop{
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.bottom {
+    margin: 0;
+    display: flex;
+    gap: 10px
+}
+.bottomInfo {
+    padding-top: 190px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    gap: 10px;
+}
+

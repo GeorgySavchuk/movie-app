@@ -1,0 +1,301 @@
+.filtersContainer {
+    display: flex;
+    padding: 24px 0 20px;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+}
+.filtersContainer.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    backdrop-filter: blur(10px);
+    z-index: 10000001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.title {
+    color: white;
+    position: relative;
+    top: 50px;
+}
+.filtersContainer.modal .filters{
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 120px;
+    z-index: 10000002;
+}
+
+.filtersContainer.modal .filters .genresSelect,
+.filtersContainer.modal .filters .ratingSelect,
+.filtersContainer.modal .filters .yearsReleaseSelect,
+.filtersContainer.modal .filters .sortSelect
+{
+    width: 90vw;
+    align-items: flex-start;
+}
+
+.filtersContainer.modal .filters .genresSelect .menu,
+.filtersContainer.modal .filters .ratingSelect .menu,
+.filtersContainer.modal .filters .yearsReleaseSelect .menu,
+.filtersContainer.modal .filters .sortSelect .menu {
+    background: transparent;
+    width: 90vw;
+    position: relative;
+    top: 10px;
+}
+
+.filtersContainer.modal .filters .genresSelect .select,
+.filtersContainer.modal .filters .ratingSelect .select,
+.filtersContainer.modal .filters .yearsReleaseSelect .select,
+.filtersContainer.modal .filters .sortSelect .select{
+    background: transparent;
+    margin: 0;
+}
+.filtersContainer.modal .filters .genresSelect > span,
+.filtersContainer.modal .filters .ratingSelect > span,
+.filtersContainer.modal .filters .yearsReleaseSelect > span,
+.filtersContainer.modal .filters .sortSelect > span{
+    color: hsla(0,0%,100%,.9);
+    font-size: 19px;
+    position: relative;
+    left: 10px;
+}
+
+.filtersContainer.modal .filters .genresSelect .select .icon,
+.filtersContainer.modal .filters .ratingSelect .select .icon,
+.filtersContainer.modal .filters .yearsReleaseSelect .select .icon,
+.filtersContainer.modal .filters .sortSelect .select .icon{
+    transform: rotate(-90deg);
+}
+.filtersContainer.modal .filters .genresSelect .menu .active,
+.filtersContainer.modal .filters .ratingSelect .menu .active,
+.filtersContainer.modal .filters .yearsReleaseSelect .menu .active,
+.filtersContainer.modal .filters .sortSelect .menu .active {
+    background: rgba(86,92,103,.24);
+    border-radius: 15px;
+}
+
+.filtersContainer.modal .filters > span{
+    height: 2px;
+    width: 90vw;
+    background: hsla(0,0%,100%,.6);
+}
+.filtersContainer.modal .filters button {
+    display:flex;
+    justify-content: center;
+    padding: 8px 16px;
+    align-items: center;
+    height: 52px;
+    width: 90vw;
+    border-radius: 10px;
+    background: #4d4ae8;
+    font-weight: 300;
+    font-size: 17px;
+    color: hsla(0,0%,100%,.9);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    z-index: 10000002;
+}
+.filtersContainer.modal .sort .sortSelect .select .selectIconAndSortName .selectIconContainer {
+    display: none;
+}
+.mobileAndTabletFilterContainer {
+    display: none;
+    justify-content: flex-end;
+    width: 32px;
+    height: 32px;
+    & svg {
+        height: 100%;
+        width: 32px;
+        cursor: pointer;
+    }
+    position: absolute;
+    right: 30px;
+}
+.filters {
+    display: flex;
+    gap: 25px;
+}
+.genresSelect, .ratingSelect, .yearsReleaseSelect, .sortSelect {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 280px;
+    box-sizing: border-box;
+    & * {
+        box-sizing: border-box;
+    }
+    position: relative;
+}
+.select {
+    background-color: rgba(86,92,103,.16);
+    width: 100%;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    transition: background-color .2s ease-in-out;
+    cursor: pointer;
+    padding: 0 16px;
+    margin-bottom: 10px;
+    & span {
+        font-size: 16px;
+        color: hsla(0,0%,100%,.6);
+    }
+}
+.selectIconAndSortName {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.select:hover {
+    background-color: rgba(86,92,103,.24);
+}
+
+.active {
+    background-color: #3d3d43;
+}
+.selectIconContainer {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+.icon {
+    display: block;
+    transition: transform .4s ease-out;
+}
+.menu {
+    list-style: none;
+    background-color: #1c1c1f;
+    border-radius: 8px;
+    width: 100%;
+    color: hsla(0,0%,100%,.6);
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0;
+    max-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 4;
+    position: absolute;
+    top: 46px;
+    display: flex;
+    transition: .4s ease-in-out;
+    & li {
+        height: 36px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 16px;
+        font-size: 16px;
+        line-height: 20px;
+        transition: .2s ease-out;
+    }
+    & li:hover {
+        background-color: rgba(86,92,103,.24);
+    }
+}
+.menu::-webkit-scrollbar {
+    width: 0;
+}
+.exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 52px;
+    height: 52px;
+    background: transparent;
+}
+@media (max-width: 1350px){
+    .genresSelect, .ratingSelect, .yearsReleaseSelect {
+        width: 180px;
+    }
+}
+@media (max-width: 970px) {
+    .filters {
+        gap: 15px;
+    }
+    .genresSelect, .ratingSelect, .yearsReleaseSelect {
+        width: 180px;
+    }
+    .sortSelect {
+        width: 220px;
+    }
+    .selectIconAndSortName {
+        gap: 7px;
+    }
+}
+@media (max-width: 880px) {
+    .filters {
+        gap: 7px;
+    }
+    .genresSelect, .ratingSelect, .yearsReleaseSelect {
+        width: 160px;
+    }
+    .sortSelect {
+        width: 220px;
+    }
+    .selectIconAndSortName {
+        gap: 7px;
+    }
+    .select {
+        padding: 0 10px;
+    }
+}
+@media (max-width: 810px) {
+    .filters {
+        gap: 7px;
+    }
+    .genresSelect, .ratingSelect {
+        width: 150px;
+    }
+    .sortSelect {
+        width: 220px;
+    }
+    .selectIconAndSortName {
+        gap: 7px;
+    }
+    .select {
+        padding: 0 10px;
+    }
+}
+@media (max-width: 780px) {
+    .filters {
+        gap: 7px;
+    }
+    .genresSelect, .ratingSelect {
+        width: 150px;
+    }
+    .sortSelect {
+        width: 200px;
+    }
+    .selectIconAndSortName {
+        gap: 3px;
+    }
+    .select {
+        padding: 0 10px;
+    }
+}
+@media (max-width: 768px) {
+    .filtersContainer {
+        display: none;
+    }
+    .mobileAndTabletFilterContainer {
+        display: inline-flex;
+    }
+}
+@media (max-width: 460px) {
+    .mobileAndTabletFilterContainer {
+        right: 20px;
+    }
+}

@@ -1,0 +1,761 @@
+.aboutMovie {
+    display: inline-block;
+    margin-left: 30px;
+    width: 600px;
+    overflow-wrap: break-word;
+    color: white;
+    & * {
+        margin-bottom: 5px;
+    }
+}
+.moviePageContainer {
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.persons {
+    color: white;
+    margin-top: 30px;
+}
+.exitArrow {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+.exitArrow:hover .arrowIcon{
+    transform: rotateY(180deg) translateX(-3.5px) ;
+}
+
+.arrowIcon {
+    transition: transform 0.2s ease;
+    transform: rotateY(180deg);
+}
+.similarMovies {
+    display: flex;
+    /*margin-top: 50px;*/
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+    position: relative;
+}
+.movies {
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
+    padding-left: 20px;
+}
+.carousel {
+    width: 90%;
+    margin: 0 auto;
+}
+.imageContainer {
+    z-index: -1;
+    background-repeat: no-repeat;
+    /*background-position: top 30% right;*/
+    background-position: top 30% center;
+    background-size: cover;
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    /*height: 731px;*/
+    height: 80vh;
+}
+.backdropContainer::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    /*-150px*/
+    left: -1px;
+    width: 100%;
+    /*height: 731px;*/
+    height: 80vh;
+    background: linear-gradient(90deg,#000 3.31%,rgba(0,0,0,.99) 7.71%,rgba(0,0,0,.96) 12.11%,rgba(0,0,0,.91) 16.51%,rgba(0,0,0,.85) 20.91%,rgba(0,0,0,.76) 25.31%,rgba(0,0,0,.67) 29.71%,rgba(0,0,0,.55) 34.11%,rgba(0,0,0,.44) 38.52%,rgba(0,0,0,.33) 42.92%,rgba(0,0,0,.23) 47.32%,rgba(0,0,0,.15) 51.72%,rgba(0,0,0,.08) 56.12%,rgba(0,0,0,.03) 60.52%,rgba(0,0,0,.01) 64.92%,transparent 69.32%);
+}
+.backdropContainer::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    /*bottom: 80px;*/
+    /*bottom: 120px;*/
+    /*bottom: -1px;*/
+    bottom: 5%;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(180deg,transparent 50%,transparent 52.63%,rgba(0,0,0,.03) 55.25%,rgba(0,0,0,.08) 57.88%,rgba(0,0,0,.14) 60.51%,rgba(0,0,0,.23) 63.13%,rgba(0,0,0,.33) 65.76%,rgba(0,0,0,.44) 68.39%,rgba(0,0,0,.55) 71.01%,rgba(0,0,0,.66) 73.64%,rgba(0,0,0,.77) 76.27%,rgba(0,0,0,.85) 78.89%,rgba(0,0,0,.92) 81.52%,rgba(0,0,0,.96) 84.15%,rgba(0,0,0,.99) 86.77%,#000 89.4%);
+}
+.backdropContainer{
+    position: relative;
+    height: 855px;
+}
+.backdropMovieInfo {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 450px;
+    width: 100%;
+    padding-left: 30px;
+}
+.logo {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    object-position: bottom left;
+    object-fit: contain;
+    z-index: 1;
+}
+.backdropMovieRating {
+    background: rgb(255 255 255 / 0.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.infoContainer {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /*position: relative;*/
+    position: absolute;
+    left: 80px;
+    right: 80px;
+    /*bottom: 520px;*/
+    /*top: 20%;*/
+    top: 180px;
+    gap: 15px;
+    z-index: 3;
+}
+.backdropMovieLogo {
+    width: 420px;
+    height: 140px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+.movieInfo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90vw;
+    gap: 13px;
+    margin-bottom: 10px;
+}
+.movieInfoRating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #12b77c;
+    color: hsla(0,0%,100%,.9);
+    width: 15px;
+    height: 10px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    /*z-index: 1;*/
+}
+.movieInfoItem {
+    font-weight: 300;
+    color: hsla(0,0%,100%,.6);
+    font-size: 17px;
+    /*z-index: 1;*/
+}
+.movieDescription {
+    overflow-wrap: break-word;
+    /*width: 560px;*/
+    width: 660px;
+    /*position: absolute;*/
+    /*top: 190px;*/
+    /*z-index: 1;*/
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.movieDescriptionItem {
+    /*z-index: 1;*/
+    font-weight: 300;
+    font-size: 17px;
+    color: hsla(0,0%,100%,.9);
+    line-height: 25px;
+}
+.mobileMovieDescriptionItem {
+    font-weight: 300;
+    font-size: 17px;
+    color: hsla(0,0%,100%,.9);
+    line-height: 25px;
+    display: none;
+}
+.movieDirectorItem {
+    /*z-index: 1;*/
+    font-weight: 300;
+    font-size: 17px;
+    color: hsla(0,0%,100%,.9);
+}
+.movieActorsItem {
+    /*z-index: 1;*/
+    font-weight: 300;
+    font-size: 17px;
+    color: hsla(0,0%,100%,.9);
+}
+.exitBtns {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    z-index: 3;
+}
+
+.actors {
+    width: 100%;
+    overflow-wrap: break-word;
+}
+.buttons {
+    display: flex;
+    width: 100vw;
+    gap: 15px;
+    align-items: center;
+}
+.movieBtn1 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+    width: 170px;
+    border-radius: 10px;
+    background: #4d4ae8;
+    font-weight: 300;
+    font-size: 17px;
+    color: hsla(0,0%,100%,.9);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.movieBtn2 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+    width: 100px;
+    border-radius: 10px;
+    background: rgb(255 255 255 / 0.3);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    font-weight: 300;
+    font-size: 17px;
+    color: hsla(0,0%,100%,.9);
+    border: none;
+    cursor: pointer;
+}
+.mobileMovieBtn2 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: rgb(255 255 255 / 0.3);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: none;
+    cursor: pointer;
+    min-width: 52px;
+    min-height: 40px;
+    padding: 14px;
+}
+.movieBtn3 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: rgb(255 255 255 / 0.3);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: none;
+    cursor: pointer;
+    min-width: 52px;
+    min-height: 40px;
+    padding: 14px;
+}
+.movieBtn3:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+.movieBtn2:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+.movieBtn1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2em;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .6);
+    transform: translateX(-4em) skewX(-45deg);
+}
+.movieBtn1:hover::before {
+    animation: move-light .8s;
+}
+.similarMoviesSlider {
+    margin: 0 80px;
+    position: relative;
+    height: 401px;
+    /*border: 1px solid #fff;*/
+    display: flex;
+    /*align-items: center;*/
+    /*gap: 15px;*/
+    align-items: flex-end;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+.similarMovie:last-child {
+    margin-right: 0;
+}
+.similarMoviesSlider::-webkit-scrollbar {
+    height: 0;
+}
+.similarMovie {
+    position: relative;
+    /*min-width: 254px;*/
+    min-width: 17%;
+    max-width: 17%;
+    height: 95%;
+    margin-right: 15px;
+    /*margin-right: 8px;*/
+    cursor: pointer;
+}
+.similarMoviesLeftArrowContainer {
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    backdrop-filter: blur(13px);
+    background: hsla(258,4%,55%,.32);
+    width: 47px;
+    height: 84px;
+    /*width: 40px;*/
+    /*height: 40px;*/
+    box-shadow: 1px 2px 10px -1px rgb(0 0 0 / 30%);
+    transition: filter .3s ease, opacity .3s ease;
+    border-radius: 8px;
+    /*border-radius: 50%;*/
+    cursor: pointer;
+    opacity: 0;
+}
+.similarMoviesLeftArrowContainer:hover, .similarMoviesRightArrowContainer:hover {
+    filter: brightness(.8);
+}
+.similarMoviesRightArrowContainer:hover {
+    opacity: 1;
+}
+.similarMoviesLeftArrowContainer:hover {
+    opacity: 1;
+}
+.similarMoviesLeftArrow {
+    height: 25px;
+    width: 25px;
+    /*color: #49c5b6;*/
+    color: white;
+}
+.similarMoviesRightArrowContainer {
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    backdrop-filter: blur(13px);
+    background: hsla(258,4%,55%,.32);
+    width: 47px;
+    height: 84px;
+    box-shadow: 1px 2px 10px -1px rgb(0 0 0 / 30%);
+    transition: filter .3s ease, opacity .3s ease;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0;
+}
+.similarMoviesRightArrow {
+    /*color: #49c5b6;*/
+    height: 25px;
+    width: 25px;
+    color: white;
+}
+.similarMovies h1{
+    color: white;
+    /*margin-bottom: 20px;*/
+    padding-top: 20px;
+    padding-left: 80px;
+}
+@keyframes move-light {
+    from {
+        transform: translateX(-4em) skewX(-45deg);
+    }
+    to {
+        transform: translateX(15em) skewX(-45deg);
+    }
+}
+@media (max-width: 1300px) {
+ .similarMovie {
+    min-width: 250px;
+     max-width: 250px;
+ }
+}
+@media (max-width: 1400px) {
+ .similarMovie {
+     min-width: 18%;
+     max-width: 18%;
+ }
+}
+@media (min-width: 1840px) {
+    .imageContainer {
+        background-position: top 10% center;
+    }
+    .movieDescriptionItem {
+        font-size: 20px;
+    }
+    .movieInfoRating {
+        font-size: 17px;
+    }
+    .movieInfoItem {
+        font-size: 20px;
+    }
+    .infoContainer {
+        left: 120px;
+        right: 120px;
+    }
+    .similarMovies h1 {
+        padding-left: 120px;
+    }
+    .similarMoviesSlider {
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+    .similarMoviesRightArrowContainer{
+        right: 120px;
+    }
+    .similarMoviesLeftArrowContainer {
+        left: 120px;
+    }
+}
+@media (min-width: 1024px) {
+    .imageContainer {
+        height: 731px;
+    }
+}
+@media (max-width: 1024px){
+    .backdropContainer::before {
+        display: none;
+    }
+    .imageContainer {
+        /*height: 55vh;*/
+        /*padding-top: 150px;*/
+        background-position: top 30% right 50%;
+        bottom: auto;
+        height: fit-content;
+        padding-bottom: 56.25%;
+    }
+    .backdropContainer {
+        /*height: 100vh;*/
+        /*height: 855px;*/
+    }
+    .backdropContainer::after {
+        /*bottom: 25vh;*/
+        bottom: 30%;
+    }
+    .infoContainer {
+        /*bottom: 300px;*/
+        /*top: 30%;*/
+        /*top: 250px;*/
+        top: 270px;
+        left: 40px;
+        right: 40px;
+    }
+    .similarMovies h1 {
+        padding-left: 40px;
+    }
+    .similarMoviesSlider {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .moviePageContainer {
+        gap: 80px;
+    }
+    .similarMovie {
+        min-width: 25%;
+    }
+    .similarMoviesRightArrowContainer {
+        right: 40px;
+    }
+    .similarMoviesLeftArrowContainer {
+        left: 40px;
+    }
+}
+@media (max-width: 924px) {
+    .backdropContainer::after {
+        /*bottom: 35vh;*/
+        bottom: 35%;
+    }
+}
+@media (max-width: 824px) {
+    .backdropContainer::after {
+        /*bottom: 40vh;*/
+        bottom: 40%;
+    }
+}
+@media (max-width: 768px) {
+    .exitBtns {
+        display: none;
+    }
+    .similarMovie {
+        min-width: 30%;
+        max-width: 30%;
+    }
+    .similarMoviesRightArrowContainer, .similarMoviesLeftArrowContainer {
+        display: none;
+    }
+}
+@media (max-width: 724px) {
+    .movieDescription {
+        width: 520px;
+    }
+    .backdropContainer::after {
+        /*bottom: 45vh;*/
+        bottom: 45%;
+    }
+    .infoContainer {
+        top: 240px;
+    }
+}
+@media (max-width: 624px) {
+    .backdropMovieLogo {
+        width: 268px;
+        height: 89px;
+    }
+    .backdropContainer::after {
+        /*bottom: 595px;*/
+        bottom: 50%;
+    }
+}
+@media (max-width: 576px) {
+    .backdropContainer {
+        /*height: 100vh;*/
+        height: 955px;
+    }
+    .backdropContainer::after {
+        bottom: 55%;
+    }
+    .movieDescription {
+        width: 440px;
+    }
+    .imageContainer {
+        padding-bottom: 70%;
+        background-position: 50%;
+    }
+    .similarMovie {
+        min-width: 38%;
+        max-width: 38%;
+    }
+}
+@media (max-width: 500px) {
+    .infoContainer {
+        left: 20px;
+    }
+    .similarMovies h1 {
+        padding-left: 20px;
+    }
+    .similarMoviesSlider {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .similarMoviesRightArrowContainer {
+        right: 20px;
+    }
+    .similarMoviesLeftArrowContainer {
+        left: 20px;
+    }
+}
+@media (max-width: 468px) {
+    .backdropContainer {
+        height: 1055px;
+    }
+    .movieDescription {
+        width: 100%;
+    }
+    .backdropContainer::after {
+        bottom: 60%;
+    }
+}
+@media (max-width: 426px) {
+    .infoContainer {
+        gap: 7px;
+        top: 220px;
+    }
+    .backdropContainer::after {
+        bottom: 58%;
+    }
+    .backdropContainer {
+        height: 755px;
+    }
+    .buttons {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .movieBtn1 {
+        width: 100%;
+    }
+    .movieBtn1::before {
+        display: none;
+    }
+    .moviePageContainer {
+        gap: 20px;
+    }
+    .movieBtn2 {
+        display: none;
+    }
+    .mobileMovieBtn2 {
+        display: flex;
+    }
+    .mobileMovieBtn2, .movieBtn3 {
+        border-radius: 50%;
+    }
+    .movieDescriptionItem {
+        display: none;
+    }
+    .mobileMovieDescriptionItem {
+        display: block;
+    }
+    .similarMoviesSlider {
+        overflow-x: auto;
+    }
+}
+
+
+
+@media (max-width: 320px) {
+    .similarMoviesSlider {
+        height: 170px;
+    }
+}
+@media (max-width: 360px) and (min-width: 321px){
+    .similarMoviesSlider {
+        height: 185px;
+    }
+}
+@media (max-width: 390px) and (min-width: 361px){
+    .similarMoviesSlider {
+        height: 205px;
+    }
+}
+@media (max-width: 420px) and (min-width: 390px){
+    .similarMoviesSlider {
+        height: 225px;
+    }
+}
+@media (max-width: 460px) and (min-width: 421px){
+    .similarMoviesSlider {
+        height: 245px;
+    }
+}
+@media (max-width: 500px) and (min-width: 461px){
+    .similarMoviesSlider {
+        height: 260px;
+    }
+}
+@media (max-width: 520px) and (min-width: 501px){
+    .similarMoviesSlider {
+        height: 280px;
+    }
+}
+@media (max-width: 550px) and (min-width: 521px){
+    .similarMoviesSlider {
+        height: 290px;
+    }
+}
+@media (max-width: 600px) and (min-width: 551px){
+    .similarMoviesSlider {
+        height: 300px;
+    }
+}
+@media (max-width: 650px) and (min-width: 601px){
+    .similarMoviesSlider {
+        height: 320px;
+    }
+}
+@media (max-width: 700px) and (min-width: 651px){
+    .similarMoviesSlider {
+        height: 340px;
+    }
+}
+@media (max-width: 768px) and (min-width: 701px){
+    .similarMoviesSlider {
+        height: 382px;
+    }
+}
+@media (max-width: 800px) and (min-width: 769px){
+    .similarMoviesSlider {
+        height: 300px;
+    }
+}
+@media (max-width: 850px) and (min-width: 801px){
+    .similarMoviesSlider {
+        height: 320px;
+    }
+}
+@media (max-width: 950px) and (min-width: 851px){
+    .similarMoviesSlider {
+        height: 340px;
+    }
+}
+@media (max-width: 1025px) and (min-width: 951px){
+    .similarMoviesSlider {
+        height: 385px;
+    }
+}
+@media (max-width: 1100px) and (min-width: 1026px){
+    .similarMoviesSlider {
+        height: 272px;
+    }
+}
+@media (max-width: 1250px) and (min-width: 1101px){
+    .similarMoviesSlider {
+        height: 291px;
+    }
+}
+@media (max-width: 1350px) and (min-width: 1251px){
+    .similarMoviesSlider {
+        height: 316px;
+    }
+}
+@media (max-width: 1500px) and (min-width: 1351px){
+    .similarMoviesSlider {
+        height: 354px;
+    }
+}
+@media (min-width: 1500px) {
+    .similarMoviesSlider {
+        height: 421px;
+    }
+    .similarMovie {
+        min-width: 254px;
+        max-width: 254px;
+    }
+}

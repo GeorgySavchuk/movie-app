@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.navBar {
+    height: 55px;
+    background: #141414;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    gap: 30px;
+    padding: 0 15px;
+    z-index: 10000000;
+}
+.title {
+    font-family: circeRegular, sans-serif;
+    color: #49c5b6;
+    font-weight: bold;
+}
+.visibleMenu {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 100000000;
+}
+.gridContainer {
+    display: grid;
+    grid-template-columns: auto 530px auto;
+    grid-template-areas: ". input accountIconAndSearchIcon";
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    grid-template-rows: 55px;
+}
+.searchContainer {
+    position: absolute;
+    grid-area: input;
+    top: 7.5px;
+    justify-self: center;
+}
+.modal {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,.8);
+    backdrop-filter: blur(10px);
+    z-index: 10000001;
+    justify-content: center;
+    display: flex;
+}
+.modalSearchContainer {
+    position: absolute;
+    /*width: 350px;*/
+    width: 530px;
+    top: 150px;
+}
+.inputTitle {
+    display: flex;
+    align-items: center;
+    top: 100px;
+    position: absolute;
+}
+.inputTitle h1 {
+    color: white;
+    font-family: circeRegular, sans-serif;
+}
+.exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 52px;
+    height: 52px;
+    background: transparent;
+}
+.accountIconAndSearchIcon {
+    grid-area: accountIconAndSearchIcon;
+    position: absolute;
+    right: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.searchIconContainer {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: none;
+}
+.accountLogo {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+.accountLogo svg {
+    width: 100%;
+    height: 100%;
+}
+.navigationMenu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+@media (max-width: 1200px){
+    .accountIconAndSearchIcon {
+        right: 25px;
+    }
+}
+@media (max-width: 950px) {
+    .searchContainer {
+        display: none;
+    }
+    .searchIconContainer {
+        display: block;
+    }
+}
+@media (max-width: 768px) {
+    .accountIconAndSearchIcon {
+        right: 15px;
+    }
+}
+@media (max-width: 600px) {
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: ". accountIconAndSearchIcon";
+    }
+}
+@media (max-width: 560px) {
+    .modalSearchContainer {
+        width: 430px;
+    }
+}
+@media (max-width: 460px) {
+    .accountIconAndSearchIcon {
+        right: 5px;
+    }
+    .modalSearchContainer {
+        width: 350px;
+    }
+}
+@media (max-width: 370px) {
+    .modalSearchContainer {
+        width: 300px;
+    }
+}
+@media (max-width: 350px) {
+    .visibleMenu {
+        gap: 5px;
+    }
+    .accountIconAndSearchIcon {
+        gap: 10px;
+    }
+}
+@media (max-width: 320px) {
+    .modalSearchContainer {
+        width: 250px;
+    }
+}
