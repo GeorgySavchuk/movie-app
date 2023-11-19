@@ -116,8 +116,10 @@ const MoviePage = () => {
                                        type={imageProps.type === "movie" ? "Фильм" : "Сериал"}/>
                     <div className={classes.backdropContainer}>
                         <div
-                            style={{backgroundImage: `url(${imageProps.backdrop?.url ? imageProps.backdrop.url : imageProps.src})`}}
-                            className={classes.imageContainer}/>
+                            // style={{backgroundImage: `url(${imageProps.backdrop?.url ? imageProps.backdrop.url : imageProps.src})`}}
+                            className={classes.imageContainer}>
+                            <img src={imageProps.backdrop.url ?? imageProps.src} style={{objectFit: 'cover', width: '100%', height: '100%'}} loading={"lazy"}/>
+                        </div>
                         <div className={classes.exitBtns}>
                             <div className={classes.exitArrow} onClick={() => navigate("/")}>
                                 <p style={{color: '#49c5b6'}}>Главная</p>
