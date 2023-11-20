@@ -5,6 +5,7 @@ const MovieCard = (props) => {
     const navigate = useNavigate()
     const [color, setColor] = useState('')
     const [rating, setRating] = useState(0)
+    const [isTextNotFull, setIsTextNotFull] = useState(false)
     useEffect(() => {
         const calculatedRating = props.rating.kp
             ? parseFloat(props.rating.kp.toFixed(1))
@@ -32,7 +33,8 @@ const MovieCard = (props) => {
             <div className="movie__info">
                 <span style={{color, display: 'flex', justifyContent:'center', alignItems: 'center'}}>{rating}</span>
                 <h3>{`${props.name}(${props.year})`}</h3>
-                {props.shortDescription ? <p>{props.shortDescription}</p> : <br/>}
+                {/*{props.shortDescription ? <p>{window.innerWidth <= 1440 && window.innerWidth > 1150 || window.innerWidth < 951 ? props.description.slice(0, props.shortDescription.length / 2) + "…" : window.innerWidth <= 1150 && window.innerWidth > 951 ? "" : props.shortDescription}</p> : <br/>}*/}
+                {props.shortDescription ? <p>{window.innerWidth <= 1340 ? props.description.slice(0, props.shortDescription.length / 3) + "…" : props.shortDescription}</p> : <br/>}
                 <a className="movie__btn" onClick={handleImageClick}>
                     Подробнее
                 </a>

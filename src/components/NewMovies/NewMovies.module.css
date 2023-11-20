@@ -1,6 +1,5 @@
 .newMovies {
     widtH: 100%;
-    position: relative;
     display: flex;
     justify-content: center;
     margin-bottom: 25px;

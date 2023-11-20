@@ -155,7 +155,7 @@ const Films = () => {
                      isMobileFiltersConfirmed={isMobileFiltersConfirmed}
             />
             {isLoading && currentPage === 0
-                ? <div style={{textAlign: 'center', height: '100vh'}}>
+                ? <div style={{textAlign: 'center', height: '100vh', marginTop: '30vh'}}>
                     <ClipLoader
                         color="#49c5b6"
                         size={75}

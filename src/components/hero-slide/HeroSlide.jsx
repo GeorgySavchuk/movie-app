@@ -1,10 +1,6 @@
-import React, {useEffect, useState} from 'react';
-import { useHistory } from "react-router-dom";
-import classes from "./HeroSlide.css"
+import React from 'react';
 import SwiperCore, {Autoplay, Navigation} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {ArrowBackIos, ArrowForwardIos} from "@mui/icons-material";
-import Slider from "react-slick";
 import "../hero-slide/HeroSlide.css";
 import "swiper/swiper.min.css"
 import "swiper/components/pagination/pagination.min.css"

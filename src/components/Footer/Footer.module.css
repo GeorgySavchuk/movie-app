@@ -14,7 +14,6 @@
     display: flex;
     align-items: center;
     gap: 30px;
-/*hsla(0,0%,100%,.902)*/
 }
 .social__btn1, .social__btn2, .social__btn3 {
     width: 30px;
@@ -52,6 +51,8 @@
     gap: 25px;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    padding: 0 40px;
 }
 .quickLinks span {
     font-size: 16px;
@@ -66,4 +67,14 @@
     background: #333333;
     width: 100%;
     padding: 10px 0;
+}
+@media (max-width: 500px) {
+    .quickLinks {
+        padding: 0 20px;
+    }
+}
+@media (max-width: 425px) {
+    .copyrightText {
+        font-size: 12px;
+    }
 }

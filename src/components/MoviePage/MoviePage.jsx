@@ -57,6 +57,7 @@ const MoviePage = () => {
     }, [imageProps])
     const setFavourite = () => {
         toggleFavourite(imageProps)
+        window.scroll(0, 0)
         if (!isFavourite(imageProps)) setIsToastVisible(true)
         else setIsToastVisible(false)
     };
@@ -193,7 +194,7 @@ const MoviePage = () => {
                             <div className={classes.movieDescription}>
                                 <span className={classes.movieDescriptionItem}>{imageProps.description}</span>
                                 <span
-                                    className={classes.mobileMovieDescriptionItem}>{imageProps.shortDescription ?? imageProps.description.slice(0, imageProps.description.length / 3) + "…"}</span>
+                                    className={classes.mobileMovieDescriptionItem}>{imageProps.shortDescription ?? imageProps.description.slice(0, imageProps.description.length / 5) + "…"}</span>
                                 <div className={classes.director}>
                                     <span className={classes.movieInfoItem}>{"Режиссер: "}</span>
                                     <span
