@@ -462,7 +462,7 @@
         bottom: -1px;
     }
 }
-@media (min-width: 1800px) {
+@media (min-width: 1600px) {
     .infoContainer {
         top: 150px;
     }
