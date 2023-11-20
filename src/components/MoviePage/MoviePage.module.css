@@ -450,9 +450,6 @@
     .backdropContainer::after {
         bottom: -1px;
     }
-    .infoContainer {
-        top: 300px;
-    }
 }
 @media (min-width: 1500px) and (max-width: 1900px){
     .imageContainer {
@@ -463,6 +460,11 @@
     }
     .backdropContainer::after {
         bottom: -1px;
+    }
+}
+@media (min-width: 1800px) {
+    .infoContainer {
+        top: 150px;
     }
 }
 @media (max-width: 1024px){
