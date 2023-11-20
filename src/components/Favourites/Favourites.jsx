@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {useFavourites} from "../../hooks/useFavourites";
-import Image from "../UI/Image/Image";
 import classes from './Favourites.module.css'
 import MovieCard from "../UI/MovieCard/MovieCard";
 const Favourites = () => {

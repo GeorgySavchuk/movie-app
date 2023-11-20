@@ -6,7 +6,7 @@
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: 356px;
 }
-.container span {
+.container > span {
     font-size: 25px;
 }
 .container {

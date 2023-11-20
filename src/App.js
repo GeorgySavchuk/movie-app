@@ -4,7 +4,6 @@ import React, {useEffect, useState} from "react";
 import {BrowserRouter} from "react-router-dom";
 import classes from "./components/Main/Main.module.css";
 import AppRouter from "./components/AppRouter/AppRouter";
-
 function App() {
   return (
     <div className="App">

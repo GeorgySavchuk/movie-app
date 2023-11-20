@@ -2,9 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {fetchFilmById, fetchNewMovies} from "../../API/myApi";
 import "react-multi-carousel/lib/styles.css";
 import classes from './NewMovies.module.css'
-import {RotatingLines} from "react-loader-spinner";
-import MyCarousel from "../UI/MyCarousel/MyCarousel";
-import Pagination from 'react-bootstrap/Pagination';
 import {ClipLoader} from "react-spinners";
 import MovieSlider from "../UI/MovieSlider/MovieSlider";
 const NewMovies = ({type, currentPage}) => {

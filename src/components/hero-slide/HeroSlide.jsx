@@ -21,6 +21,7 @@ const HeroSlide = ({openModal, handleMovieClick}) => {
                 style={{
                     width: '100vw',
                     height: '700px',
+                    zIndex: 0,
                 }}
             >
                 {

@@ -18,6 +18,9 @@ const Serials = () => {
     const [isMobileFiltersConfirmed, setIsMobileFiltersConfirmed] = useState(false)
     useEffect(() => {
         document.title = `Мир Кино | Сериалы`
+        window.scroll(0, 0)
+    }, [])
+    useEffect(() => {
         if (isMobile) {
             if (isMobileFiltersConfirmed) {
                 setIsLoading(true)

@@ -11,8 +11,8 @@ const Films = () => {
     const [listOfFilms, setListOfFilms] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [currentPage, setCurrentPage] = useState(0)
-    const [currentHeader, setCurrentHeader] = useState("Фильмы")
-    const [currentYear, setCurrentYear] = useState("1860-2024")
+    const [currentHeader, setCurrentHeader] = useState('Фильмы')
+    const [currentYear, setCurrentYear] = useState('1860-2024')
     const [currentGenre, setCurrentGenre] = useState("Все")
     const [currentRating, setCurrentRating] = useState("1-10")
     const [sortType, setSortType] = useState("Рекомендуемые")
@@ -21,6 +21,9 @@ const Films = () => {
     const [isMobileLoad, setIsMobileLoad] = useState(false)
     useEffect(() => {
         document.title = `Мир Кино | Фильмы`
+        window.scroll(0, 0)
+    }, [])
+    useEffect(() => {
         if (isMobile) {
             if (isMobileFiltersConfirmed) {
                 setIsLoading(true)

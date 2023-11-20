@@ -10,7 +10,7 @@ const Filters = ({appendGenreToHeader, appendYearToHeader, setCurrentYear, setCu
     const [currentGenre, setCurrentGenre] = useState("Все")
     const [currentRating, setCurrentRating] = useState("Любой рейтинг")
     const [currentYearsRelease, setCurrentYearsRelease] = useState("Все годы")
-    const [currentSort, setCurrentSort] = useState("Рекомендуемые")
+    const [currentSort, setCurrentSort] = useState('Рекомендуемые')
     const [ratingsList] = useState([
         "Любой рейтинг",
         "Больше 9",

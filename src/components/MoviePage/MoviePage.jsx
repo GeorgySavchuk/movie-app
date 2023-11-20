@@ -2,7 +2,6 @@ import React, {useEffect, useRef, useState} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import classes from './MoviePage.module.css'
 import {minutesToHoursAndMinutes} from "../../utils/minutesToHoursAndMinutes";
-import MyCarousel from "../UI/MyCarousel/MyCarousel";
 import {fetchFilmById} from "../../API/myApi";
 import MovieCard from "../UI/MovieCard/MovieCard";
 import {useFavourites} from "../../hooks/useFavourites";
@@ -35,11 +34,14 @@ const MoviePage = () => {
         return fetchedMovies
     }
     useEffect(() => {
+        document.title = `Мир Кино | ${params.name}`
+        window.scroll(0, 0)
+    }, [])
+    useEffect(() => {
      setImageProps(JSON.parse(localStorage.getItem(`${decodeURIComponent(window.location.pathname).split('/').slice(3).join('/')}`)))
     }, [params.name]);
     useEffect(() => {
         setIsLoading(true)
-        document.title = `Мир Кино | ${params.name}`
         setCurrentProps({
             ...imageProps,
             isPropsFromMoviePage: true,
@@ -119,7 +121,7 @@ const MoviePage = () => {
                         <div
                             // style={{backgroundImage: `url(${imageProps.backdrop?.url ? imageProps.backdrop.url : imageProps.src})`}}
                             className={classes.imageContainer}>
-                            <img src={imageProps.backdrop.url ?? imageProps.src} style={{objectFit: 'cover', width: '100%', height: '100%'}} loading={"lazy"}/>
+                            <img src={imageProps.backdrop?.url ? imageProps.backdrop.url : imageProps.backdrop} style={{objectFit: 'cover', width: '100%', height: '100%'}} loading={"eager"}/>
                         </div>
                         <div className={classes.exitBtns}>
                             <div className={classes.exitArrow} onClick={() => navigate("/")}>
@@ -164,7 +166,7 @@ const MoviePage = () => {
                             <div className={classes.backdropMovieLogo}>
                                 {imageProps.logo?.url
                                     ? <img src={imageProps.logo?.url ? imageProps.logo.url : imageProps.logo} alt="Лого"
-                                           className={classes.logo} loading={'lazy'}/>
+                                           className={classes.logo} loading={'eager'}/>
                                     : <span style={{
                                         color: "hsla(0,0%,100%,.9)",
                                         fontSize: "47px",

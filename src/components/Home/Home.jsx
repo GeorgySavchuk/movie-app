@@ -32,6 +32,7 @@ const Home = () => {
     };
     useEffect(() => {
         document.title = `Мир Кино | Главная`
+        window.scroll(0, 0)
     }, [])
     return (
         <>
