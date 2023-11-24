@@ -13,7 +13,7 @@
     position: relative;
     width: 400px;
     min-height: 400px;
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.01);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -51,7 +51,7 @@
 }
 .form .input__box input{
     width: 100%;
-    background: rgba(255,255,255, 0.1);
+    background: rgba(255,255,255, 0.03);
     outline:  none;
     padding: 10px 20px;
     border-radius: 35px;
@@ -75,9 +75,11 @@
 .forget {
     margin-top: 5px;
     color: #fff;
+    width: 100%;
+    overflow-wrap: break-word;
 }
 .forget a {
-    color: darkorange;
+    color: #49c5b6;
     font-weight: 600;
     text-decoration: none;
 }
@@ -86,7 +88,7 @@
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.01);
     border-radius: 10px;
     animation: animate 5s linear infinite;
     animation-delay: calc(-1s * var(--i));

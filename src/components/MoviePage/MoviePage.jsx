@@ -201,8 +201,8 @@ const MoviePage = () => {
                         <div className={classes.infoContainer}>
                             <div className={classes.backdropMovieLogo}>
                                 {imageProps.logo?.url
-                                    ? <img src={imageProps.logo?.url ? imageProps.logo.url : imageProps.logo} alt="Лого"
-                                           className={classes.logo} loading={'eager'}/>
+                                    ? <img src={imageProps.logo?.url ? imageProps.logo.url : imageProps.logo}
+                                           className={classes.logo} loading={'lazy'} onError={e => e.target.style.display = 'none'}/>
                                     : <span style={{
                                         color: "hsla(0,0%,100%,.9)",
                                         fontSize: "47px",
