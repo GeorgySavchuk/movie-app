@@ -157,7 +157,7 @@ const MoviePage = () => {
                     <div className={classes.backdropContainer}>
                         <div
                             className={classes.imageContainer}>
-                            <img src={imageProps.backdrop?.url ? imageProps.backdrop.url : imageProps.backdrop} style={{objectFit: 'cover', width: '100%', height: '100%'}} loading={"eager"}/>
+                            <img src={imageProps.backdrop?.url ? imageProps.backdrop.url : imageProps.backdrop} style={{objectFit: 'cover', width: '100%', height: '100%'}} loading={"eager"} onError={e => e.target.style.display = 'none'}/>
                         </div>
                         <div className={classes.exitBtns}>
                             <div className={classes.exitArrow} onClick={() => navigate("/")}>

@@ -76,10 +76,6 @@ const Input = (props) => {
                 {
                     isLoading
                         ? <div style={{alignSelf: 'center', margin: '0 auto'}}>
-                            {/*<ClipLoader
-                                color="#49c5b6"
-                                size={75}
-                            />*/}
                             <Oval
                                 height={55}
                                 width={55}
