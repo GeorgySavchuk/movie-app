@@ -7,6 +7,7 @@ import SearchMovieList from "../../SearchMoviesList/SearchMovieList";
 import {useNavigate} from "react-router-dom";
 import {ClipLoader} from "react-spinners";
 import {useImageProps} from "../../../Context/useImageProps";
+import {Oval} from "react-loader-spinner";
 const Input = (props) => {
     let [input, setInput] = useState('')
     const debouncedSearch = useDebounce(input)
@@ -65,7 +66,7 @@ const Input = (props) => {
             <div className={classes.inputWrapper}>
                 <div className={classes.container}>
                     <label htmlFor="input" className={classes.inputLabel}><FaSearch id="search-icon" className={classes.searchIcon}/></label>
-                    <input autoComplete="off" type="text" id="input" className={classes.myInput} value={input} onChange={handleInput} style={{color: props.isModal ? '#141414' : undefined}}/>
+                    <input autoComplete="off" type="text" id="input" className={classes.myInput} value={input} onChange={handleInput} style={{color: props.isModal ? '#141414' : undefined}} placeholder={props.placeholder}/>
                     <div className={classes.clearBtn} style={{opacity: isVisible === 'visible' ? 1 : 0, color: props.isModal ? '#141414' : undefined}} onClick={clearInput}>
                         <svg viewBox="0 0 32 32" enableBackground="new 0 0 32 32"><path d="M10 23a1 1 0 0 1-.707-1.707l12-12a1 1 0 1 1 1.414 1.414l-12 12A.997.997 0 0 1 10 23z" fill="#49c5b6" className="fill-000000" style={{width: '100%', height: '100%'}}></path><path d="M22 23a.997.997 0 0 1-.707-.293l-12-12a1 1 0 1 1 1.414-1.414l12 12A1 1 0 0 1 22 23z" fill="#49c5b6" className="fill-000000"></path></svg>
                     </div>
@@ -75,9 +76,22 @@ const Input = (props) => {
                 {
                     isLoading
                         ? <div style={{alignSelf: 'center', margin: '0 auto'}}>
-                            <ClipLoader
+                            {/*<ClipLoader
                                 color="#49c5b6"
                                 size={75}
+                            />*/}
+                            <Oval
+                                height={55}
+                                width={55}
+                                color="#49c5b6"
+                                wrapperStyle={{}}
+                                wrapperClass=""
+                                visible={true}
+                                ariaLabel='oval-loading'
+                                secondaryColor="rgba(86,92,103,.24)"
+                                strokeWidth={2}
+                                strokeWidthSecondary={2}
+
                             />
                         </div>
                         : <SearchMovieList input={input} searchedMovies={searchedMovies} handleSubmit={handleSubmit} isModal={props.isModal}/>

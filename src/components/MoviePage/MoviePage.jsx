@@ -6,11 +6,11 @@ import {fetchFilmById} from "../../API/myApi";
 import MovieCard from "../UI/MovieCard/MovieCard";
 import {useFavourites} from "../../hooks/useFavourites";
 import ToastNotification from "../UI/ToastNotification/ToastNotification";
-import {ClipLoader} from "react-spinners";
 import Modal from "../UI/Modal/Modal";
 import {useImageProps} from "../../Context/useImageProps";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
+import {Oval} from "react-loader-spinner";
 const MoviePage = () => {
     const navigate = useNavigate()
     const params = useParams();
@@ -21,10 +21,12 @@ const MoviePage = () => {
     const [isToastVisible, setIsToastVisible] = useState(false);
     const [isModalVisible, setIsModalVisible] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
+    const [isArrowsVisible, setIsArrowsVisible] = useState(true)
     const slider = useRef()
     const similarMovie = useRef(0)
     const leftArrow = useRef()
     const rightArrow = useRef()
+    const [delta, setDelta] = useState(0)
     const fetchSimilarMovies = async similarMovies => {
         let fetchedMovies = []
         for (let i = 0; i < similarMovies.length; ++i) {
@@ -49,6 +51,11 @@ const MoviePage = () => {
         })
         fetchSimilarMovies(imageProps.similarMovies)
             .then(data => {
+                if(data.length < 4) {
+                    setIsArrowsVisible(false)
+                } else {
+                    setIsArrowsVisible(true)
+                }
                 setSimilarMovies([...data])
                 setIsLoading(false)
             })
@@ -98,18 +105,48 @@ const MoviePage = () => {
     }
     const handleNextClick = () => {
         slider.current.scrollLeft += similarMovie.current.getBoundingClientRect().width + 15;
+        setDelta(delta + 1)
     };
 
     const handlePrevClick = () => {
         slider.current.scrollLeft -= similarMovie.current.getBoundingClientRect().width + 15;
+        setDelta(delta - 1)
     };
+    const showArrows = index => {
+        const currentSliderWidth = slider.current.getBoundingClientRect().width;
+        if(index % (Math.round(currentSliderWidth / (similarMovie.current.getBoundingClientRect().width + 15)) + delta) !== delta
+            && index % (Math.round(currentSliderWidth / (similarMovie.current.getBoundingClientRect().width + 15)) + delta) !== Math.round(currentSliderWidth / (similarMovie.current.getBoundingClientRect().width + 15)) - 1 + delta)
+        {
+            leftArrow.current.style.opacity = '1';
+            rightArrow.current.style.opacity = '1';
+        }
+    }
+    const hideArrows = () => {
+        leftArrow.current.style.opacity = '0';
+        rightArrow.current.style.opacity = '0';
+    }
+    const hoverLeftArrow = () => {
+        leftArrow.current.style.opacity = '1';
+    }
+    const hoverRightArrow = () => {
+        rightArrow.current.style.opacity = '1'
+    }
     return (
         <>
             {isLoading
                 ? <div style={{height: '80vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                    <ClipLoader
+                    <Oval
+                        height={55}
+                        width={55}
                         color="#49c5b6"
-                        size={75}
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                        visible={true}
+                        ariaLabel='oval-loading'
+                        secondaryColor="rgba(86,92,103,.24)"
+                        strokeWidth={2}
+                        strokeWidthSecondary={2}
+
                     />
                 </div>
                 : <div className={classes.moviePageContainer} style={{height: '100%', paddingBottom: !similarMovies.length && '20px'}}>
@@ -119,7 +156,6 @@ const MoviePage = () => {
                                        type={imageProps.type === "movie" ? "Фильм" : "Сериал"}/>
                     <div className={classes.backdropContainer}>
                         <div
-                            // style={{backgroundImage: `url(${imageProps.backdrop?.url ? imageProps.backdrop.url : imageProps.src})`}}
                             className={classes.imageContainer}>
                             <img src={imageProps.backdrop?.url ? imageProps.backdrop.url : imageProps.backdrop} style={{objectFit: 'cover', width: '100%', height: '100%'}} loading={"eager"}/>
                         </div>
@@ -237,12 +273,12 @@ const MoviePage = () => {
                     {imageProps.similarMovies.length !== 0 &&
                         <div className={classes.similarMovies}>
                             <h1>Похожее</h1>
-                            <div className={classes.similarMoviesLeftArrowContainer} onClick={handlePrevClick} ref={leftArrow}>
+                            <div className={classes.similarMoviesLeftArrowContainer} onClick={handlePrevClick} style={{display: !isArrowsVisible && 'none'}} ref={leftArrow} onMouseEnter={hoverLeftArrow} onMouseLeave={hideArrows}>
                                 <FaChevronLeft className={classes.similarMoviesLeftArrow}/>
                             </div>
                             <div className={classes.similarMoviesSlider} ref={slider}>
-                                {similarMovies.map(movie =>
-                                    <div className={classes.similarMovie} ref={similarMovie}>
+                                {similarMovies.map((movie, index) =>
+                                    <div className={classes.similarMovie} ref={similarMovie} key={`${movie.name}/${movie.year}`}  onMouseEnter={() => showArrows(index)} onMouseLeave={hideArrows}>
                                         <MovieCard name={movie.name} src={movie.poster.previewUrl} rating={movie.rating}
                                                    type={movie.type}
                                                    year={movie.year} movieLength={movie.movieLength}
@@ -265,7 +301,7 @@ const MoviePage = () => {
                                     </div>
                                 )}
                             </div>
-                            <div className={classes.similarMoviesRightArrowContainer} onClick={handleNextClick} ref={rightArrow}>
+                            <div className={classes.similarMoviesRightArrowContainer} onClick={handleNextClick} style={{display: !isArrowsVisible && 'none'}} ref={rightArrow} onMouseEnter={hoverRightArrow} onMouseLeave={hideArrows}>
                                 <FaChevronRight className={classes.similarMoviesRightArrow}/>
                             </div>
                         </div>

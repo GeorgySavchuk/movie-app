@@ -1,11 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import NewMovies from "../NewMovies/NewMovies";
 import classes from "./Home.module.css"
-import Pagination from "react-bootstrap/Pagination";
 import HeroSlide from "../hero-slide/HeroSlide";
 import Footer from "../Footer/Footer";
-import Modal from "../UI/Modal/Modal";
-import {useProps} from "../../Context/useProps";
 import {useNavigate} from "react-router-dom";
 import {heroSlideItems} from "../../hero-slide__items";
 

@@ -6,11 +6,11 @@
     justify-content: space-between;
 }
 .filtersContainer.modal {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: rgba(0,0,0,.8);
     backdrop-filter: blur(10px);
     z-index: 10000001;
@@ -30,6 +30,9 @@
     position: absolute;
     top: 120px;
     z-index: 10000002;
+}
+.filtersContainer.modal .sort {
+    transform: translateY(100%);
 }
 
 .filtersContainer.modal .filters .genresSelect,

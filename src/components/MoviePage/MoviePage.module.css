@@ -317,7 +317,7 @@
 }
 .similarMoviesLeftArrowContainer {
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 80px;
     display: flex;
     align-items: center;
@@ -349,7 +349,7 @@
 }
 .similarMoviesRightArrowContainer {
     position: absolute;
-    top: 50%;
+    top: 47%;
     right: 80px;
     display: flex;
     align-items: center;

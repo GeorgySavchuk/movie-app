@@ -9,9 +9,9 @@ const Favourites = () => {
     }, []);
     return (
         <div className={classes.container}>
-            <h1 style={{marginBottom: '20px'}}>Избранное</h1>
+            <h1 style={{marginBottom: '20px', fontStyle: '30px'}}>Избранное</h1>
             {favourites.length === 0 && <div style={{textAlign: 'center'}}>
-                <span>Список избранного пуст</span>
+                <span className={classes.empty}>Список избранного пуст</span>
             </div>}
             <div className={classes.favourites}>
                 {favourites.map(favouriteMovie =>

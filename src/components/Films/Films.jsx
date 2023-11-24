@@ -6,6 +6,7 @@ import classes from "./Films.module.css"
 import MovieCard from "../UI/MovieCard/MovieCard";
 import {ClipLoader, PulseLoader} from "react-spinners";
 import Filters from "../UI/Filters/Filters";
+import {Oval} from "react-loader-spinner";
 
 const Films = () => {
     const [listOfFilms, setListOfFilms] = useState([])
@@ -158,11 +159,22 @@ const Films = () => {
                      isMobileFiltersConfirmed={isMobileFiltersConfirmed}
             />
             {isLoading && currentPage === 0
-                ? <div style={{textAlign: 'center', height: '100vh', marginTop: '30vh'}}>
-                    <ClipLoader
-                        color="#49c5b6"
-                        size={75}
-                    />
+                ? <div style={{textAlign: 'center', height: '100vh', marginTop: '30vh', display: 'flex'}}>
+                    <div style={{justifySelf: 'center', margin: '0 auto'}}>
+                        <Oval
+                            height={55}
+                            width={55}
+                            color="#49c5b6"
+                            wrapperStyle={{}}
+                            wrapperClass=""
+                            visible={true}
+                            ariaLabel='oval-loading'
+                            secondaryColor="rgba(86,92,103,.24)"
+                            strokeWidth={2}
+                            strokeWidthSecondary={2}
+
+                        />
+                    </div>
                 </div>
                 :
                 <>

@@ -4,6 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import classes from './NewMovies.module.css'
 import {ClipLoader} from "react-spinners";
 import MovieSlider from "../UI/MovieSlider/MovieSlider";
+import {Oval, TailSpin} from "react-loader-spinner";
 const NewMovies = ({type, currentPage}) => {
     let [listOfMovies, setListOfMovies] = useState([])
     let [isLoading, setIsLoading] = useState(true)
@@ -31,9 +32,18 @@ const NewMovies = ({type, currentPage}) => {
         <div className={classes.newMovies}>
             {isLoading ?
                 <div style={{textAlign: 'center'}}>
-                    <ClipLoader
+                    <Oval
+                        height={55}
+                        width={55}
                         color="#49c5b6"
-                        size={75}
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                        visible={true}
+                        ariaLabel='oval-loading'
+                        secondaryColor="rgba(86,92,103,.24)"
+                        strokeWidth={2}
+                        strokeWidthSecondary={2}
+
                     />
                 </div>
                 : <MovieSlider movies={listOfMovies} isPropsFromMoviePage={false}/>
