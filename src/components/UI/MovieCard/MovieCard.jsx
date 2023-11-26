@@ -29,7 +29,7 @@ const MovieCard = (props) => {
     };
     return (
         <div className="movie__card" style={{width: props.width, height: props.height}}>
-            <img src={props.src} alt={props.name} loading="lazy" style={{width: props.width, height: props.height}}/>
+            <img src={props.src} loading="lazy" style={{width: props.width, height: props.height}}/>
             <div className="movie__info">
                 <span style={{color, display: 'flex', justifyContent:'center', alignItems: 'center'}}>{rating}</span>
                 <h3>{`${props.name}(${props.year})`}</h3>

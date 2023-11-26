@@ -51,10 +51,10 @@ const MoviePage = () => {
         })
         fetchSimilarMovies(imageProps.similarMovies)
             .then(data => {
-                if(data.length < 4) {
-                    setIsArrowsVisible(false)
+                if (data.length < 5) {
+                    setIsArrowsVisible(false);
                 } else {
-                    setIsArrowsVisible(true)
+                    setIsArrowsVisible(true);
                 }
                 setSimilarMovies([...data])
                 setIsLoading(false)
@@ -155,12 +155,19 @@ const MoviePage = () => {
                     <ToastNotification isActive={isToastVisible} onClose={() => setIsToastVisible(false)}
                                        type={imageProps.type === "movie" ? "Фильм" : "Сериал"}/>
                     <div className={classes.backdropContainer}>
-                        <div
-                            className={classes.imageContainer}>
-                            <img src={imageProps.backdrop?.url ? imageProps.backdrop.url : imageProps.backdrop} style={{objectFit: 'cover', width: '100%', height: '100%'}} loading={"eager"} onError={e => e.target.style.display = 'none'}/>
+                        <div className={classes.imageContainer}>
+                            <img
+                                src={imageProps.backdrop?.url ? imageProps.backdrop.url : imageProps.backdrop}
+                                style={{objectFit: 'cover', width: '100%', height: '100%'}}
+                                loading="eager"
+                                onError={e => {
+                                    e.currentTarget.style.display = 'none';
+                                }}
+                                crossOrigin="anonymous"
+                            />
                         </div>
                         <div className={classes.exitBtns}>
-                            <div className={classes.exitArrow} onClick={() => navigate("/")}>
+                            <div className={classes.exitArrow} onClick={() => navigate("/movie-app")}>
                                 <p style={{color: '#49c5b6'}}>Главная</p>
                                 <svg className={classes.arrowIcon} xmlns="http://www.w3.org/2000/svg"
                                      viewBox="0 0 24 24" width="32" height="32" onClick={() => window.history.back()}>
@@ -202,7 +209,7 @@ const MoviePage = () => {
                             <div className={classes.backdropMovieLogo}>
                                 {imageProps.logo?.url
                                     ? <img src={imageProps.logo?.url ? imageProps.logo.url : imageProps.logo}
-                                           className={classes.logo} loading={'lazy'} onError={e => e.target.style.display = 'none'}/>
+                                           className={classes.logo} loading="eager" onError={e => e.target.style.display = 'none'} crossOrigin={"anonymous"}/>
                                     : <span style={{
                                         color: "hsla(0,0%,100%,.9)",
                                         fontSize: "47px",
@@ -278,7 +285,7 @@ const MoviePage = () => {
                             </div>
                             <div className={classes.similarMoviesSlider} ref={slider}>
                                 {similarMovies.map((movie, index) =>
-                                    <div className={classes.similarMovie} ref={similarMovie} key={`${movie.name}/${movie.year}`}  onMouseEnter={() => showArrows(index)} onMouseLeave={hideArrows}>
+                                    <div className={classes.similarMovie} ref={similarMovie} key={`${movie.name}:${movie.id}:${movie.year}`}  onMouseEnter={() => showArrows(index)} onMouseLeave={hideArrows}>
                                         <MovieCard name={movie.name} src={movie.poster.previewUrl} rating={movie.rating}
                                                    type={movie.type}
                                                    year={movie.year} movieLength={movie.movieLength}

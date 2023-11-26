@@ -347,6 +347,11 @@
     width: 25px;
     color: white;
 }
+input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
 .similarMoviesRightArrowContainer {
     position: absolute;
     top: 47%;
