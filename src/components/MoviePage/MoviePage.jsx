@@ -162,6 +162,7 @@ const MoviePage = () => {
                                 loading="eager"
                                 onError={e => {
                                     e.currentTarget.style.display = 'none';
+                                    e.currentTarget.src = imageProps.backdrop?.url ? imageProps.backdrop.url : imageProps.backdrop;
                                 }}
                                 crossOrigin="anonymous"
                             />
@@ -209,7 +210,10 @@ const MoviePage = () => {
                             <div className={classes.backdropMovieLogo}>
                                 {imageProps.logo?.url
                                     ? <img src={imageProps.logo?.url ? imageProps.logo.url : imageProps.logo}
-                                           className={classes.logo} loading="eager" onError={e => e.target.style.display = 'none'} crossOrigin={"anonymous"}/>
+                                           className={classes.logo} loading="eager" onError={e => {
+                                               e.target.style.display = 'none'
+                                                e.currentTarget.src = imageProps.logo?.url ? imageProps.logo.url : imageProps.logo
+                                    }} crossOrigin={"anonymous"}/>
                                     : <span style={{
                                         color: "hsla(0,0%,100%,.9)",
                                         fontSize: "47px",

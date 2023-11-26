@@ -1732,8 +1732,8 @@ export const heroSlideItems = [
         },
         "ageRating": null,
         "backdrop": {
-            "url": "https://imagetmdb.com/t/p/original/fm6KqXpk3M2HVveHwCrBSSBaO0V.jpg",
-            "previewUrl": "https://imagetmdb.com/t/p/w500/fm6KqXpk3M2HVveHwCrBSSBaO0V.jpg"
+            "url": "https://imagetmdb.com/t/p/original/rLb2cwF3Pazuxaj0sRXQ037tGI1.jpg",
+            "previewUrl": "https://imagetmdb.com/t/p/w500/rLb2cwF3Pazuxaj0sRXQ037tGI1.jpg"
         },
         "logo": {
             "url": "https://imagetmdb.com/t/p/original/b07VisHvZb0WzUpA8VB77wfMXwg.png"
@@ -2670,8 +2670,8 @@ export const heroSlideItems = [
             "await": null
         },
         "backdrop": {
-            "url": "https://imagetmdb.com/t/p/original/p7PLOCD4bqLV4sJmeLrwvkufHt3.jpg",
-            "previewUrl": "https://imagetmdb.com/t/p/w500/p7PLOCD4bqLV4sJmeLrwvkufHt3.jpg"
+            "url": "https://imagetmdb.com/t/p/original/q3jHCb4dMfYF6ojikKuHd6LscxC.jpg",
+            "previewUrl": "https://imagetmdb.com/t/p/w500/q3jHCb4dMfYF6ojikKuHd6LscxC.jpg"
         },
         "id": 1203039,
         "type": "tv-series",
