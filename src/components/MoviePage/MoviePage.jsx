@@ -39,6 +39,7 @@ const MoviePage = () => {
         document.title = `Мир Кино | ${params.name}`
         window.scroll(0, 0)
     }, [])
+    useEffect(() => setDelta(0))
     useEffect(() => {
      setImageProps(JSON.parse(localStorage.getItem(`${decodeURIComponent(window.location.pathname).split('/').slice(3).join('/')}`)))
     }, [params.name]);

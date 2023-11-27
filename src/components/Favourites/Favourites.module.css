@@ -13,10 +13,16 @@
     padding: 35px 72px 20px 72px;
     color: white;
 }
-@media (max-width: 425px) {
-    .container .empty {
-        font-size: 18px;
-    }
+.container h1{
+    position: relative;
+    border-bottom: 3px solid #49c5b6;
+}
+.container h1::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #333333;
 }
 @media (max-width: 320px) {
     .favourites {
@@ -126,14 +132,6 @@
     }
     .container {
         padding: 35px 30px 20px 30px;
-    }
-}
-@media (max-width: 768px) {
-    .container h1 {
-        display: inline-block;
-        max-width: 90%;
-        overflow-wrap: break-word;
-        margin-bottom: 10px;
     }
 }
 @media (max-width: 768px) and (min-width: 701px){

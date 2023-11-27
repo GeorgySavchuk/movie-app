@@ -107,6 +107,5 @@ export const fetchFilmById = async(id) => {
 }
 export const fetchFilmByName = async(name) => {
     const {data} = await kp.movie.getBySearchQuery({query: name, limit: 20});
-    console.log(data.docs)
     return data.docs
 }
