@@ -10,7 +10,7 @@ const Favourites = () => {
     return (
         <div className={classes.container}>
             <h1 style={{marginBottom: '20px', fontStyle: '30px'}}>Избранное</h1>
-            {!favouriteMovies || favouriteMovies.length === 0 && <div style={{textAlign: 'center'}}>
+            {favouriteMovies === undefined || favouriteMovies.length === 0 && <div style={{textAlign: 'center'}}>
                 <span className={classes.empty}>Список избранного пуст</span>
             </div>}
             <div className={classes.favourites}>
