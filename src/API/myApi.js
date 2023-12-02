@@ -25,7 +25,8 @@ export const fetchNewMovies = async(type) => {
 export const fetchFilms = async(sortType, rating = "1-10",year = "1860-2024",page = 1) => {
     const query = {
         selectFields: ['id', 'name', 'rating', 'year', 'movieLength', 'poster', 'type',
-            'backdrop', 'genres', 'shortDescription', 'countries', 'budget', 'fees', 'similarMovies', 'ageRating', 'videos', 'description', 'persons','slogan', 'premiere', 'logo', 'watchability'],
+            'backdrop', 'genres', 'shortDescription', 'countries', 'budget', 'fees', 'similarMovies',
+            'ageRating', 'videos', 'description', 'persons','slogan', 'premiere', 'logo', 'watchability'],
         type: 'movie',
         page,
         year,
@@ -40,10 +41,11 @@ export const fetchFilms = async(sortType, rating = "1-10",year = "1860-2024",pag
     const {data} = await kp.movie.getByFilters(query)
     return data.docs
 }
-export const fetchFilmsByGenre = async(sortType, genre, rating = "1-10",year = "1860-2024",page = 1) => {
+export const fetchFilmsByFilters = async(sortType, genre, rating = "1-10",year = "1860-2024",page = 1) => {
     const query = {
         selectFields: ['id', 'name', 'rating', 'year', 'movieLength', 'poster', 'type',
-            'backdrop', 'genres', 'shortDescription', 'countries', 'budget', 'fees', 'similarMovies', 'ageRating', 'videos', 'description', 'persons','slogan', 'premiere', 'logo', 'watchability'],
+            'backdrop', 'genres', 'shortDescription', 'countries', 'budget', 'fees', 'similarMovies',
+            'ageRating', 'videos', 'description', 'persons','slogan', 'premiere', 'logo', 'watchability'],
         type: 'movie',
         page,
         year,
@@ -80,10 +82,11 @@ export const fetchSerials = async(sortType, rating = "1-10",year = "1860-2024",p
     const {data} = await kp.movie.getByFilters(query)
     return data.docs
 }
-export const fetchSerialsByGenre = async(sortType, genre,rating = "1-10",year = "1860-2024",page = 1) => {
+export const fetchSerialsByFilters = async(sortType, genre,rating = "1-10",year = "1860-2024",page = 1) => {
     const query = {
         selectFields: ['id', 'name', 'rating', 'year', 'movieLength', 'poster', 'type',
-            'backdrop', 'genres', 'shortDescription', 'countries', 'budget', 'fees', 'similarMovies', 'ageRating', 'videos', 'description', 'persons',
+            'backdrop', 'genres', 'shortDescription', 'countries', 'budget', 'fees', 'similarMovies',
+            'ageRating', 'videos', 'description', 'persons',
             'seasonsInfo', 'slogan', 'premiere', 'logo', 'watchability'
         ],
         type: 'tv-series',
@@ -101,11 +104,11 @@ export const fetchSerialsByGenre = async(sortType, genre,rating = "1-10",year = 
     const {data} = await kp.movie.getByFilters(query)
     return data.docs
 }
-export const fetchFilmById = async(id) => {
+export const fetchMovieById = async(id) => {
     const {data} = await kp.movie.getById(id)
     return data
 }
-export const fetchFilmByName = async(name) => {
+export const fetchMovieByName = async(name) => {
     const {data} = await kp.movie.getBySearchQuery({query: name, limit: 20});
     return data.docs
 }

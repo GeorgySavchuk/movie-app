@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import classes from './MoviePage.module.css'
 import {minutesToHoursAndMinutes} from "../../utils/minutesToHoursAndMinutes";
-import {fetchFilmById} from "../../API/myApi";
+import {fetchMovieById} from "../../API/myApi";
 import MovieCard from "../UI/MovieCard/MovieCard";
 import {useFavourites} from "../../hooks/useFavourites";
 import ToastNotification from "../UI/ToastNotification/ToastNotification";
@@ -30,7 +30,7 @@ const MoviePage = () => {
     const fetchSimilarMovies = async similarMovies => {
         let fetchedMovies = []
         for (let i = 0; i < similarMovies.length; ++i) {
-            const fetchedMovie = await fetchFilmById(similarMovies[i].id)
+            const fetchedMovie = await fetchMovieById(similarMovies[i].id)
             fetchedMovies.push(fetchedMovie)
         }
         return fetchedMovies
@@ -160,7 +160,7 @@ const MoviePage = () => {
                             <img
                                 src={imageProps.backdrop?.url ? imageProps.backdrop.url : imageProps.backdrop}
                                 style={{objectFit: 'cover', width: '100%', height: '100%'}}
-                                loading="eager"
+                                loading={"eager"}
                                 onError={e => {
                                     e.currentTarget.style.display = 'none';
                                     e.currentTarget.src = imageProps.backdrop?.url ? imageProps.backdrop.url : imageProps.backdrop;
@@ -211,7 +211,7 @@ const MoviePage = () => {
                             <div className={classes.backdropMovieLogo}>
                                 {imageProps.logo?.url
                                     ? <img src={imageProps.logo?.url ? imageProps.logo.url : imageProps.logo}
-                                           className={classes.logo} loading="eager" onError={e => {
+                                           className={classes.logo}  loading={"eager"} onError={e => {
                                                e.target.style.display = 'none'
                                                 e.currentTarget.src = imageProps.logo?.url ? imageProps.logo.url : imageProps.logo
                                     }} crossOrigin={"anonymous"}/>

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {fetchFilms, fetchFilmsByGenre, fetchSerials, fetchSerialsByGenre} from "../../API/myApi";
+import {fetchSerials, fetchSerialsByFilters} from "../../API/myApi";
 import classes from "./Serials.module.css"
 import MovieCard from "../UI/MovieCard/MovieCard";
 import {ClipLoader, PulseLoader} from "react-spinners";
@@ -16,6 +16,7 @@ const Serials = () => {
     const [sortType, setSortType] = useState("Рекомендуемые")
     const [isMobile, setIsMobile] = useState(false)
     const [isMobileFiltersConfirmed, setIsMobileFiltersConfirmed] = useState(false)
+    const [isMobileLoad, setIsMobileLoad] = useState(false)
     useEffect(() => {
         document.title = `Мир Кино | Сериалы`
         window.scroll(0, 0)
@@ -39,7 +40,38 @@ const Serials = () => {
                             setIsMobileFiltersConfirmed(false)
                         })
                 } else {
-                    fetchSerialsByGenre(sortType, currentGenre, currentRating, currentYear,currentPage + 1)
+                    fetchSerialsByFilters(sortType, currentGenre, currentRating, currentYear,currentPage + 1)
+                        .then(data => {
+                            if(currentPage === 0) setListOfSerials([...data])
+                            else setListOfSerials([...listOfSerials, ...data])
+                            setIsLoading(false)
+                        })
+                        .catch(err => {
+                            console.log(err.message)
+                            setIsLoading(false)
+                        })
+                        .finally(() => {
+                            setIsMobileFiltersConfirmed(false)
+                        })
+                }
+            } else if(isMobileLoad) {
+                setIsLoading(true)
+                if(currentGenre === "Все") {
+                    fetchSerials(sortType, currentRating, currentYear,currentPage + 1)
+                        .then(data => {
+                            if(currentPage === 0) setListOfSerials([...data])
+                            else setListOfSerials([...listOfSerials, ...data])
+                            setIsLoading(false)
+                        })
+                        .catch(err => {
+                            console.log(err.message)
+                            setIsLoading(false)
+                        })
+                        .finally(() => {
+                            setIsMobileFiltersConfirmed(false)
+                        })
+                } else {
+                    fetchSerialsByFilters(sortType, currentGenre, currentRating, currentYear,currentPage + 1)
                         .then(data => {
                             if(currentPage === 0) setListOfSerials([...data])
                             else setListOfSerials([...listOfSerials, ...data])
@@ -68,7 +100,7 @@ const Serials = () => {
                         setIsLoading(false)
                     })
             } else {
-                fetchSerialsByGenre(sortType, currentGenre, currentRating, currentYear,currentPage + 1)
+                fetchSerialsByFilters(sortType, currentGenre, currentRating, currentYear,currentPage + 1)
                     .then(data => {
                         if(currentPage === 0) setListOfSerials([...data])
                         else setListOfSerials([...listOfSerials, ...data])
@@ -157,7 +189,10 @@ const Serials = () => {
                                     )}
                                 </div>
                                 {listOfSerials.length >= 36 && <div className={classes.loadNextMoviesBtn}>
-                                    <button onClick={() => setCurrentPage(currentPage + 1)}>
+                                    <button onClick={() => {
+                                        if (isMobile) setIsMobileLoad(true)
+                                        setCurrentPage(currentPage + 1)
+                                    }}>
                                         {isLoading
                                             ? <PulseLoader
                                                 color="hsla(0,0%,100%,.6)"

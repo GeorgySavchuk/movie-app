@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import classes from './Input.module.css'
 import {FaSearch} from "react-icons/fa";
 import {useDebounce} from "../../../hooks/useDebounce";
-import {fetchFilmByName} from "../../../API/myApi";
+import {fetchMovieByName} from "../../../API/myApi";
 import SearchMovieList from "../../SearchMoviesList/SearchMovieList";
 import {useNavigate} from "react-router-dom";
 import {ClipLoader} from "react-spinners";
@@ -23,7 +23,7 @@ const Input = (props) => {
     useEffect(() => {
         setIsLoading(true)
         if(debouncedSearch !== '') {
-            fetchFilmByName(debouncedSearch)
+            fetchMovieByName(debouncedSearch)
                 .then(data => {
                     setSearchedMovies([...data])
                     setIsLoading(false)

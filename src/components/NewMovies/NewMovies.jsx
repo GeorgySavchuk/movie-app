@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {fetchFilmById, fetchNewMovies} from "../../API/myApi";
+import {fetchMovieById, fetchNewMovies} from "../../API/myApi";
 import "react-multi-carousel/lib/styles.css";
 import classes from './NewMovies.module.css'
 import {ClipLoader} from "react-spinners";
@@ -11,7 +11,7 @@ const NewMovies = ({type, currentPage}) => {
     const fetchNewMoviesById = async newMovies => {
         let fetchedMovies = []
         for(let i = 0; i < newMovies.length; ++i) {
-            const fetchedMovie = await fetchFilmById(newMovies[i].id)
+            const fetchedMovie = await fetchMovieById(newMovies[i].id)
             fetchedMovies.push(fetchedMovie)
         }
         return fetchedMovies

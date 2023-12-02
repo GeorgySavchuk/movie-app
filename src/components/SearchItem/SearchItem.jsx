@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import classes from "./SearchItem.module.css"
-import {fetchFilmById} from "../../API/myApi";
+import {fetchMovieById} from "../../API/myApi";
 const SearchItem = ({searchedMovie, handleSubmit, isModal}) => {
     let [dataProps, setDataProps] = useState({})
     useEffect(() => {
-        fetchFilmById(searchedMovie.id)
+        fetchMovieById(searchedMovie.id)
             .then(data => setDataProps({...data}))
             .catch(err => console.log(err.message))
     }, []);

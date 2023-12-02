@@ -28,7 +28,7 @@ const Footer = () => {
                 <span>Служба поддержки</span>
             </div>
             <div className={classes.copyrightText}>
-                <p>Copyright © 2023 Мир Кино. All Rights Reserved</p>
+                <p>Выполнил Савчук Г.А. ИКБО-16-22</p>
             </div>
         </footer>
     );

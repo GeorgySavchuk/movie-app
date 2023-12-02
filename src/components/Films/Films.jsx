@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {
-    fetchFilms, fetchFilmsByGenre
+    fetchFilms, fetchFilmsByFilters
 } from "../../API/myApi";
 import classes from "./Films.module.css"
 import MovieCard from "../UI/MovieCard/MovieCard";
@@ -43,7 +43,7 @@ const Films = () => {
                             setIsMobileFiltersConfirmed(false)
                         })
                 } else {
-                    fetchFilmsByGenre(sortType, currentGenre, currentRating, currentYear, currentPage + 1)
+                    fetchFilmsByFilters(sortType, currentGenre, currentRating, currentYear, currentPage + 1)
                         .then(data => {
                             if (currentPage === 0) setListOfFilms([...data])
                             else setListOfFilms([...listOfFilms, ...data])
@@ -75,7 +75,7 @@ const Films = () => {
                             setIsMobileLoad(false)
                         })
                 } else {
-                    fetchFilmsByGenre(sortType, currentGenre, currentRating, currentYear, currentPage + 1)
+                    fetchFilmsByFilters(sortType, currentGenre, currentRating, currentYear, currentPage + 1)
                         .then(data => {
                             if (currentPage === 0) setListOfFilms([...data])
                             else setListOfFilms([...listOfFilms, ...data])
@@ -105,7 +105,7 @@ const Films = () => {
                         setIsLoading(false)
                     })
             } else {
-                fetchFilmsByGenre(sortType, currentGenre, currentRating, currentYear, currentPage + 1)
+                fetchFilmsByFilters(sortType, currentGenre, currentRating, currentYear, currentPage + 1)
                     .then(data => {
                         if (currentPage === 0) setListOfFilms([...data])
                         else setListOfFilms([...listOfFilms, ...data])
