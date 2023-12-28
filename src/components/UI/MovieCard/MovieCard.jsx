@@ -7,7 +7,7 @@ const MovieCard = (props) => {
     const [rating, setRating] = useState(0)
     const [isTextNotFull, setIsTextNotFull] = useState(false)
     useEffect(() => {
-        const calculatedRating = props.rating.kp
+        const calculatedRating = props.rating.kp !== null
             ? parseFloat(props.rating.kp.toFixed(1))
             : parseFloat(props.rating.toFixed(1));
 

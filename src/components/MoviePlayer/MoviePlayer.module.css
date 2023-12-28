@@ -1,0 +1,24 @@
+.moviePlayer {
+    position: absolute;
+    z-index: 10000002;
+    /*width: 80%;*/
+    /*height: 80%;*/
+    /*width: 948px;*/
+    width: 60%;
+    height: 533px;
+    /*left: 50%;*/
+    /*top: 5%;*/
+}
+@media (max-width: 1025px) {
+    .moviePlayer {
+        height: calc(56.25vw - 56.25px);
+    }
+}
+@media (max-width: 576px) {
+    .moviePlayer {
+        width: 80vw;
+        height: calc(56.25vw - 18px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

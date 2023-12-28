@@ -11,6 +11,9 @@ import {useImageProps} from "../../Context/useImageProps";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
 import {Oval} from "react-loader-spinner";
+import MoviePlayer from "../MoviePlayer/MoviePlayer";
+import MoviePlayerLayout from "../MoviePlayerLayout/MoviePlayerLayout";
+import ActorsCast from "../ActorsCast/ActorsCast";
 const MoviePage = () => {
     const navigate = useNavigate()
     const params = useParams();
@@ -27,6 +30,7 @@ const MoviePage = () => {
     const leftArrow = useRef()
     const rightArrow = useRef()
     const [delta, setDelta] = useState(0)
+    const [isMoviePlayerOpen, setIsMoviePlayerOpen] = useState(false)
     const fetchSimilarMovies = async similarMovies => {
         let fetchedMovies = []
         for (let i = 0; i < similarMovies.length; ++i) {
@@ -38,11 +42,12 @@ const MoviePage = () => {
     useEffect(() => {
         document.title = `Мир Кино | ${params.name}`
         window.scroll(0, 0)
+        console.log(imageProps)
     }, [])
     useEffect(() => setDelta(0))
     useEffect(() => {
      setImageProps(JSON.parse(localStorage.getItem(`${decodeURIComponent(window.location.pathname).split('/').slice(3).join('/')}`)))
-    }, [params.name]);
+    },[params.name]);
     useEffect(() => {
         setIsLoading(true)
         setCurrentProps({
@@ -132,6 +137,10 @@ const MoviePage = () => {
     const hoverRightArrow = () => {
         rightArrow.current.style.opacity = '1'
     }
+    const handleWatchBtnClick = () => {
+        setIsMoviePlayerOpen(!isMoviePlayerOpen)
+        !isMoviePlayerOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'visible'
+    }
     return (
         <>
             {isLoading
@@ -151,6 +160,9 @@ const MoviePage = () => {
                     />
                 </div>
                 : <div className={classes.moviePageContainer} style={{height: '100%', paddingBottom: !similarMovies.length && '20px'}}>
+                    {isMoviePlayerOpen && <MoviePlayerLayout hideMoviePlayer={setIsMoviePlayerOpen}>
+                        <MoviePlayer movieID={imageProps.id}/>
+                    </MoviePlayerLayout>}
                     <Modal visible={isModalVisible} trailers={imageProps?.videos?.trailers}
                            setVisible={setIsModalVisible}/>
                     <ToastNotification isActive={isToastVisible} onClose={() => setIsToastVisible(false)}
@@ -214,7 +226,7 @@ const MoviePage = () => {
                                            className={classes.logo}  loading={"eager"} onError={e => {
                                                e.target.style.display = 'none'
                                                 e.currentTarget.src = imageProps.logo?.url ? imageProps.logo.url : imageProps.logo
-                                    }} crossOrigin={"anonymous"}/>
+                                    }} crossOrigin={"anonymous"} draggable={false}/>
                                     : <span style={{
                                         color: "hsla(0,0%,100%,.9)",
                                         fontSize: "47px",
@@ -242,9 +254,10 @@ const MoviePage = () => {
                                 }
                             </div>
                             <div className={classes.movieDescription}>
-                                <span className={classes.movieDescriptionItem}>{imageProps.description}</span>
-                                <span
-                                    className={classes.mobileMovieDescriptionItem}>{imageProps.shortDescription ?? imageProps.description.slice(0, imageProps.description.length / 5) + "…"}</span>
+                                {imageProps.description && <span className={classes.movieDescriptionItem}>{imageProps.description}</span>}
+                                {imageProps.description && <span
+                                    className={classes.mobileMovieDescriptionItem}>{imageProps.shortDescription ?? imageProps.description.slice(0, imageProps.description.length / 5) + "…"}
+                                </span>}
                                 <div className={classes.director}>
                                     <span className={classes.movieInfoItem}>{"Режиссер: "}</span>
                                     <span
@@ -256,7 +269,7 @@ const MoviePage = () => {
                                 </div>
                                 <div className={classes.buttons}>
                                     <button
-                                        className={classes.movieBtn1}>{`Смотреть ${imageProps.type === "movie" ? "Фильм" : imageProps.type === "tv-series" ? "Сериал" : ""}`}</button>
+                                        className={classes.movieBtn1} onClick={handleWatchBtnClick}>{`Смотреть ${imageProps.type === "movie" ? "Фильм" : imageProps.type === "tv-series" ? "Сериал" : ""}`}</button>
                                     <button className={classes.movieBtn2} onClick={openModal}>{"Трейлер"}</button>
                                     <button className={classes.mobileMovieBtn2} onClick={openModal}>
                                         <svg enableBackground="new 0 0 24 24" version="1.1" viewBox="0 0 24 24"
@@ -316,6 +329,13 @@ const MoviePage = () => {
                             <div className={classes.similarMoviesRightArrowContainer} onClick={handleNextClick} style={{display: !isArrowsVisible && 'none'}} ref={rightArrow} onMouseEnter={hoverRightArrow} onMouseLeave={hideArrows}>
                                 <FaChevronRight className={classes.similarMoviesRightArrow}/>
                             </div>
+                        </div>
+                    }
+                    {
+                        imageProps.persons.length !== 0 &&
+                        <div className={classes.actorsCast}>
+                            <h1>Актерский состав</h1>
+                            <ActorsCast actors={imageProps.persons}/>
                         </div>
                     }
                 </div>

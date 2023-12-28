@@ -54,7 +54,7 @@ const MovieSlider = ({movies, setImageProps, isPropsFromMoviePage}) => {
                                        ageRating={movie.ageRating} videos={movie.videos}
                                        description={movie.description} persons={movie.persons} slogan={movie.slogan}
                                        seasonsInfo={movie.seasonsInfo} premiere={movie.premiere} logo={movie.logo}
-                                       setImageProps={setImageProps} isPropsFromMoviePage={isPropsFromMoviePage}
+                                       setImageProps={setImageProps} isPropsFromMoviePage={isPropsFromMoviePage} player={movie.watchability}
                             />
                         </div>
                     )}

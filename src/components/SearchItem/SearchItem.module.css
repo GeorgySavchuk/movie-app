@@ -1,7 +1,5 @@
 .searchedMovies {
-    /*width: 480px;*/
     height: 75px;
-    /*padding: 5px 25px;*/
     padding: 5px 0 5px 25px;
     display: flex;
     flex-direction: row;

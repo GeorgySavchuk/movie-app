@@ -184,7 +184,7 @@ const Serials = () => {
                                                    alt={serial.name} backdrop={serial.backdrop} genres={serial.genres} shortDescription={serial.shortDescription} countries={serial.countries}
                                                    budget={serial.budget} fees={serial.fees} similarMovies={serial.similarMovies} ageRating={serial.ageRating} videos={serial.videos}
                                                    description={serial.description} persons={serial.persons} seasonsInfo={serial.seasonsInfo} slogan={serial.slogan} premiere={serial.premiere}
-                                                   logo={serial.logo} isPropsFromMoviePage={false}
+                                                   logo={serial.logo} isPropsFromMoviePage={false} player={serial.watchability}
                                         />
                                     )}
                                 </div>

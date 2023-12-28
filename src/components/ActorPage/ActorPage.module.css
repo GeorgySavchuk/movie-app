@@ -1,0 +1,299 @@
+.actorPage {
+    padding: 35px 72px 20px 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.actorInfo {
+    display: flex;
+    align-items: flex-start;
+    height: min-content;
+    position: relative;
+}
+.actorItem {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    margin-right: 30px;
+}
+.actorPhoto {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+}
+.actorPhoto > img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: transparent;
+    max-width: 100%;
+    object-fit: cover;
+}
+.title > h1 {
+    font-size: 32px;
+    color: hsla(0,0%,100%,.9);
+    margin: 0 0 12px 0;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+}
+.title > span {
+    font-size: 17px;
+    color: hsla(0,0%,100%,.6);
+    margin: 0 0 14px 0;
+}
+.mainInfoContainer, .mainInfo {
+    display: flex;
+    flex-direction: column;
+}
+.actorCareer, .dateOfBirth {
+    margin: 0 0 12px 0;
+    display: flex;
+    align-items: center;
+}
+.actorFilmography {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.actorFilmography > h1 {
+    position: relative;
+    border-bottom: 3px solid #49c5b6;
+}
+.movies {
+    gap: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 356px;
+}
+@media (max-width: 320px) {
+    .movies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 130px;
+        gap: 12px;
+    }
+    .actorPage {
+        padding: 35px 20px 20px 20px;
+    }
+}
+@media (max-width: 360px) and (min-width: 321px){
+    .movies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 145px;
+        gap: 12px;
+    }
+    .actorPage {
+        padding: 35px 20px 20px 20px;
+    }
+}
+@media (max-width: 390px) and (min-width: 361px){
+    .movies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 165px;
+        gap: 12px;
+    }
+    .actorPage {
+        padding: 35px 20px 20px 20px;
+    }
+}
+@media (max-width: 420px) and (min-width: 390px){
+    .movies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 185px;
+        gap: 12px;
+    }
+    .actorPage {
+        padding: 35px 20px 20px 20px;
+    }
+}
+@media (max-width: 460px) and (min-width: 421px){
+    .movies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 205px;
+        gap: 12px;
+    }
+    .actorPage {
+        padding: 35px 20px 20px 20px;
+    }
+}
+@media (max-width: 500px) and (min-width: 461px){
+    .movies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 210px;
+        gap: 12px;
+    }
+    .actorPage {
+        padding: 35px 30px 20px 30px;
+    }
+}
+@media (max-width: 520px) and (min-width: 501px){
+    .movies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 230px;
+        gap: 12px;
+    }
+    .actorPage {
+        padding: 35px 30px 20px 30px;
+    }
+}
+@media (max-width: 550px) and (min-width: 521px){
+    .movies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 250px;
+        gap: 12px;
+    }
+    .actorPage {
+        padding: 35px 30px 20px 30px;
+    }
+}
+@media (max-width: 600px) and (min-width: 551px){
+    .movies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 260px;
+        gap: 12px;
+    }
+    .actorPage {
+        padding: 35px 30px 20px 30px;
+    }
+}
+@media (max-width: 650px) and (min-width: 601px){
+    .movies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 280px;
+        gap: 12px;
+    }
+    .actorPage {
+        padding: 35px 30px 20px 30px;
+    }
+}
+@media (max-width: 700px) and (min-width: 651px){
+    .movies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 300px;
+        gap: 12px;
+    }
+    .actorPage {
+        padding: 35px 30px 20px 30px;
+    }
+}
+@media (max-width: 768px) and (min-width: 701px){
+    .movies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 342px;
+        gap: 12px;
+    }
+    .actorPage {
+        padding: 35px 30px 20px 30px;
+    }
+}
+@media (max-width: 768px) {
+    .actorPage h1 {
+        display: inline-block;
+        max-width: 90%;
+        overflow-wrap: break-word;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 800px) and (min-width: 769px){
+    .movies {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 260px;
+        gap: 15px;
+    }
+}
+@media (max-width: 850px) and (min-width: 801px){
+    .movies {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 280px;
+        gap: 15px;
+    }
+}
+@media (max-width: 950px) and (min-width: 851px){
+    .movies {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 300px;
+        gap: 15px;
+    }
+}
+@media (max-width: 1100px) and (min-width: 1026px){
+    .movies {
+        grid-auto-rows: 232px;
+    }
+}
+@media (max-width: 1200px) and (min-width: 769px){
+    .actorPage {
+        padding: 35px 40px 20px 40px;
+    }
+}
+@media (max-width: 1250px) and (min-width: 1101px){
+    .movies {
+        grid-auto-rows: 251px;
+    }
+}
+@media (max-width: 1350px) and (min-width: 1251px){
+    .movies {
+        grid-auto-rows: 276px;
+    }
+}
+@media (max-width: 1500px) and (min-width: 1351px){
+    .movies {
+        grid-auto-rows: 314px;
+    }
+}
+@media  (min-width: 1700px) {
+    .movies {
+        grid-auto-rows: 386px;
+    }
+}
+@media (min-width: 1850px) {
+    .movies {
+        grid-auto-rows: 400px;
+    }
+}
+@media (min-width: 1900px) {
+    .movies {
+        grid-auto-rows: 420px;
+    }
+}
+@media (min-width: 2000px) {
+    .movies {
+        grid-auto-rows: 430px;
+    }
+}
+@media (min-width: 2050px) {
+    .movies {
+        grid-auto-rows: 445px;
+    }
+}
+@media (min-width: 2100px) {
+    .movies {
+        grid-auto-rows: 455px;
+    }
+}
+@media (min-width: 2150px) {
+    .movies {
+        grid-auto-rows: 475px;
+    }
+}
+@media (min-width: 2200px) {
+    .movies {
+        grid-template-columns: repeat(8, 1fr);
+        grid-auto-rows: 400px;
+    }
+}
+@media (min-width: 2450px) {
+    .movies {
+        grid-template-columns: repeat(9, 1fr);
+        grid-auto-rows: 400px;
+    }
+}

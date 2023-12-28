@@ -218,7 +218,8 @@
     justify-content: center;
     align-items: center;
     height: 52px;
-    width: 170px;
+    /*width: 170px;*/
+    padding: 15px;
     border-radius: 10px;
     background: #4d4ae8;
     font-weight: 300;
@@ -377,6 +378,15 @@ input[type="file"] {
     color: white;
 }
 .similarMovies h1{
+    color: white;
+    padding-top: 20px;
+    padding-left: 80px;
+}
+.actorsCast {
+    position: relative;
+    height: 100%;
+}
+.actorsCast h1 {
     color: white;
     padding-top: 20px;
     padding-left: 80px;

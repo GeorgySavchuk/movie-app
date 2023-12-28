@@ -197,7 +197,7 @@ const Films = () => {
                                                    ageRating={film.ageRating} videos={film.videos}
                                                    description={film.description} persons={film.persons}
                                                    slogan={film.slogan} premiere={film.premiere} logo={film.logo}
-                                                   isPropsFromMoviePage={false}
+                                                   isPropsFromMoviePage={false} player={film.watchability}
                                         />
                                     )}
                                 </div>

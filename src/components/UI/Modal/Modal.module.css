@@ -4,7 +4,6 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    /*align-items: center;*/
     opacity: 0;
     visibility: hidden;
     background: rgba(0,0,0,0.9);
@@ -16,10 +15,8 @@
     background: transparent;
     padding: 32px;
     opacity: 0;
-    /*width: 60%;*/
     width: 948px;
     height: 533px;
-    /*height: 60%;*/
     z-index: 101;
     transform: translateY(-100%);
     transition: transform .5s ease, opacity .5s ease;
