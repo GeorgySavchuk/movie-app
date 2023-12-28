@@ -1,7 +1,7 @@
 .actorsCastSlider {
-    margin: 20px 80px;
+    padding: 20px 80px;
     position: relative;
-    height: 100%;
+    /*height: 100%;*/
     display: flex;
     align-items: flex-start;
     overflow-x: hidden;
@@ -10,10 +10,11 @@
     font-family: circeRegular, sans-serif;
 }
 .actorItem {
-    padding-top: 8px;
-    /*width: calc(11% - 15px);*/
-    width: 180px;
-    height: 180px;
+    /*padding-top: 8px;*/
+    padding: 20px 0;
+    width: calc(11% - 15px);
+    /*width: 180px;*/
+    /*height: 180px;*/
     position: relative;
     margin-right: 5px;
     cursor: pointer;
