@@ -1,10 +1,7 @@
 import {KinopoiskDev} from "@openmoviedb/kinopoiskdev_client";
 import {getCurrentYear} from "../utils/getCurrentYear";
 import {genres} from "../genres/genres";
-import axios from "axios";
-
-const X_API_TOKEN="AG8E0HT-4QR49GW-QGXA4B8-TEKWJ5R"
-const kp = new KinopoiskDev(X_API_TOKEN)
+const kp = new KinopoiskDev(process.env.REACT_APP_X_API_TOKEN)
 export const fetchNewMovies = async(type) => {
     const query = {
         selectFields: ['id', 'name', 'rating', 'poster', 'year', 'movieLength', 'type',
