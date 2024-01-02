@@ -240,14 +240,14 @@ const MoviePage = () => {
                                 <span
                                     className={classes.movieInfoItem}>{imageProps?.year ? imageProps.year : '2023'}</span>
                                 <span
-                                    className={classes.movieInfoItem}>{imageProps.genres.length !== 0 ? imageProps.genres[0].name.charAt(0).toUpperCase() + imageProps.genres[0].name.slice(1) : " "}</span>
+                                    className={classes.movieInfoItem}>{imageProps.genres ?? imageProps.genres.length !== 0 ? imageProps.genres[0].name.charAt(0).toUpperCase() + imageProps.genres[0].name.slice(1) : " "}</span>
                                 <span
                                     className={classes.movieInfoItem}>{imageProps.ageRating ? `${imageProps.ageRating}+` : "16+"}</span>
                                 <span
                                     className={classes.movieInfoItem}>{imageProps.countries.length !== 0 ? imageProps.countries[0].name.charAt(0).toUpperCase() + imageProps.countries[0].name.slice(1) : " "}</span>
                                 {imageProps.type === "tv-series"
                                     ? <span
-                                        className={classes.movieInfoItem}>{printCountOfSeasons(imageProps.seasonsInfo.length)}</span>
+                                        className={classes.movieInfoItem}>{imageProps.seasonsInfo && printCountOfSeasons(imageProps.seasonsInfo.length)}</span>
                                     : <span
                                         className={classes.movieInfoItem}>{minutesToHoursAndMinutes(imageProps.movieLength)}</span>
 

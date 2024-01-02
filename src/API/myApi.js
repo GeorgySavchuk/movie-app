@@ -2,19 +2,21 @@ import {KinopoiskDev} from "@openmoviedb/kinopoiskdev_client";
 import {getCurrentYear} from "../utils/getCurrentYear";
 import {genres} from "../genres/genres";
 const kp = new KinopoiskDev(process.env.REACT_APP_X_API_TOKEN)
-export const fetchNewMovies = async(type) => {
+export const fetchNewMovies = async(movieType,sortType, rating = "7-10",year = "2023-2024",page = 1) => {
     const query = {
-        selectFields: ['id', 'name', 'rating', 'poster', 'year', 'movieLength', 'type',
-            'backdrop', 'genres', 'shortDescription', 'countries', 'budget', 'fees', 'similarMovies', 'ageRating', 'videos', 'description', 'persons',
-            'seasonsInfo', 'slogan', 'premiere', 'logo', 'watchability', 'premiere'
-        ],
-        year: getCurrentYear(),
-        page: 1,
-        limit: 30,
-        type,
-        'rating.kp': '7-10',
-        'backdrop.url': '!null',
+        selectFields: ['id', 'name', 'rating', 'year', 'movieLength', 'poster', 'type',
+            'backdrop', 'genres', 'shortDescription', 'countries', 'budget', 'fees', 'similarMovies',
+            'ageRating', 'videos', 'description', 'persons','slogan', 'premiere', 'logo', 'watchability'],
+        type: movieType,
+        page,
+        year,
+        limit: 36,
         'poster.url': '!null',
+        'backdrop.url': '!null',
+        'name': '!null',
+        'rating.kp': rating,
+        'sortField': sortType === "По рейтингу" ? 'rating.kp' : sortType === "По году выпуска" ? 'year' : '',
+        'sortType': sortType === "По рейтингу" ? -1 : sortType === "По году выпуска" ? -1 : 0,
     }
     const {data} = await kp.movie.getByFilters(query)
     return data.docs

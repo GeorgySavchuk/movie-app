@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {fetchMovieById, fetchNewMovies} from "../../API/myApi";
+import {fetchFilms, fetchMovieById, fetchNewMovies} from "../../API/myApi";
 import "react-multi-carousel/lib/styles.css";
 import classes from './NewMovies.module.css'
 import {ClipLoader} from "react-spinners";
@@ -17,7 +17,7 @@ const NewMovies = ({type, currentPage}) => {
         return fetchedMovies
     }
     useEffect(() => {
-        fetchNewMovies(type)
+        fetchNewMovies(type,"Рекомендуемые")
             .then(data => {
                 setListOfMovies(data)
                 setIsLoading(false)
