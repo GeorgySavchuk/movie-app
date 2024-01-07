@@ -53,7 +53,7 @@ const Input = (props) => {
         }))
         if(currentProps.hasOwnProperty("isPropsFromMoviePage")) currentProps.setImageProps(JSON.parse(localStorage.getItem(`${props.name}`)))
         const encodedName = encodeURIComponent(props.name)
-        navigate(`/movie-app/movies/${encodedName}`);
+        navigate(`/movies/${encodedName}`);
         setInput('')
         closeModal()
     }

@@ -5,7 +5,7 @@ const Login = () => {
     let navigate = useNavigate()
     const confirmLogin = e => {
         e.preventDefault()
-        navigate('/movie-app')
+        navigate('/')
     }
     return (
         <div className={classes.box__container}>

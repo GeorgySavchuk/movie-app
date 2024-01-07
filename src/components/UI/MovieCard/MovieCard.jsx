@@ -25,7 +25,7 @@ const MovieCard = (props) => {
         localStorage.setItem(`${props.name}`, JSON.stringify(props))
         if(props.isPropsFromMoviePage) props.setImageProps(JSON.parse(localStorage.getItem(`${props.name}`)))
         const encodedName = encodeURIComponent(props.name)
-        navigate(`/movie-app/movies/${encodedName}`);
+        navigate(`/movies/${encodedName}`);
     };
     return (
         <div className="movie__card" style={{width: props.width, height: props.height}}>

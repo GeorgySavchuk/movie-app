@@ -7,11 +7,11 @@ import Login from "../components/Login/Login";
 import ActorPage from "../components/ActorPage/ActorPage";
 
 export const routes = [
-    {path: "/movie-app", element: <Home/>},
-    {path: "/movie-app/films", element: <Films/>},
-    {path: "/movie-app/serials", element: <Serials/>},
-    {path: "/movie-app/favourites", element: <Favourites/>},
-    {path: "/movie-app/movies/:name", element: <MoviePage/>},
-    {path: "/movie-app/login", element: <Login/>},
-    {path: "/movie-app/:actorName", element: <ActorPage/>}
+    {path: "/", element: <Home/>},
+    {path: "/films", element: <Films/>},
+    {path: "/serials", element: <Serials/>},
+    {path: "/favourites", element: <Favourites/>},
+    {path: "/movies/:name", element: <MoviePage/>},
+    {path: "/login", element: <Login/>},
+    {path: "/:actorName", element: <ActorPage/>}
 ]

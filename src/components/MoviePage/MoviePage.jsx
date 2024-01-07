@@ -17,7 +17,7 @@ import ActorsCast from "../ActorsCast/ActorsCast";
 const MoviePage = () => {
     const navigate = useNavigate()
     const params = useParams();
-    const [imageProps, setImageProps] = useState(JSON.parse(localStorage.getItem(`${decodeURIComponent(window.location.pathname).split('/').slice(3).join('/')}`)))
+    const [imageProps, setImageProps] = useState(JSON.parse(localStorage.getItem(`${decodeURIComponent(window.location.pathname).split('/').slice(2).join('/')}`)))
     const {setCurrentProps} = useImageProps()
     const {isFavourite, toggleFavourite} = useFavourites();
     const [similarMovies, setSimilarMovies] = useState([])
@@ -46,7 +46,7 @@ const MoviePage = () => {
     }, [])
     useEffect(() => setDelta(0))
     useEffect(() => {
-     setImageProps(JSON.parse(localStorage.getItem(`${decodeURIComponent(window.location.pathname).split('/').slice(3).join('/')}`)))
+     setImageProps(JSON.parse(localStorage.getItem(`${decodeURIComponent(window.location.pathname).split('/').slice(2).join('/')}`)))
     },[params.name]);
     useEffect(() => {
         setIsLoading(true)
@@ -181,7 +181,7 @@ const MoviePage = () => {
                             />
                         </div>
                         <div className={classes.exitBtns}>
-                            <div className={classes.exitArrow} onClick={() => navigate("/movie-app")}>
+                            <div className={classes.exitArrow} onClick={() => navigate("/")}>
                                 <p style={{color: '#49c5b6'}}>Главная</p>
                                 <svg className={classes.arrowIcon} xmlns="http://www.w3.org/2000/svg"
                                      viewBox="0 0 24 24" width="32" height="32" onClick={() => window.history.back()}>
@@ -191,7 +191,7 @@ const MoviePage = () => {
                                 </svg>
                             </div>
                             <div className={classes.exitArrow}
-                                 onClick={() => imageProps.type === 'movie' ? navigate("/movie-app/films") : navigate("/movie-app/serials")}>
+                                 onClick={() => imageProps.type === 'movie' ? navigate("/films") : navigate("/serials")}>
                                 {imageProps.type === 'movie'
                                     ? <>
                                         <p style={{color: '#49c5b6'}}>Фильмы</p>

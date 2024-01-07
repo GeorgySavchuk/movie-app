@@ -10,7 +10,7 @@ const ActorsCast = ({actors}) => {
         const actorInfo = await fetchActorById(actor.id)
         localStorage.setItem(`${actor.name}`, JSON.stringify(actorInfo))
         const encodedName = encodeURIComponent(actor.name)
-        navigate(`/movie-app/${encodedName}`);
+        navigate(`/${encodedName}`);
     }
     return (
         <div style={{position: "relative", width: "100%", height: '100%'}}>
