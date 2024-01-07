@@ -2,7 +2,6 @@ import {KinopoiskDev} from "@openmoviedb/kinopoiskdev_client";
 import {getCurrentYear} from "../utils/getCurrentYear";
 import {genres} from "../genres/genres";
 const kp = new KinopoiskDev(process.env.REACT_APP_X_API_TOKEN)
-console.log(process.env.REACT_APP_X_API_TOKEN)
 export const fetchNewMovies = async(movieType,sortType, rating = "7-10",year = "2023-2024",page = 1) => {
     const query = {
         selectFields: ['id', 'name', 'rating', 'year', 'movieLength', 'poster', 'type',
