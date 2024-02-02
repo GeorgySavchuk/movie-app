@@ -13,7 +13,7 @@ const SearchMovieList = ({searchedMovies, input, handleSubmit, isModal}) => {
                         <span style={{color: '#ffffff', fontSize: '20px'}}>Ничего не найдено</span>
                     </div>
                     : searchedMovies.map(movie =>
-                        movie.poster.previewUrl != null && <SearchItem searchedMovie={movie} handleSubmit={handleSubmit} key={`${movie.name}:${movie.id}:${movie.year}`} isModal={isModal}/>)
+                        movie.poster?.previewUrl && <SearchItem searchedMovie={movie} handleSubmit={handleSubmit} key={`${movie.name}:${movie.id}:${movie.year}`} isModal={isModal}/>)
             }
         </div>
     );
