@@ -6,6 +6,7 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
 import { setAuth } from '../../store/slices/authSlice';
 import { PulseLoader } from 'react-spinners';
+import {auth} from "../../firebase/FirebaseInit";
 const Login = () => {
     const [isLoading, setIsLoading] = useState(false)
     const {
@@ -15,7 +16,6 @@ const Login = () => {
         control } = useForm();
     let navigate = useNavigate()
     const dispatch = useDispatch()
-    const auth = getAuth()
     const confirmLogin = async (data) => {
         try{
             setIsLoading(true)

@@ -3,9 +3,9 @@ import classes from './UserAccount.module.css'
 import {useNavigate} from "react-router-dom";
 import {getAuth, signOut} from "firebase/auth";
 import {useSelector} from "react-redux";
+import {auth} from "../../firebase/FirebaseInit";
 const UserAccount = () => {
     const navigate = useNavigate()
-    const auth = getAuth()
     const {user} = useSelector(state => state.authReducer)
     const confirmLogOut = async() => {
         await signOut(auth)

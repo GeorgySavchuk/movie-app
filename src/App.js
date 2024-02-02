@@ -7,8 +7,8 @@ import AppRouter from "./components/AppRouter/AppRouter";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import {useDispatch, useSelector} from "react-redux";
 import { setAuth } from '../src/store/slices/authSlice';
+import {auth} from "./firebase/FirebaseInit";
 function App() {
-    const auth = getAuth()
     const dispatch = useDispatch()
     useEffect(() => {
         onAuthStateChanged(auth, user => {

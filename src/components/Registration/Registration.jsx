@@ -11,6 +11,7 @@ import {useDispatch} from "react-redux";
 import {setAuth} from "../../store/slices/authSlice";
 import {PulseLoader} from "react-spinners";
 import {Controller, useForm} from "react-hook-form";
+import {auth} from "../../firebase/FirebaseInit";
 
 const Registration = () => {
     const [isLoading, setIsLoading] = useState(false)
@@ -20,7 +21,6 @@ const Registration = () => {
         setError,
         control } = useForm();
     let navigate = useNavigate()
-    const auth = getAuth()
     const dispatch = useDispatch()
     const provider = new GoogleAuthProvider();
     const confirmRegistration = async (data) => {
