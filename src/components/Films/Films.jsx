@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {
-    fetchFilms, fetchFilmsByFilters
-} from "../../API/myApi";
+    getFilms
+} from "../../API/mirkinoService";
 import classes from "./Films.module.css"
 import MovieCard from "../UI/MovieCard/MovieCard";
-import {ClipLoader, PulseLoader} from "react-spinners";
+import {PulseLoader} from "react-spinners";
 import Filters from "../UI/Filters/Filters";
 import {Oval} from "react-loader-spinner";
 
@@ -13,7 +13,7 @@ const Films = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [currentPage, setCurrentPage] = useState(0)
     const [currentHeader, setCurrentHeader] = useState('Фильмы')
-    const [currentYear, setCurrentYear] = useState('1860-2024')
+    const [currentYear, setCurrentYear] = useState('1874-2024')
     const [currentGenre, setCurrentGenre] = useState("Все")
     const [currentRating, setCurrentRating] = useState("1-10")
     const [sortType, setSortType] = useState("Рекомендуемые")
@@ -25,108 +25,33 @@ const Films = () => {
         window.scroll(0, 0)
     }, [])
     useEffect(() => {
-        if (isMobile) {
-            if (isMobileFiltersConfirmed) {
-                setIsLoading(true)
-                if (currentGenre === "Все") {
-                    fetchFilms(sortType, currentRating, currentYear, currentPage + 1)
-                        .then(data => {
-                            if (currentPage === 0) setListOfFilms([...data])
-                            else setListOfFilms([...listOfFilms, ...data])
-                            setIsLoading(false)
-                        })
-                        .catch(err => {
-                            console.log(err.message)
-                            setIsLoading(false)
-                        })
-                        .finally(() => {
-                            setIsMobileFiltersConfirmed(false)
-                        })
-                } else {
-                    fetchFilmsByFilters(sortType, currentGenre, currentRating, currentYear, currentPage + 1)
-                        .then(data => {
-                            if (currentPage === 0) setListOfFilms([...data])
-                            else setListOfFilms([...listOfFilms, ...data])
-                            setIsLoading(false)
-                        })
-                        .catch(err => {
-                            console.log(err.message)
-                            setIsLoading(false)
-                        })
-                        .finally(() => {
-                            setIsMobileFiltersConfirmed(false)
-                        })
-                }
-            } else if(isMobileLoad) {
-                setIsLoading(true)
-                if (currentGenre === "Все") {
-                    fetchFilms(sortType, currentRating, currentYear, currentPage + 1)
-                        .then(data => {
-                            if (currentPage === 0) setListOfFilms([...data])
-                            else setListOfFilms([...listOfFilms, ...data])
-                            setIsLoading(false)
-                        })
-                        .catch(err => {
-                            console.log(err.message)
-                            setIsLoading(false)
-                        })
-                        .finally(() => {
-                            setIsMobileFiltersConfirmed(false)
-                            setIsMobileLoad(false)
-                        })
-                } else {
-                    fetchFilmsByFilters(sortType, currentGenre, currentRating, currentYear, currentPage + 1)
-                        .then(data => {
-                            if (currentPage === 0) setListOfFilms([...data])
-                            else setListOfFilms([...listOfFilms, ...data])
-                            setIsLoading(false)
-                        })
-                        .catch(err => {
-                            console.log(err.message)
-                            setIsLoading(false)
-                        })
-                        .finally(() => {
-                            setIsMobileFiltersConfirmed(false)
-                            setIsMobileLoad(false)
-                        })
-                }
-            }
-        } else {
+        let isNeedToFetch = isMobile && (isMobileFiltersConfirmed || isMobileLoad) || !isMobile
+        if(isNeedToFetch) {
             setIsLoading(true)
-            if (currentGenre === "Все") {
-                fetchFilms(sortType, currentRating, currentYear, currentPage + 1)
-                    .then(data => {
-                        if (currentPage === 0) setListOfFilms([...data])
-                        else setListOfFilms([...listOfFilms, ...data])
-                        setIsLoading(false)
-                    })
-                    .catch(err => {
-                        console.log(err.message)
-                        setIsLoading(false)
-                    })
-            } else {
-                fetchFilmsByFilters(sortType, currentGenre, currentRating, currentYear, currentPage + 1)
-                    .then(data => {
-                        if (currentPage === 0) setListOfFilms([...data])
-                        else setListOfFilms([...listOfFilms, ...data])
-                        setIsLoading(false)
-                    })
-                    .catch(err => {
-                        console.log(err.message)
-                        setIsLoading(false)
-                    })
-            }
+            getFilms(sortType, currentGenre, currentRating, currentYear, currentPage + 1)
+                .then(data => {
+                    if (currentPage === 0) setListOfFilms([...data])
+                    else setListOfFilms([...listOfFilms, ...data])
+                })
+                .catch(err => {
+                    console.log(err.message)
+                })
+                .finally(() => {
+                    setIsLoading(false)
+                    if(isMobileFiltersConfirmed) setIsMobileFiltersConfirmed(false)
+                    if(isMobileLoad) setIsMobileLoad(false)
+                })
         }
     }, [currentPage, currentYear, currentRating, sortType, currentGenre, isMobile, isMobileFiltersConfirmed]);
     const appendGenreToHeader = (genre) => {
         if (genre === "Все") {
-            if (currentYear === "1860-2024") {
+            if (currentYear === "1874-2024") {
                 setCurrentHeader("Фильмы")
             } else {
                 setCurrentHeader(`Фильмы: ${currentYear}`)
             }
         } else {
-            if (currentYear === "1860-2024") {
+            if (currentYear === "1874-2024") {
                 setCurrentHeader(`Фильмы: ${genre}`)
             } else {
                 setCurrentHeader(`Фильмы: ${genre}, ${currentYear}`)
@@ -197,7 +122,7 @@ const Films = () => {
                                                    ageRating={film.ageRating} videos={film.videos}
                                                    description={film.description} persons={film.persons}
                                                    slogan={film.slogan} premiere={film.premiere} logo={film.logo}
-                                                   isPropsFromMoviePage={false} player={film.watchability}
+                                                   isPropsFromMoviePage={false}
                                         />
                                     )}
                                 </div>

@@ -1,32 +1,21 @@
 import React, {useEffect, useState} from 'react';
-import {fetchFilms, fetchMovieById, fetchNewMovies} from "../../API/myApi";
+import {getNewMovies} from "../../API/mirkinoService";
 import "react-multi-carousel/lib/styles.css";
 import classes from './NewMovies.module.css'
-import {ClipLoader} from "react-spinners";
 import MovieSlider from "../UI/MovieSlider/MovieSlider";
 import {Oval, TailSpin} from "react-loader-spinner";
-const NewMovies = ({type, currentPage}) => {
+const NewMovies = ({type}) => {
     let [listOfMovies, setListOfMovies] = useState([])
     let [isLoading, setIsLoading] = useState(true)
-    const fetchNewMoviesById = async newMovies => {
-        let fetchedMovies = []
-        for(let i = 0; i < newMovies.length; ++i) {
-            const fetchedMovie = await fetchMovieById(newMovies[i].id)
-            fetchedMovies.push(fetchedMovie)
-        }
-        return fetchedMovies
-    }
     useEffect(() => {
-        fetchNewMovies(type,"Рекомендуемые")
+        getNewMovies(type,"Рекомендуемые")
             .then(data => {
                 setListOfMovies(data)
-                setIsLoading(false)
             })
             .catch(err => {
                 console.log(err.message)
-                setIsLoading(false)
             })
-
+            .finally(() => setIsLoading(false))
     }, [])
     return (
         <div className={classes.newMovies}>

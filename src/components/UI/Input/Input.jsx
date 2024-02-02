@@ -2,10 +2,9 @@ import React, {useEffect, useState} from 'react';
 import classes from './Input.module.css'
 import {FaSearch} from "react-icons/fa";
 import {useDebounce} from "../../../hooks/useDebounce";
-import {fetchMovieByName} from "../../../API/myApi";
+import {getMovieByName} from "../../../API/mirkinoService";
 import SearchMovieList from "../../SearchMoviesList/SearchMovieList";
 import {useNavigate} from "react-router-dom";
-import {ClipLoader} from "react-spinners";
 import {useImageProps} from "../../../Context/useImageProps";
 import {Oval} from "react-loader-spinner";
 const Input = (props) => {
@@ -23,15 +22,14 @@ const Input = (props) => {
     useEffect(() => {
         setIsLoading(true)
         if(debouncedSearch !== '') {
-            fetchMovieByName(debouncedSearch)
+            getMovieByName(debouncedSearch)
                 .then(data => {
                     setSearchedMovies([...data])
-                    setIsLoading(false)
                 })
                 .catch(err => {
                     console.log(err.message)
-                    setIsLoading(false)
                 })
+                .finally(() => setIsLoading(false))
         }
     }, [debouncedSearch])
     const handleInput = (e) => {
@@ -74,7 +72,7 @@ const Input = (props) => {
             </div>
             <div className={classes.searchList} style={{visibility: isVisible, background: props.isModal && 'transparent', height: props.isModal && `${window.screen.height - 235}px`}}>
                 {
-                    isLoading
+                    isLoading || debouncedSearch === '' || input !== debouncedSearch
                         ? <div style={{alignSelf: 'center', margin: '0 auto'}}>
                             <Oval
                                 height={55}

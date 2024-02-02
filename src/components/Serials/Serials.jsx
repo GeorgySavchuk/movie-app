@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {fetchSerials, fetchSerialsByFilters} from "../../API/myApi";
+import {getSerials} from "../../API/mirkinoService";
 import classes from "./Serials.module.css"
 import MovieCard from "../UI/MovieCard/MovieCard";
-import {ClipLoader, PulseLoader} from "react-spinners";
+import {PulseLoader} from "react-spinners";
 import Filters from "../UI/Filters/Filters";
 import {Oval} from "react-loader-spinner";
 const Serials = () => {
@@ -10,7 +10,7 @@ const Serials = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(0);
     const [currentHeader, setCurrentHeader] = useState("Сериалы")
-    const [currentYear, setCurrentYear] = useState("1860-2024")
+    const [currentYear, setCurrentYear] = useState("1874-2024")
     const [currentGenre, setCurrentGenre] = useState("Все")
     const [currentRating, setCurrentRating] = useState("1-10")
     const [sortType, setSortType] = useState("Рекомендуемые")
@@ -22,106 +22,33 @@ const Serials = () => {
         window.scroll(0, 0)
     }, [])
     useEffect(() => {
-        if (isMobile) {
-            if (isMobileFiltersConfirmed) {
-                setIsLoading(true)
-                if(currentGenre === "Все") {
-                    fetchSerials(sortType, currentRating, currentYear,currentPage + 1)
-                        .then(data => {
-                            if(currentPage === 0) setListOfSerials([...data])
-                            else setListOfSerials([...listOfSerials, ...data])
-                            setIsLoading(false)
-                        })
-                        .catch(err => {
-                            console.log(err.message)
-                            setIsLoading(false)
-                        })
-                        .finally(() => {
-                            setIsMobileFiltersConfirmed(false)
-                        })
-                } else {
-                    fetchSerialsByFilters(sortType, currentGenre, currentRating, currentYear,currentPage + 1)
-                        .then(data => {
-                            if(currentPage === 0) setListOfSerials([...data])
-                            else setListOfSerials([...listOfSerials, ...data])
-                            setIsLoading(false)
-                        })
-                        .catch(err => {
-                            console.log(err.message)
-                            setIsLoading(false)
-                        })
-                        .finally(() => {
-                            setIsMobileFiltersConfirmed(false)
-                        })
-                }
-            } else if(isMobileLoad) {
-                setIsLoading(true)
-                if(currentGenre === "Все") {
-                    fetchSerials(sortType, currentRating, currentYear,currentPage + 1)
-                        .then(data => {
-                            if(currentPage === 0) setListOfSerials([...data])
-                            else setListOfSerials([...listOfSerials, ...data])
-                            setIsLoading(false)
-                        })
-                        .catch(err => {
-                            console.log(err.message)
-                            setIsLoading(false)
-                        })
-                        .finally(() => {
-                            setIsMobileFiltersConfirmed(false)
-                        })
-                } else {
-                    fetchSerialsByFilters(sortType, currentGenre, currentRating, currentYear,currentPage + 1)
-                        .then(data => {
-                            if(currentPage === 0) setListOfSerials([...data])
-                            else setListOfSerials([...listOfSerials, ...data])
-                            setIsLoading(false)
-                        })
-                        .catch(err => {
-                            console.log(err.message)
-                            setIsLoading(false)
-                        })
-                        .finally(() => {
-                            setIsMobileFiltersConfirmed(false)
-                        })
-                }
-            }
-        } else {
+        let isNeedToFetch = isMobile && (isMobileFiltersConfirmed || isMobileLoad) || !isMobile
+        if(isNeedToFetch) {
             setIsLoading(true)
-            if(currentGenre === "Все") {
-                fetchSerials(sortType, currentRating, currentYear,currentPage + 1)
-                    .then(data => {
-                        if(currentPage === 0) setListOfSerials([...data])
-                        else setListOfSerials([...listOfSerials, ...data])
-                        setIsLoading(false)
-                    })
-                    .catch(err => {
-                        console.log(err.message)
-                        setIsLoading(false)
-                    })
-            } else {
-                fetchSerialsByFilters(sortType, currentGenre, currentRating, currentYear,currentPage + 1)
-                    .then(data => {
-                        if(currentPage === 0) setListOfSerials([...data])
-                        else setListOfSerials([...listOfSerials, ...data])
-                        setIsLoading(false)
-                    })
-                    .catch(err => {
-                        console.log(err.message)
-                        setIsLoading(false)
-                    })
-            }
+            getSerials(sortType, currentGenre, currentRating, currentYear, currentPage + 1)
+                .then(data => {
+                    if (currentPage === 0) setListOfSerials([...data])
+                    else setListOfSerials([...listOfSerials, ...data])
+                })
+                .catch(err => {
+                    console.log(err.message)
+                })
+                .finally(() => {
+                    setIsLoading(false)
+                    if(isMobileFiltersConfirmed) setIsMobileFiltersConfirmed(false)
+                    if(isMobileLoad) setIsMobileLoad(false)
+                })
         }
     }, [currentPage, currentYear, currentRating, sortType, currentGenre, isMobile, isMobileFiltersConfirmed]);
     const appendGenreToHeader = (genre) => {
         if(genre === "Все") {
-            if(currentYear === "1860-2024") {
+            if(currentYear === "1874-2024") {
                 setCurrentHeader("Сериалы")
             } else {
                 setCurrentHeader(`Сериалы: ${currentYear}`)
             }
         } else {
-            if(currentYear === "1860-2024") {
+            if(currentYear === "1874-2024") {
                 setCurrentHeader(`Сериалы: ${genre}`)
             } else {
                 setCurrentHeader(`Сериалы: ${genre}, ${currentYear}`)

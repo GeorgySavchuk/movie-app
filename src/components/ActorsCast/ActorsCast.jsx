@@ -1,13 +1,12 @@
 import React, {useRef, useState} from 'react';
 import classes from './ActorsCast.module.css';
-import {FaChevronLeft, FaChevronRight} from "react-icons/fa";
 import {useNavigate} from "react-router-dom";
-import {fetchActorById} from "../../API/myApi";
+import {getActorById} from "../../API/mirkinoService";
 const ActorsCast = ({actors}) => {
     const navigate = useNavigate()
     const handleImageClick = async (actor) => {
         window.scroll(0, 0)
-        const actorInfo = await fetchActorById(actor.id)
+        const actorInfo = await getActorById(actor.id)
         localStorage.setItem(`${actor.name}`, JSON.stringify(actorInfo))
         const encodedName = encodeURIComponent(actor.name)
         navigate(`/${encodedName}`);

@@ -16,11 +16,11 @@ const HeroSlide = ({openModal, handleMovieClick}) => {
                 spaceBetween={0}
                 slidesPerView={1}
                 navigation={true}
-                autoplay={{delay: 3000}}
+                autoplay={{delay: 7000}}
                 speed={2000}
                 style={{
                     width: '100vw',
-                    height: '700px',
+                    height: '750px',
                     zIndex: 0,
                 }}
             >

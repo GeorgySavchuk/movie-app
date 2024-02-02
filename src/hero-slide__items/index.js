@@ -1,235 +1,745 @@
 export const heroSlideItems = [
     {
-        "id": 5000997,
+        "id": 4664634,
         "countries": [
             {
                 "name": "США"
+            },
+            {
+                "name": "Великобритания"
             }
         ],
+        "description": "История жизни американского физика Роберта Оппенгеймера, который стоял во главе первых разработок ядерного оружия.",
         "genres": [
+            {
+                "name": "биография"
+            },
             {
                 "name": "драма"
             },
             {
-                "name": "биография"
+                "name": "история"
             }
         ],
+        "movieLength": 180,
+        "name": "Оппенгеймер",
         "persons": [
+            {
+                "id": 5005,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_5005.jpg",
+                "name": "Киллиан Мерфи",
+                "enName": "Cillian Murphy",
+                "description": "J. Robert Oppenheimer",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 227068,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_227068.jpg",
+                "name": "Эмили Блант",
+                "enName": "Emily Blunt",
+                "description": "Kitty Oppenheimer",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
             {
                 "id": 6458,
                 "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6458.jpg",
                 "name": "Мэтт Дэймон",
                 "enName": "Matt Damon",
-                "description": "Sonny Vaccaro",
+                "description": "Leslie Groves",
                 "profession": "актеры",
                 "enProfession": "actor"
             },
             {
-                "id": 1858,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1858.jpg",
-                "name": "Джейсон Бейтман",
-                "enName": "Jason Bateman",
-                "description": "Rob Strasser",
+                "id": 10096,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_10096.jpg",
+                "name": "Роберт Дауни мл.",
+                "enName": "Robert Downey Jr.",
+                "description": "Lewis Strauss",
                 "profession": "актеры",
                 "enProfession": "actor"
             },
             {
-                "id": 10620,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_10620.jpg",
-                "name": "Бен Аффлек",
-                "enName": "Ben Affleck",
-                "description": "Phil Knight",
+                "id": 3435612,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_3435612.jpg",
+                "name": "Флоренс Пью",
+                "enName": "Florence Pugh",
+                "description": "Jean Tatlock",
                 "profession": "актеры",
                 "enProfession": "actor"
             },
             {
-                "id": 12802,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_12802.jpg",
-                "name": "Крис Мессина",
-                "enName": "Chris Messina",
-                "description": "David Falk",
+                "id": 206,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_206.jpg",
+                "name": "Джош Хартнетт",
+                "enName": "Josh Hartnett",
+                "description": "Ernest Lawrence",
                 "profession": "актеры",
                 "enProfession": "actor"
             },
             {
-                "id": 37058,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_37058.jpg",
-                "name": "Виола Дэвис",
-                "enName": "Viola Davis",
-                "description": "Deloris Jordan",
+                "id": 4,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4.jpg",
+                "name": "Кейси Аффлек",
+                "enName": "Casey Affleck",
+                "description": "Boris Pash",
                 "profession": "актеры",
                 "enProfession": "actor"
             },
             {
-                "id": 63902,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_63902.jpg",
-                "name": "Джулиус Теннон",
-                "enName": "Julius Tennon",
-                "description": "James Jordan",
+                "id": 1089891,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1089891.jpg",
+                "name": "Рами Малек",
+                "enName": "Rami Malek",
+                "description": "David Hill",
                 "profession": "актеры",
                 "enProfession": "actor"
             },
             {
-                "id": 7029365,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_7029365.jpg",
-                "name": "Дэмиэн Делано Янг",
-                "enName": "Damian Delano Young",
-                "description": "Michael Jordan (в титрах: Damian Young)",
+                "id": 8886,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_8886.jpg",
+                "name": "Кеннет Брана",
+                "enName": "Kenneth Branagh",
+                "description": "Niels Bohr",
                 "profession": "актеры",
                 "enProfession": "actor"
             },
             {
-                "id": 6742,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6742.jpg",
-                "name": "Крис Такер",
-                "enName": "Chris Tucker",
-                "description": "Howard White",
+                "id": 702326,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_702326.jpg",
+                "name": "Бенни Сэфди",
+                "enName": "Benny Safdie",
+                "description": "Edward Teller",
                 "profession": "актеры",
                 "enProfession": "actor"
             },
             {
-                "id": 15648,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_15648.jpg",
-                "name": "Мэттью Мехер",
-                "enName": "Matthew Maher",
-                "description": "Peter Moore",
-                "profession": "актеры",
-                "enProfession": "actor"
+                "id": 1795101,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1795101.jpg",
+                "name": "Людвиг Горанссон",
+                "enName": "Ludwig Göransson",
+                "description": null,
+                "profession": "композиторы",
+                "enProfession": "composer"
             },
             {
-                "id": 271392,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_271392.jpg",
-                "name": "Густаф Скарсгард",
-                "enName": "Gustaf Skarsgård",
-                "description": "Horst Dassler",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 1986458,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1986458.jpg",
-                "name": "А. Тодд Холлэнд",
-                "enName": "A. Todd Holland",
+                "id": 4277712,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4277712.jpg",
+                "name": "Саманта Инглендер",
+                "enName": "Samantha Englender",
                 "description": null,
                 "profession": "художники",
                 "enProfession": "designer"
             },
             {
-                "id": 2041414,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2041414.jpg",
-                "name": "Гари Макмоннис",
-                "enName": "Gary McMonnies",
+                "id": 2003395,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2003395.jpg",
+                "name": "Энтони Д. Парилло",
+                "enName": "Anthony D. Parrillo",
                 "description": null,
                 "profession": "художники",
                 "enProfession": "designer"
             },
             {
-                "id": 2274819,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2274819.jpg",
-                "name": "Джейсон Перрин",
-                "enName": "Jason Perrine",
+                "id": 157166,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_157166.jpg",
+                "name": "Эллен Мирожник",
+                "enName": "Ellen Mirojnick",
                 "description": null,
                 "profession": "художники",
                 "enProfession": "designer"
             },
             {
-                "id": 3748186,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_3748186.jpg",
-                "name": "Катрина Сайнц",
-                "enName": "Katrina Sainz",
+                "id": 1987873,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1987873.jpg",
+                "name": "Клер Кауфман",
+                "enName": "Claire Kaufman",
                 "description": null,
                 "profession": "художники",
                 "enProfession": "designer"
             },
             {
-                "id": 3007286,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_3007286.jpg",
-                "name": "Чарлиз Антониетта Джонс",
-                "enName": "Charlese Antoinette Jones",
+                "id": 2582148,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2582148.jpg",
+                "name": "Оливия Пиблз",
+                "enName": "Olivia Peebles",
                 "description": null,
                 "profession": "художники",
                 "enProfession": "designer"
             },
             {
-                "id": 1986690,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1986690.jpg",
-                "name": "Дэвид Смит",
-                "enName": "David Smith",
+                "id": 2017722,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2017722.jpg",
+                "name": "Адам Уиллис",
+                "enName": "Adam Willis",
                 "description": null,
                 "profession": "художники",
                 "enProfession": "designer"
             },
             {
-                "id": 6827105,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6827105.jpg",
-                "name": "Генри Сомарриба",
-                "enName": "Henry Somarriba",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 10620,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_10620.jpg",
-                "name": "Бен Аффлек",
-                "enName": "Ben Affleck",
+                "id": 41477,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_41477.jpg",
+                "name": "Кристофер Нолан",
+                "enName": "Christopher Nolan",
                 "description": null,
                 "profession": "режиссеры",
                 "enProfession": "director"
             },
             {
-                "id": 1529422,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1529422.jpg",
-                "name": "Уильям Голденберг",
-                "enName": "William Goldenberg",
+                "id": 2449829,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2449829.jpg",
+                "name": "Дженнифер Лэйм",
+                "enName": "Jennifer Lame",
                 "description": null,
                 "profession": "монтажеры",
                 "enProfession": "editor"
             },
             {
-                "id": 74952,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_74952.jpg",
-                "name": "Роберт Ричардсон",
-                "enName": "Robert Richardson",
+                "id": 758887,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_758887.jpg",
+                "name": "Хойте Ван Хойтема",
+                "enName": "Hoyte Van Hoytema",
                 "description": null,
                 "profession": "операторы",
                 "enProfession": "operator"
             },
             {
-                "id": 10620,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_10620.jpg",
-                "name": "Бен Аффлек",
-                "enName": "Ben Affleck",
+                "id": 41477,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_41477.jpg",
+                "name": "Кристофер Нолан",
+                "enName": "Christopher Nolan",
                 "description": null,
                 "profession": "продюсеры",
                 "enProfession": "producer"
             },
             {
-                "id": 966805,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_966805.jpg",
-                "name": "Мэдисон Эйнли",
-                "enName": "Madison Ainley",
+                "id": 21110,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_21110.jpg",
+                "name": "Чарльз Ровен",
+                "enName": "Charles Roven",
                 "description": null,
                 "profession": "продюсеры",
                 "enProfession": "producer"
             },
             {
-                "id": 2324386,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2324386.jpg",
-                "name": "Джейсон Майкл Берман",
-                "enName": "Jason Michael Berman",
+                "id": 41489,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_41489.jpg",
+                "name": "Эмма Томас",
+                "enName": "Emma Thomas",
                 "description": null,
                 "profession": "продюсеры",
                 "enProfession": "producer"
             },
             {
-                "id": 6866293,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6866293.jpg",
-                "name": "Алекс Конвери",
-                "enName": "Alex Convery",
+                "id": 51141,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_51141.jpg",
+                "name": "Томас Хэйслип",
+                "enName": "Thomas Hayslip",
                 "description": null,
                 "profession": "продюсеры",
                 "enProfession": "producer"
+            },
+            {
+                "id": 6039981,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6039981.jpg",
+                "name": "Станислав Шапкин",
+                "enName": null,
+                "description": null,
+                "profession": "актеры дубляжа",
+                "enProfession": "voice_actor"
+            },
+            {
+                "id": 6326775,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6326775.jpg",
+                "name": "Катя Хейфец",
+                "enName": null,
+                "description": null,
+                "profession": "актеры дубляжа",
+                "enProfession": "voice_actor"
+            },
+            {
+                "id": 6867588,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6867588.jpg",
+                "name": "Григорий Лайков",
+                "enName": null,
+                "description": null,
+                "profession": "актеры дубляжа",
+                "enProfession": "voice_actor"
+            },
+            {
+                "id": 6867596,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6867596.jpg",
+                "name": "Георгий Вардиашвили",
+                "enName": null,
+                "description": null,
+                "profession": "актеры дубляжа",
+                "enProfession": "voice_actor"
+            },
+            {
+                "id": 6867726,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6867726.jpg",
+                "name": "София Габелия",
+                "enName": null,
+                "description": null,
+                "profession": "актеры дубляжа",
+                "enProfession": "voice_actor"
+            },
+            {
+                "id": 41477,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_41477.jpg",
+                "name": "Кристофер Нолан",
+                "enName": "Christopher Nolan",
+                "description": null,
+                "profession": "редакторы",
+                "enProfession": "writer"
+            },
+            {
+                "id": 5220147,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_5220147.jpg",
+                "name": "Кай Бёрд",
+                "enName": "Kai Bird",
+                "description": null,
+                "profession": "редакторы",
+                "enProfession": "writer"
+            },
+            {
+                "id": 6579708,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6579708.jpg",
+                "name": "Мартин Шервин",
+                "enName": "Martin Sherwin",
+                "description": null,
+                "profession": "редакторы",
+                "enProfession": "writer"
+            }
+        ],
+        "poster": {
+            "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/4486454/c5292109-642c-4ab0-894a-cc304e1bcec4/orig",
+            "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4486454/c5292109-642c-4ab0-894a-cc304e1bcec4/x1000"
+        },
+        "rating": {
+            "kp": 8.484,
+            "imdb": 8.5,
+            "filmCritics": 0,
+            "russianFilmCritics": 0,
+            "await": null
+        },
+        "seasonsInfo": [],
+        "shortDescription": null,
+        "similarMovies": [
+            {
+                "id": 635772,
+                "name": "Игра в имитацию",
+                "enName": null,
+                "alternativeName": "The Imitation Game",
+                "type": "movie",
+                "poster": {
+                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/49359d7b-8aa8-408f-bf07-407d49f439a0/orig",
+                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/49359d7b-8aa8-408f-bf07-407d49f439a0/x1000"
+                }
+            },
+            {
+                "id": 530,
+                "name": "Игры разума",
+                "enName": null,
+                "alternativeName": "A Beautiful Mind",
+                "type": "movie",
+                "poster": {
+                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/80f21137-eebb-4cdc-8124-96c68c07c2a8/orig",
+                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/80f21137-eebb-4cdc-8124-96c68c07c2a8/x1000"
+                }
+            },
+            {
+                "id": 478052,
+                "name": "Барби",
+                "enName": null,
+                "alternativeName": "Barbie",
+                "type": "movie",
+                "poster": {
+                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/f0ae94af-050a-433b-a2a9-d6c96d644fd8/orig",
+                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/f0ae94af-050a-433b-a2a9-d6c96d644fd8/x1000"
+                }
+            }
+        ],
+        "type": "movie",
+        "videos": {
+            "trailers": [
+                {
+                    "url": "https://www.youtube.com/embed/mDu95JPujwU",
+                    "name": "трейлер американского байопика ОППЕНГЕЙМЕР от Кристофера Нолана, в кино с 27 июля",
+                    "site": "youtube",
+                    "type": "TRAILER"
+                },
+                {
+                    "url": "https://www.youtube.com/embed/mDu95JPujwU",
+                    "name": "трейлер американского байопика ОППЕНГЕЙМЕР от Кристофера Нолана, в кино с 27 июля",
+                    "site": "youtube",
+                    "type": "TRAILER"
+                },
+                {
+                    "url": "https://www.youtube.com/embed/uYPbbksJxIg",
+                    "name": "New Trailer",
+                    "site": "youtube",
+                    "type": "TRAILER"
+                },
+                {
+                    "url": "https://www.youtube.com/embed/bK6ldnjE3Y0",
+                    "name": "Official Trailer",
+                    "site": "youtube",
+                    "type": "TRAILER"
+                }
+            ],
+            "teasers": []
+        },
+        "year": 2023,
+        "budget": {
+            "value": 100000000,
+            "currency": "$"
+        },
+        "fees": {
+            "world": {
+                "value": 945403395,
+                "currency": "$"
+            },
+            "usa": {
+                "value": 324102395,
+                "currency": "$"
+            }
+        },
+        "ageRating": null,
+        "backdrop": {
+            "url": "https://imagetmdb.com/t/p/original/rLb2cwF3Pazuxaj0sRXQ037tGI1.jpg",
+            "previewUrl": "https://imagetmdb.com/t/p/w500/rLb2cwF3Pazuxaj0sRXQ037tGI1.jpg"
+        },
+        "logo": {
+            "url": "https://imagetmdb.com/t/p/original/b07VisHvZb0WzUpA8VB77wfMXwg.png"
+        },
+    },
+    {
+        "rating": {
+            "kp": 6.122,
+            "imdb": 6,
+            "filmCritics": 0,
+            "russianFilmCritics": 0,
+            "await": null
+        },
+        "countries": [
+            {
+                "name": "США"
+            },
+            {
+                "name": "Великобритания"
+            },
+            {
+                "name": "Канада"
+            },
+            {
+                "name": "Австралия"
+            },
+            {
+                "name": "Исландия"
+            }
+        ],
+        "backdrop": {
+            "url": "https://imagetmdb.com/t/p/original/jXJxMcVoEuXzym3vFnjqDW4ifo6.jpg",
+            "previewUrl": "https://imagetmdb.com/t/p/w500/jXJxMcVoEuXzym3vFnjqDW4ifo6.jpg"
+        },
+        "movieLength": 124,
+        "id": 1234997,
+        "type": "movie",
+        "name": "Аквамен и потерянное царство",
+        "description": "Над Атлантидой нависла новая угроза, способная привести к необратимой катастрофе. Даже Аквамен не сможет справиться в одиночку – ему предстоит заключить неожиданный союз ради спасения своего королевства.",
+        "year": 2023,
+        "poster": {
+            "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/10835644/cfad55ef-5b52-4ac8-b276-2ba61768801e/orig",
+            "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/10835644/cfad55ef-5b52-4ac8-b276-2ba61768801e/x1000"
+        },
+        "facts": [],
+        "genres": [
+            {
+                "name": "фантастика"
+            },
+            {
+                "name": "фэнтези"
+            },
+            {
+                "name": "боевик"
+            },
+            {
+                "name": "приключения"
+            }
+        ],
+        "seasonsInfo": [],
+        "persons": [
+            {
+                "id": 554576,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_554576.jpg",
+                "name": "Джейсон Момоа",
+                "enName": "Jason Momoa",
+                "description": "Arthur Curry / Aquaman",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 223309,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_223309.jpg",
+                "name": "Патрик Уилсон",
+                "enName": "Patrick Wilson",
+                "description": "King Orm / Ocean Master",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 4296336,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4296336.jpg",
+                "name": "Яхья Абдул-Матин II",
+                "enName": "Yahya Abdul-Mateen II",
+                "description": "David Kane / Black Manta",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 4768,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4768.jpg",
+                "name": "Дольф Лундгрен",
+                "enName": "Dolph Lundgren",
+                "description": "King Nereus",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 10312,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_10312.jpg",
+                "name": "Темуэра Моррисон",
+                "enName": "Temuera Morrison",
+                "description": "Tom Curry",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 20303,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_20303.jpg",
+                "name": "Николь Кидман",
+                "enName": "Nicole Kidman",
+                "description": "Atlanna",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 1746685,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1746685.jpg",
+                "name": "Яни Жао",
+                "enName": "Jani Zhao",
+                "description": "Stingray",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 581919,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_581919.jpg",
+                "name": "Эмбер Хёрд",
+                "enName": "Amber Heard",
+                "description": "Mera",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 4810,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4810.jpg",
+                "name": "Винсент Риган",
+                "enName": "Vincent Regan",
+                "description": "Atlan",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 227473,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_227473.jpg",
+                "name": "Рэндалл Пак",
+                "enName": "Randall Park",
+                "description": "Dr. Stephen Shin",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 614626,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_614626.jpg",
+                "name": "Руперт Грегсон-Уильямс",
+                "enName": "Rupert Gregson-Williams",
+                "description": null,
+                "profession": "композиторы",
+                "enProfession": "composer"
+            },
+            {
+                "id": 3690022,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_3690022.jpg",
+                "name": "Рави Бансал",
+                "enName": "Ravi Bansal",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 6807964,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6807964.jpg",
+                "name": "Иэн Бантинг",
+                "enName": "Ian Bunting",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 3026641,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_3026641.jpg",
+                "name": "Майкл Гауэн",
+                "enName": "Michael Gowen",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 1989172,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1989172.jpg",
+                "name": "Джо Ховард",
+                "enName": "Joe Howard",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 2007032,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2007032.jpg",
+                "name": "Гари Джоплинг",
+                "enName": "Gary Jopling",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 2009110,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2009110.jpg",
+                "name": "Лиза МакДиармид",
+                "enName": "Lisa McDiarmid",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 2000706,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2000706.jpg",
+                "name": "Ник Пэллас",
+                "enName": "Nic Pallace",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 2004676,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2004676.jpg",
+                "name": "Том Стилл",
+                "enName": "Tom Still",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 2198775,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2198775.jpg",
+                "name": "Ричард Сейл",
+                "enName": "Richard Sale",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 1736697,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1736697.jpg",
+                "name": "Дэвид Морисон",
+                "enName": "David Morison",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 483412,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_483412.jpg",
+                "name": "Джеймс Ван",
+                "enName": "James Wan",
+                "description": null,
+                "profession": "режиссеры",
+                "enProfession": "director"
+            },
+            {
+                "id": 1987923,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1987923.jpg",
+                "name": "Кирк М. Морри",
+                "enName": "Kirk M. Morri",
+                "description": null,
+                "profession": "монтажеры",
+                "enProfession": "editor"
+            },
+            {
+                "id": 85510,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_85510.jpg",
+                "name": "Дон Бёрджесс",
+                "enName": "Don Burgess",
+                "description": null,
+                "profession": "операторы",
+                "enProfession": "operator"
+            },
+            {
+                "id": 27153,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_27153.jpg",
+                "name": "Роб Кауэн",
+                "enName": "Rob Cowan",
+                "description": null,
+                "profession": "продюсеры",
+                "enProfession": "producer"
+            },
+            {
+                "id": 12882,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_12882.jpg",
+                "name": "Питер Сафран",
+                "enName": "Peter Safran",
+                "description": null,
+                "profession": "продюсеры",
+                "enProfession": "producer"
+            },
+            {
+                "id": 483412,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_483412.jpg",
+                "name": "Джеймс Ван",
+                "enName": "James Wan",
+                "description": null,
+                "profession": "продюсеры",
+                "enProfession": "producer"
+            },
+            {
+                "id": 45347,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_45347.jpg",
+                "name": "Уолтер Хамада",
+                "enName": "Walter Hamada",
+                "description": null,
+                "profession": "продюсеры",
+                "enProfession": "producer"
+            },
+            {
+                "id": 1156367,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1156367.jpg",
+                "name": "Кирилл Сафонов",
+                "enName": null,
+                "description": null,
+                "profession": "актеры дубляжа",
+                "enProfession": "voice_actor"
+            },
+            {
+                "id": 1811445,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1811445.jpg",
+                "name": "Михаил Гульдан",
+                "enName": null,
+                "description": null,
+                "profession": "актеры дубляжа",
+                "enProfession": "voice_actor"
             },
             {
                 "id": 3140716,
@@ -241,143 +751,438 @@ export const heroSlideItems = [
                 "enProfession": "voice_actor"
             },
             {
-                "id": 6975041,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6975041.jpg",
-                "name": "Ариэль Крыжопольский",
+                "id": 1629111,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1629111.jpg",
+                "name": "Сергей Колешня",
                 "enName": null,
                 "description": null,
                 "profession": "актеры дубляжа",
                 "enProfession": "voice_actor"
             },
             {
-                "id": 4201072,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4201072.jpg",
-                "name": "Олег Родовильский",
-                "enName": "Oleg Rodovilski",
-                "description": null,
-                "profession": "актеры дубляжа",
-                "enProfession": "voice_actor"
-            },
-            {
-                "id": 1144107,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1144107.jpg",
-                "name": "Максим Полак",
+                "id": 304215,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_304215.jpg",
+                "name": "Мария Мушкатина",
                 "enName": null,
                 "description": null,
                 "profession": "актеры дубляжа",
                 "enProfession": "voice_actor"
             },
             {
-                "id": 6985940,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6985940.jpg",
-                "name": "Ирина Кильфин",
+                "id": 2532065,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2532065.jpg",
+                "name": "Морт Вейзингер",
+                "enName": "Mort Weisinger",
+                "description": null,
+                "profession": "редакторы",
+                "enProfession": "writer"
+            },
+            {
+                "id": 3560745,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_3560745.jpg",
+                "name": "Пол Норрис",
+                "enName": "Paul Norris",
+                "description": null,
+                "profession": "редакторы",
+                "enProfession": "writer"
+            },
+            {
+                "id": 1047677,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1047677.jpg",
+                "name": "Дэвид Лесли Джонсон-Макголдрик",
+                "enName": "David Leslie Johnson-McGoldrick",
+                "description": null,
+                "profession": "редакторы",
+                "enProfession": "writer"
+            },
+            {
+                "id": 483412,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_483412.jpg",
+                "name": "Джеймс Ван",
+                "enName": "James Wan",
+                "description": null,
+                "profession": "редакторы",
+                "enProfession": "writer"
+            }
+        ],
+        "similarMovies": [],
+        "ratingMpaa": "pg13",
+        "shortDescription": null,
+        "ageRating": null,
+        "logo": {
+            "url": "https://imagetmdb.com/t/p/original/iQtdkxVK2rqVuSV4hUOyFY4n4h7.png"
+        },
+        "videos": {
+            "trailers": [
+                {
+                    "url": "https://www.youtube.com/embed/UGc5Tzz19UY",
+                    "name": "Official Trailer",
+                    "site": "youtube",
+                    "type": "TRAILER"
+                },
+                {
+                    "url": "https://www.youtube.com/embed/UGc5Tzz19UY",
+                    "name": "Official Trailer",
+                    "site": "youtube",
+                    "type": "TRAILER"
+                }
+            ]
+        }
+    },
+    {
+        "id": 4626783,
+        "countries": [
+            {
+                "name": "США"
+            },
+            {
+                "name": "Великобритания"
+            }
+        ],
+        "genres": [
+            {
+                "name": "боевик"
+            },
+            {
+                "name": "криминал"
+            }
+        ],
+        "persons": [
+            {
+                "id": 1514,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1514.jpg",
+                "name": "Джейсон Стэйтем",
+                "enName": "Jason Statham",
+                "description": "Adam Clay",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 4515375,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4515375.jpg",
+                "name": "Эмми Рейвер-Лэмпман",
+                "enName": "Emmy Raver-Lampman",
+                "description": "Agent Verona Parker",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 1175606,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1175606.jpg",
+                "name": "Бобби Надери",
+                "enName": "Bobby Naderi",
+                "description": "Agent Matt Wiley",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 32734,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_32734.jpg",
+                "name": "Джош Хатчерсон",
+                "enName": "Josh Hutcherson",
+                "description": "Derek Danforth",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 33061,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_33061.jpg",
+                "name": "Джереми Айронс",
+                "enName": "Jeremy Irons",
+                "description": "Wallace Westwyld",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 2421679,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2421679.jpg",
+                "name": "Дэвид Уиттс",
+                "enName": "David Witts",
+                "description": "Mickey Garnett",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 888345,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_888345.jpg",
+                "name": "Михаэль Эпп",
+                "enName": "Michael Epp",
+                "description": "Pettis",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 1529773,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1529773.jpg",
+                "name": "Тейлор Джеймс",
+                "enName": "Taylor James",
+                "description": "Lazarus",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 57775,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_57775.jpg",
+                "name": "Филишия Рашад",
+                "enName": "Phylicia Rashad",
+                "description": "Eloise Parker",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 29836,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_29836.jpg",
+                "name": "Джемма Редгрейв",
+                "enName": "Jemma Redgrave",
+                "description": "President Danforth",
+                "profession": "актеры",
+                "enProfession": "actor"
+            },
+            {
+                "id": 5725984,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_5725984.jpg",
+                "name": "Джаред Майкл Фрай",
+                "enName": "Jared Michael Fry",
+                "description": null,
+                "profession": "композиторы",
+                "enProfession": "composer"
+            },
+            {
+                "id": 1535415,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1535415.jpg",
+                "name": "Дэвид Сарди",
+                "enName": "David Sardy",
+                "description": null,
+                "profession": "композиторы",
+                "enProfession": "composer"
+            },
+            {
+                "id": 2009279,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2009279.jpg",
+                "name": "Мария Криссикос",
+                "enName": "Maria Chryssikos",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 6089892,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6089892.jpg",
+                "name": "Кристофер Гай Эванс",
+                "enName": "Christopher Guy Evans",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 7058949,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_7058949.jpg",
+                "name": "Крэйг Гилрой",
+                "enName": "Craig Gilroy",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 5446984,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_5446984.jpg",
+                "name": "Эшли Линн Джеймс",
+                "enName": "Ashley Lynn James",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 976637,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_976637.jpg",
+                "name": "Келли Джонс",
+                "enName": "Kelli Jones",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 2000409,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2000409.jpg",
+                "name": "Софи Ньюман",
+                "enName": "Sophie Newman",
+                "description": null,
+                "profession": "художники",
+                "enProfession": "designer"
+            },
+            {
+                "id": 30322,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_30322.jpg",
+                "name": "Дэвид Эйр",
+                "enName": "David Ayer",
+                "description": null,
+                "profession": "режиссеры",
+                "enProfession": "director"
+            },
+            {
+                "id": 246160,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_246160.jpg",
+                "name": "Джеффри О’Брайэн",
+                "enName": "Geoffrey O'Brien",
+                "description": null,
+                "profession": "монтажеры",
+                "enProfession": "editor"
+            },
+            {
+                "id": 15188,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_15188.jpg",
+                "name": "Габриель Беристайн",
+                "enName": "Gabriel Beristain",
+                "description": null,
+                "profession": "операторы",
+                "enProfession": "operator"
+            },
+            {
+                "id": 51810,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_51810.jpg",
+                "name": "Билл Блок",
+                "enName": "Bill Block",
+                "description": null,
+                "profession": "продюсеры",
+                "enProfession": "producer"
+            },
+            {
+                "id": 1514,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1514.jpg",
+                "name": "Джейсон Стэйтем",
+                "enName": "Jason Statham",
+                "description": null,
+                "profession": "продюсеры",
+                "enProfession": "producer"
+            },
+            {
+                "id": 25995,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_25995.jpg",
+                "name": "Курт Уиммер",
+                "enName": "Kurt Wimmer",
+                "description": null,
+                "profession": "продюсеры",
+                "enProfession": "producer"
+            },
+            {
+                "id": 2383314,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2383314.jpg",
+                "name": "Марк Бирмингем",
+                "enName": "Mark Birmingham",
+                "description": null,
+                "profession": "продюсеры",
+                "enProfession": "producer"
+            },
+            {
+                "id": 700806,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_700806.jpg",
+                "name": "Юрий Деркач",
                 "enName": null,
                 "description": null,
                 "profession": "актеры дубляжа",
                 "enProfession": "voice_actor"
             },
             {
-                "id": 6866293,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6866293.jpg",
-                "name": "Алекс Конвери",
-                "enName": "Alex Convery",
+                "id": 5577597,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_5577597.jpg",
+                "name": "Екатерина Ландо",
+                "enName": null,
+                "description": null,
+                "profession": "актеры дубляжа",
+                "enProfession": "voice_actor"
+            },
+            {
+                "id": 4074983,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4074983.jpg",
+                "name": "Александр Матвеев",
+                "enName": null,
+                "description": null,
+                "profession": "актеры дубляжа",
+                "enProfession": "voice_actor"
+            },
+            {
+                "id": 1797634,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1797634.jpg",
+                "name": "Иван Чабан",
+                "enName": null,
+                "description": null,
+                "profession": "актеры дубляжа",
+                "enProfession": "voice_actor"
+            },
+            {
+                "id": 2790421,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2790421.jpg",
+                "name": "Валентин Морозов",
+                "enName": null,
+                "description": null,
+                "profession": "актеры дубляжа",
+                "enProfession": "voice_actor"
+            },
+            {
+                "id": 25995,
+                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_25995.jpg",
+                "name": "Курт Уиммер",
+                "enName": "Kurt Wimmer",
                 "description": null,
                 "profession": "редакторы",
                 "enProfession": "writer"
             }
         ],
         "seasonsInfo": [],
-        "similarMovies": [
-            {
-                "id": 934923,
-                "name": "Дуэль братьев. История Adidas и Puma",
-                "enName": null,
-                "alternativeName": "Duell der Brüder - Die Geschichte von Adidas und Puma",
-                "type": "movie",
-                "poster": {
-                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/5740b2db-bf7e-41c8-9759-20cc795316bd/orig",
-                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/5740b2db-bf7e-41c8-9759-20cc795316bd/x1000"
-                }
-            },
-            {
-                "id": 432791,
-                "name": "Человек, который изменил всё",
-                "enName": null,
-                "alternativeName": "Moneyball",
-                "type": "movie",
-                "poster": {
-                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/0a8dd3ce-d0ce-493d-9590-37977ae5b833/orig",
-                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/0a8dd3ce-d0ce-493d-9590-37977ae5b833/x1000"
-                }
-            },
-            {
-                "id": 893245,
-                "name": "Основатель",
-                "enName": null,
-                "alternativeName": "The Founder",
-                "type": "movie",
-                "poster": {
-                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/96b659b6-5b80-4555-aa42-608708d13cce/orig",
-                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/96b659b6-5b80-4555-aa42-608708d13cce/x1000"
-                }
-            }
-        ],
+        "similarMovies": [],
+        "description": "Адам Клэй живет в тихом пригороде, занимается разведением пчёл и не распространяется о своей прошлой жизни. Он дружит с пожилой соседкой миссис Паркер, у которой арендует сарай. Однажды миссис Паркер становится жертвой кибермошенников, которые похищают деньги со всех её счетов. Не в силах вынести такой удар, женщина сводит счёты с жизнью. Осознав, что закон в данной ситуации бессилен, Адам решает применить все свои боевые навыки, чтобы вычислить преступников и отомстить.",
+        "movieLength": 105,
+        "name": "Пчеловод",
+        "poster": {
+            "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/9784475/a5b21cdf-89b9-4571-a6cd-751c998312d6/orig",
+            "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/9784475/a5b21cdf-89b9-4571-a6cd-751c998312d6/x1000"
+        },
+        "rating": {
+            "kp": 6.514,
+            "imdb": 6.6,
+            "filmCritics": 5.9,
+            "russianFilmCritics": 0,
+            "await": null
+        },
+        "shortDescription": null,
+        "type": "movie",
+        "year": 2024,
+        "ageRating": null,
+        "backdrop": {
+            "url": "https://imagetmdb.com/t/p/original/4MCKNAc6AbWjEsM2h9Xc29owo4z.jpg",
+            "previewUrl": "https://imagetmdb.com/t/p/w500/4MCKNAc6AbWjEsM2h9Xc29owo4z.jpg"
+        },
+        "logo": {
+            "url": "https://imagetmdb.com/t/p/original/1WB5aQuuYOVdub44aDdqtjaJfLO.png"
+        },
         "videos": {
             "trailers": [
                 {
-                    "url": "https://www.youtube.com/embed/Euy4Yu6B3nU",
-                    "name": "Official Trailer",
+                    "url": "https://www.youtube.com/embed/dE0KFHYiQ4s",
+                    "name": "Official UK Trailer",
                     "site": "youtube",
                     "type": "TRAILER"
                 },
                 {
-                    "url": "https://www.youtube.com/embed/Euy4Yu6B3nU",
-                    "name": "Official Trailer",
+                    "url": "https://www.youtube.com/embed/SzINZZ6iqxY",
+                    "name": "Official Restricted Trailer",
+                    "site": "youtube",
+                    "type": "TRAILER"
+                },
+                {
+                    "url": "https://www.youtube.com/embed/dE0KFHYiQ4s",
+                    "name": "Official UK Trailer",
+                    "site": "youtube",
+                    "type": "TRAILER"
+                },
+                {
+                    "url": "https://www.youtube.com/embed/SzINZZ6iqxY",
+                    "name": "Official Restricted Trailer",
                     "site": "youtube",
                     "type": "TRAILER"
                 }
-            ],
-            "teasers": []
-        },
-        "ageRating": null,
-        "backdrop": {
-            "url": "https://imagetmdb.com/t/p/original/aT3sRVqgpkyCo23fp9myVfKPWbA.jpg",
-            "previewUrl": "https://imagetmdb.com/t/p/w500/aT3sRVqgpkyCo23fp9myVfKPWbA.jpg"
-        },
-        "description": "1984 год. Маркетинговый скаут из баскетбольного отдела Nike Сонни Ваккаро хоть и не разбирается в спортивной обуви, но имеет чутьё на таланты. Начальство хочет привлечь для заключения рекламных контрактов трёх перспективных игроков подешевле, а Сонни настаивает на выборе только одного — восходящей звезды Майкла Джордана. Всем известно, что спортсмен предпочитает играть в кроссовках Adidas и также рассматривает сотрудничество с Converse, поэтому Сонни решает сделать ему уникальное предложение: создать именной бренд и разработать линию кроссовок специально для Джордана.",
-        "logo": {
-            "url": "https://imagetmdb.com/t/p/original/wNPtJxjf0OXmJ1YTz5Ut8meIvMk.png"
-        },
-        "movieLength": 111,
-        "name": "Air: Большой прыжок",
-        "poster": {
-            "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/4069b35f-2f47-497c-98fc-fdef2d1032f5/orig",
-            "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/4069b35f-2f47-497c-98fc-fdef2d1032f5/x1000"
-        },
-        "rating": {
-            "kp": 7.384,
-            "imdb": 7.4,
-            "filmCritics": 7.7,
-            "russianFilmCritics": 100,
-            "await": null
-        },
-        "shortDescription": null,
-        "year": 2023,
-        "budget": {
-            "value": 90000000,
-            "currency": "$"
-        },
-        "fees": {
-            "world": {
-                "value": 90060106,
-                "currency": "$"
-            },
-            "usa": {
-                "value": 52460106,
-                "currency": "$"
-            }
-        },
-        "type": "movie"
+            ]
+        }
     },
     {
         "videos": {
@@ -846,897 +1651,6 @@ export const heroSlideItems = [
         "ageRating": null,
         "logo": {
             "url": "https://imagetmdb.com/t/p/original/1EDCI73ZZbfXPmIlZJtYZu1rqUh.png"
-        },
-    },
-    {
-        "videos": {
-            "trailers": [
-                {
-                    "url": "https://www.youtube.com/embed/kVQOVfYIbog",
-                    "name": "Человек-муравей и Оса: Квантомания — Русский трейлер (Дубляж, 2023)",
-                    "site": "youtube",
-                    "type": "TRAILER"
-                },
-                {
-                    "url": "https://www.youtube.com/embed/kVQOVfYIbog",
-                    "name": "Человек-муравей и Оса: Квантомания — Русский трейлер (Дубляж, 2023)",
-                    "site": "youtube",
-                    "type": "TRAILER"
-                },
-                {
-                    "url": "https://www.youtube.com/embed/5WfTEZJnv_8",
-                    "name": "New Trailer",
-                    "site": "youtube",
-                    "type": "TRAILER"
-                },
-                {
-                    "url": "https://www.youtube.com/embed/ZlNFpri-Y40",
-                    "name": "Official Trailer",
-                    "site": "youtube",
-                    "type": "TRAILER"
-                }
-            ],
-            "teasers": []
-        },
-        "id": 1318868,
-        "type": "movie",
-        "name": "Человек-муравей и Оса: Квантомания",
-        "rating": {
-            "kp": 6.002,
-            "imdb": 6.1,
-            "filmCritics": 5.6,
-            "russianFilmCritics": 25,
-            "await": null
-        },
-        "description": "О приключениях бывшего мелкого преступника Скотта Лэнга, ставшего обладателем костюма, позволяющего уменьшаться и увеличиваться в размерах. Вместе с напарницей Хоуп ван Дайн, дочерью известного физика и энтомолога Хэнка Пима, разработавшего костюм человека-муравья, Скотт вновь спасает мир от угрозы.",
-        "year": 2023,
-        "poster": {
-            "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/a5f83fbb-002a-48f0-87e1-e1809d2f58c7/orig",
-            "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/a5f83fbb-002a-48f0-87e1-e1809d2f58c7/x1000"
-        },
-        "genres": [
-            {
-                "name": "фантастика"
-            },
-            {
-                "name": "боевик"
-            },
-            {
-                "name": "комедия"
-            },
-            {
-                "name": "приключения"
-            }
-        ],
-        "countries": [
-            {
-                "name": "США"
-            }
-        ],
-        "seasonsInfo": [],
-        "persons": [
-            {
-                "id": 13330,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_13330.jpg",
-                "name": "Пол Радд",
-                "enName": "Paul Rudd",
-                "description": "Scott Lang / Ant-Man",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 605598,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_605598.jpg",
-                "name": "Эванджелин Лилли",
-                "enName": "Evangeline Lilly",
-                "description": "Hope Van Dyne / The Wasp",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 10094,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_10094.jpg",
-                "name": "Майкл Дуглас",
-                "enName": "Michael Douglas",
-                "description": "Dr. Hank Pym",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 21492,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_21492.jpg",
-                "name": "Мишель Пфайффер",
-                "enName": "Michelle Pfeiffer",
-                "description": "Janet Van Dyne",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 1905687,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1905687.jpg",
-                "name": "Джонатан Мэйджерс",
-                "enName": "Jonathan Majors",
-                "description": "Kang the Conqueror",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 460365,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_460365.jpg",
-                "name": "Кэтрин Ньютон",
-                "enName": "Kathryn Newton",
-                "description": "Cassie Lang",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 402519,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_402519.jpg",
-                "name": "Кори Столл",
-                "enName": "Corey Stoll",
-                "description": "M.O.D.O.K.",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 10079,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_10079.jpg",
-                "name": "Билл Мюррей",
-                "enName": "Bill Murray",
-                "description": "Lord Krylar",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 4085798,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4085798.jpg",
-                "name": "Кэти М. О’Брайан",
-                "enName": "Katy M. O'Brian",
-                "description": "Jentorra (в титрах: Katy O'Brian)",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 1534883,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1534883.jpg",
-                "name": "Уильям Джексон Харпер",
-                "enName": "William Jackson Harper",
-                "description": "Quaz",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 458463,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_458463.jpg",
-                "name": "Кристоф Бек",
-                "enName": "Christophe Beck",
-                "description": null,
-                "profession": "композиторы",
-                "enProfession": "composer"
-            },
-            {
-                "id": 7117341,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_7117341.jpg",
-                "name": null,
-                "enName": "Firat Averbek",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 6607713,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6607713.jpg",
-                "name": "Элис Биддл",
-                "enName": "Alice Biddle",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 1986327,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1986327.jpg",
-                "name": "Дин Клегг",
-                "enName": "Dean Clegg",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 2032895,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2032895.jpg",
-                "name": "Грегори Фанжо",
-                "enName": "Gregory Fangeaux",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 3699291,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_3699291.jpg",
-                "name": "Джордана Финкел",
-                "enName": "Jordana Finkel",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 5007176,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_5007176.jpg",
-                "name": "Лиам Георгенсен",
-                "enName": "Liam Georgensen",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 1986393,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1986393.jpg",
-                "name": "Ник Готтшалк",
-                "enName": "Nick Gottschalk",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 6758238,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6758238.jpg",
-                "name": "Тара Илсли",
-                "enName": "Tara Ilsley",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 1987616,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1987616.jpg",
-                "name": "Катрина Маккэй",
-                "enName": "Katrina Mackay",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 5017281,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_5017281.jpg",
-                "name": "Хью МакКлелланд",
-                "enName": "Hugh McClelland",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 4453020,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4453020.jpg",
-                "name": "Катя Наджера",
-                "enName": "Katia Najera",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 1986066,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1986066.jpg",
-                "name": "Клинт Уоллес",
-                "enName": "Clint Wallace",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 1006142,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1006142.jpg",
-                "name": "Сэмми Шелдон",
-                "enName": "Sammy Sheldon",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 11157,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_11157.jpg",
-                "name": "Пейтон Рид",
-                "enName": "Peyton Reed",
-                "description": null,
-                "profession": "режиссеры",
-                "enProfession": "director"
-            },
-            {
-                "id": 1987314,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1987314.jpg",
-                "name": "Адам Герстл",
-                "enName": "Adam Gerstel",
-                "description": null,
-                "profession": "монтажеры",
-                "enProfession": "editor"
-            },
-            {
-                "id": 5452615,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_5452615.jpg",
-                "name": "Лора Дженнингс",
-                "enName": "Laura Jennings",
-                "description": null,
-                "profession": "монтажеры",
-                "enProfession": "editor"
-            },
-            {
-                "id": 278101,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_278101.jpg",
-                "name": "Билл Поуп",
-                "enName": "Bill Pope",
-                "description": null,
-                "profession": "операторы",
-                "enProfession": "operator"
-            },
-            {
-                "id": 55053,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_55053.jpg",
-                "name": "Виктория Алонсо",
-                "enName": "Victoria Alonso",
-                "description": null,
-                "profession": "продюсеры",
-                "enProfession": "producer"
-            },
-            {
-                "id": 1779122,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1779122.jpg",
-                "name": "Митчелл Белл",
-                "enName": "Mitchell Bell",
-                "description": null,
-                "profession": "продюсеры",
-                "enProfession": "producer"
-            },
-            {
-                "id": 1959631,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1959631.jpg",
-                "name": "Стивен Бруссар",
-                "enName": "Stephen Broussard",
-                "description": null,
-                "profession": "продюсеры",
-                "enProfession": "producer"
-            },
-            {
-                "id": 30360,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_30360.jpg",
-                "name": "Луис Д’Эспозито",
-                "enName": "Louis D'Esposito",
-                "description": null,
-                "profession": "продюсеры",
-                "enProfession": "producer"
-            },
-            {
-                "id": 2189510,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2189510.jpg",
-                "name": "Филипп Волошин",
-                "enName": "Philip Voloshin",
-                "description": null,
-                "profession": "актеры дубляжа",
-                "enProfession": "voice_actor"
-            },
-            {
-                "id": 7042340,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_7042340.jpg",
-                "name": "Виктория Павленко",
-                "enName": null,
-                "description": null,
-                "profession": "актеры дубляжа",
-                "enProfession": "voice_actor"
-            },
-            {
-                "id": 277374,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_277374.jpg",
-                "name": "Станислав Концевич",
-                "enName": null,
-                "description": null,
-                "profession": "актеры дубляжа",
-                "enProfession": "voice_actor"
-            },
-            {
-                "id": 1828838,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1828838.jpg",
-                "name": "Ольга Коржева",
-                "enName": "Olga Korzheva",
-                "description": null,
-                "profession": "актеры дубляжа",
-                "enProfession": "voice_actor"
-            },
-            {
-                "id": 2857310,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2857310.jpg",
-                "name": "Рауф Хабибуллин",
-                "enName": "Rauf Khabibullin",
-                "description": null,
-                "profession": "актеры дубляжа",
-                "enProfession": "voice_actor"
-            },
-            {
-                "id": 1864728,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1864728.jpg",
-                "name": "Джефф Лавнесс",
-                "enName": "Jeff Loveness",
-                "description": null,
-                "profession": "редакторы",
-                "enProfession": "writer"
-            },
-            {
-                "id": 8242,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_8242.jpg",
-                "name": "Стэн Ли",
-                "enName": "Stan Lee",
-                "description": null,
-                "profession": "редакторы",
-                "enProfession": "writer"
-            },
-            {
-                "id": 465916,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_465916.jpg",
-                "name": "Ларри Либер",
-                "enName": "Larry Lieber",
-                "description": null,
-                "profession": "редакторы",
-                "enProfession": "writer"
-            },
-            {
-                "id": 29954,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_29954.jpg",
-                "name": "Джек Кёрби",
-                "enName": "Jack Kirby",
-                "description": null,
-                "profession": "редакторы",
-                "enProfession": "writer"
-            }
-        ],
-        "fees": {
-            "world": {
-                "value": 476071180,
-                "currency": "$"
-            },
-            "usa": {
-                "value": 214504909,
-                "currency": "$"
-            }
-        },
-        "budget": {
-            "value": 200000000,
-            "currency": "$"
-        },
-        "similarMovies": [
-            {
-                "id": 1203039,
-                "name": "Локи",
-                "enName": null,
-                "alternativeName": "Loki",
-                "type": "tv-series",
-                "poster": {
-                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/0c6cf88f-7a39-4627-9a5d-630ad4c40e9e/orig",
-                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/0c6cf88f-7a39-4627-9a5d-630ad4c40e9e/x1000"
-                }
-            }
-        ],
-        "movieLength": 124,
-        "shortDescription": null,
-        "ageRating": null,
-        "backdrop": {
-            "url": "https://imagetmdb.com/t/p/original/m8JTwHFwX7I7JY5fPe4SjqejWag.jpg",
-            "previewUrl": "https://imagetmdb.com/t/p/w500/m8JTwHFwX7I7JY5fPe4SjqejWag.jpg"
-        },
-        "logo": {
-            "url": "https://imagetmdb.com/t/p/original/sscgNLQSFsK5E5lHBwhisoErWaY.png"
-        },
-    },
-    {
-        "id": 4664634,
-        "countries": [
-            {
-                "name": "США"
-            },
-            {
-                "name": "Великобритания"
-            }
-        ],
-        "description": "История жизни американского физика Роберта Оппенгеймера, который стоял во главе первых разработок ядерного оружия.",
-        "genres": [
-            {
-                "name": "биография"
-            },
-            {
-                "name": "драма"
-            },
-            {
-                "name": "история"
-            }
-        ],
-        "movieLength": 180,
-        "name": "Оппенгеймер",
-        "persons": [
-            {
-                "id": 5005,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_5005.jpg",
-                "name": "Киллиан Мерфи",
-                "enName": "Cillian Murphy",
-                "description": "J. Robert Oppenheimer",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 227068,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_227068.jpg",
-                "name": "Эмили Блант",
-                "enName": "Emily Blunt",
-                "description": "Kitty Oppenheimer",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 6458,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6458.jpg",
-                "name": "Мэтт Дэймон",
-                "enName": "Matt Damon",
-                "description": "Leslie Groves",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 10096,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_10096.jpg",
-                "name": "Роберт Дауни мл.",
-                "enName": "Robert Downey Jr.",
-                "description": "Lewis Strauss",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 3435612,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_3435612.jpg",
-                "name": "Флоренс Пью",
-                "enName": "Florence Pugh",
-                "description": "Jean Tatlock",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 206,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_206.jpg",
-                "name": "Джош Хартнетт",
-                "enName": "Josh Hartnett",
-                "description": "Ernest Lawrence",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 4,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4.jpg",
-                "name": "Кейси Аффлек",
-                "enName": "Casey Affleck",
-                "description": "Boris Pash",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 1089891,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1089891.jpg",
-                "name": "Рами Малек",
-                "enName": "Rami Malek",
-                "description": "David Hill",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 8886,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_8886.jpg",
-                "name": "Кеннет Брана",
-                "enName": "Kenneth Branagh",
-                "description": "Niels Bohr",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 702326,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_702326.jpg",
-                "name": "Бенни Сэфди",
-                "enName": "Benny Safdie",
-                "description": "Edward Teller",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 1795101,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1795101.jpg",
-                "name": "Людвиг Горанссон",
-                "enName": "Ludwig Göransson",
-                "description": null,
-                "profession": "композиторы",
-                "enProfession": "composer"
-            },
-            {
-                "id": 4277712,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4277712.jpg",
-                "name": "Саманта Инглендер",
-                "enName": "Samantha Englender",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 2003395,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2003395.jpg",
-                "name": "Энтони Д. Парилло",
-                "enName": "Anthony D. Parrillo",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 157166,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_157166.jpg",
-                "name": "Эллен Мирожник",
-                "enName": "Ellen Mirojnick",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 1987873,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1987873.jpg",
-                "name": "Клер Кауфман",
-                "enName": "Claire Kaufman",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 2582148,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2582148.jpg",
-                "name": "Оливия Пиблз",
-                "enName": "Olivia Peebles",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 2017722,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2017722.jpg",
-                "name": "Адам Уиллис",
-                "enName": "Adam Willis",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 41477,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_41477.jpg",
-                "name": "Кристофер Нолан",
-                "enName": "Christopher Nolan",
-                "description": null,
-                "profession": "режиссеры",
-                "enProfession": "director"
-            },
-            {
-                "id": 2449829,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2449829.jpg",
-                "name": "Дженнифер Лэйм",
-                "enName": "Jennifer Lame",
-                "description": null,
-                "profession": "монтажеры",
-                "enProfession": "editor"
-            },
-            {
-                "id": 758887,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_758887.jpg",
-                "name": "Хойте Ван Хойтема",
-                "enName": "Hoyte Van Hoytema",
-                "description": null,
-                "profession": "операторы",
-                "enProfession": "operator"
-            },
-            {
-                "id": 41477,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_41477.jpg",
-                "name": "Кристофер Нолан",
-                "enName": "Christopher Nolan",
-                "description": null,
-                "profession": "продюсеры",
-                "enProfession": "producer"
-            },
-            {
-                "id": 21110,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_21110.jpg",
-                "name": "Чарльз Ровен",
-                "enName": "Charles Roven",
-                "description": null,
-                "profession": "продюсеры",
-                "enProfession": "producer"
-            },
-            {
-                "id": 41489,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_41489.jpg",
-                "name": "Эмма Томас",
-                "enName": "Emma Thomas",
-                "description": null,
-                "profession": "продюсеры",
-                "enProfession": "producer"
-            },
-            {
-                "id": 51141,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_51141.jpg",
-                "name": "Томас Хэйслип",
-                "enName": "Thomas Hayslip",
-                "description": null,
-                "profession": "продюсеры",
-                "enProfession": "producer"
-            },
-            {
-                "id": 6039981,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6039981.jpg",
-                "name": "Станислав Шапкин",
-                "enName": null,
-                "description": null,
-                "profession": "актеры дубляжа",
-                "enProfession": "voice_actor"
-            },
-            {
-                "id": 6326775,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6326775.jpg",
-                "name": "Катя Хейфец",
-                "enName": null,
-                "description": null,
-                "profession": "актеры дубляжа",
-                "enProfession": "voice_actor"
-            },
-            {
-                "id": 6867588,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6867588.jpg",
-                "name": "Григорий Лайков",
-                "enName": null,
-                "description": null,
-                "profession": "актеры дубляжа",
-                "enProfession": "voice_actor"
-            },
-            {
-                "id": 6867596,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6867596.jpg",
-                "name": "Георгий Вардиашвили",
-                "enName": null,
-                "description": null,
-                "profession": "актеры дубляжа",
-                "enProfession": "voice_actor"
-            },
-            {
-                "id": 6867726,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6867726.jpg",
-                "name": "София Габелия",
-                "enName": null,
-                "description": null,
-                "profession": "актеры дубляжа",
-                "enProfession": "voice_actor"
-            },
-            {
-                "id": 41477,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_41477.jpg",
-                "name": "Кристофер Нолан",
-                "enName": "Christopher Nolan",
-                "description": null,
-                "profession": "редакторы",
-                "enProfession": "writer"
-            },
-            {
-                "id": 5220147,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_5220147.jpg",
-                "name": "Кай Бёрд",
-                "enName": "Kai Bird",
-                "description": null,
-                "profession": "редакторы",
-                "enProfession": "writer"
-            },
-            {
-                "id": 6579708,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_6579708.jpg",
-                "name": "Мартин Шервин",
-                "enName": "Martin Sherwin",
-                "description": null,
-                "profession": "редакторы",
-                "enProfession": "writer"
-            }
-        ],
-        "poster": {
-            "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/4486454/c5292109-642c-4ab0-894a-cc304e1bcec4/orig",
-            "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4486454/c5292109-642c-4ab0-894a-cc304e1bcec4/x1000"
-        },
-        "rating": {
-            "kp": 8.484,
-            "imdb": 8.5,
-            "filmCritics": 0,
-            "russianFilmCritics": 0,
-            "await": null
-        },
-        "seasonsInfo": [],
-        "shortDescription": null,
-        "similarMovies": [
-            {
-                "id": 635772,
-                "name": "Игра в имитацию",
-                "enName": null,
-                "alternativeName": "The Imitation Game",
-                "type": "movie",
-                "poster": {
-                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/49359d7b-8aa8-408f-bf07-407d49f439a0/orig",
-                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/49359d7b-8aa8-408f-bf07-407d49f439a0/x1000"
-                }
-            },
-            {
-                "id": 530,
-                "name": "Игры разума",
-                "enName": null,
-                "alternativeName": "A Beautiful Mind",
-                "type": "movie",
-                "poster": {
-                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/80f21137-eebb-4cdc-8124-96c68c07c2a8/orig",
-                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/80f21137-eebb-4cdc-8124-96c68c07c2a8/x1000"
-                }
-            },
-            {
-                "id": 478052,
-                "name": "Барби",
-                "enName": null,
-                "alternativeName": "Barbie",
-                "type": "movie",
-                "poster": {
-                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/f0ae94af-050a-433b-a2a9-d6c96d644fd8/orig",
-                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/f0ae94af-050a-433b-a2a9-d6c96d644fd8/x1000"
-                }
-            }
-        ],
-        "type": "movie",
-        "videos": {
-            "trailers": [
-                {
-                    "url": "https://www.youtube.com/embed/mDu95JPujwU",
-                    "name": "трейлер американского байопика ОППЕНГЕЙМЕР от Кристофера Нолана, в кино с 27 июля",
-                    "site": "youtube",
-                    "type": "TRAILER"
-                },
-                {
-                    "url": "https://www.youtube.com/embed/mDu95JPujwU",
-                    "name": "трейлер американского байопика ОППЕНГЕЙМЕР от Кристофера Нолана, в кино с 27 июля",
-                    "site": "youtube",
-                    "type": "TRAILER"
-                },
-                {
-                    "url": "https://www.youtube.com/embed/uYPbbksJxIg",
-                    "name": "New Trailer",
-                    "site": "youtube",
-                    "type": "TRAILER"
-                },
-                {
-                    "url": "https://www.youtube.com/embed/bK6ldnjE3Y0",
-                    "name": "Official Trailer",
-                    "site": "youtube",
-                    "type": "TRAILER"
-                }
-            ],
-            "teasers": []
-        },
-        "year": 2023,
-        "budget": {
-            "value": 100000000,
-            "currency": "$"
-        },
-        "fees": {
-            "world": {
-                "value": 945403395,
-                "currency": "$"
-            },
-            "usa": {
-                "value": 324102395,
-                "currency": "$"
-            }
-        },
-        "ageRating": null,
-        "backdrop": {
-            "url": "https://imagetmdb.com/t/p/original/rLb2cwF3Pazuxaj0sRXQ037tGI1.jpg",
-            "previewUrl": "https://imagetmdb.com/t/p/w500/rLb2cwF3Pazuxaj0sRXQ037tGI1.jpg"
-        },
-        "logo": {
-            "url": "https://imagetmdb.com/t/p/original/b07VisHvZb0WzUpA8VB77wfMXwg.png"
         },
     },
     {
@@ -2659,466 +2573,6 @@ export const heroSlideItems = [
         "ageRating": null,
         "logo": {
             "url": "https://imagetmdb.com/t/p/original/msYtgZbEo8tAOJ37T50kgqulpKf.png"
-        },
-    },
-    {
-        "rating": {
-            "kp": 7.679,
-            "imdb": 8.2,
-            "filmCritics": 0,
-            "russianFilmCritics": 75,
-            "await": null
-        },
-        "backdrop": {
-            "url": "https://imagetmdb.com/t/p/original/q3jHCb4dMfYF6ojikKuHd6LscxC.jpg",
-            "previewUrl": "https://imagetmdb.com/t/p/w500/q3jHCb4dMfYF6ojikKuHd6LscxC.jpg"
-        },
-        "id": 1203039,
-        "type": "tv-series",
-        "name": "Локи",
-        "description": "Локи попадает в таинственную организацию «Управление временными изменениями» после того, как он украл Тессеракт, и путешествует во времени, меняя историю.",
-        "year": 2021,
-        "poster": {
-            "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/0c6cf88f-7a39-4627-9a5d-630ad4c40e9e/orig",
-            "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/0c6cf88f-7a39-4627-9a5d-630ad4c40e9e/x1000"
-        },
-        "genres": [
-            {
-                "name": "фантастика"
-            },
-            {
-                "name": "фэнтези"
-            },
-            {
-                "name": "боевик"
-            },
-            {
-                "name": "приключения"
-            }
-        ],
-        "countries": [
-            {
-                "name": "США"
-            }
-        ],
-        "videos": {
-            "trailers": [
-                {
-                    "url": "https://www.youtube.com/embed/SP0A1ySrEeE",
-                    "name": "Локи 1 сезон 🍿🎬 Русский трейлер 2021",
-                    "site": "youtube",
-                    "type": "TRAILER"
-                },
-                {
-                    "url": "https://www.youtube.com/embed/SP0A1ySrEeE",
-                    "name": "Локи 1 сезон 🍿🎬 Русский трейлер 2021",
-                    "site": "youtube",
-                    "type": "TRAILER"
-                },
-                {
-                    "url": "https://www.youtube.com/embed/nW948Va-l10",
-                    "name": "Official Trailer",
-                    "site": "youtube",
-                    "type": "TRAILER"
-                },
-                {
-                    "url": "https://www.youtube.com/embed/G4JuopziR3Q",
-                    "name": "Exclusive Clip",
-                    "site": "youtube",
-                    "type": "TRAILER"
-                }
-            ],
-            "teasers": []
-        },
-        "seasonsInfo": [
-            {
-                "number": 1,
-                "episodesCount": 6
-            },
-            {
-                "number": 2,
-                "episodesCount": 6
-            }
-        ],
-        "persons": [
-            {
-                "id": 553143,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_553143.jpg",
-                "name": "Том Хиддлстон",
-                "enName": "Tom Hiddleston",
-                "description": "Loki",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 1054325,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1054325.jpg",
-                "name": "Гугу Эмбата-Ро",
-                "enName": "Gugu Mbatha-Raw",
-                "description": "Ravonna Renslayer",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 1263928,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1263928.jpg",
-                "name": "Вунми Моссаку",
-                "enName": "Wunmi Mosaku",
-                "description": "Hunter B-15",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 1631512,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1631512.jpg",
-                "name": "Юджин Кордеро",
-                "enName": "Eugene Cordero",
-                "description": "Casey",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 8830,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_8830.jpg",
-                "name": "Тара Стронг",
-                "enName": "Tara Strong",
-                "description": "Miss Minutes",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 9213,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_9213.jpg",
-                "name": "Оуэн Уилсон",
-                "enName": "Owen Wilson",
-                "description": "Mobius",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 1202233,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1202233.jpg",
-                "name": "Софи Ди Мартино",
-                "enName": "Sophia Di Martino",
-                "description": "Sylvie",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 4195883,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4195883.jpg",
-                "name": "Саша Лэйн",
-                "enName": "Sasha Lane",
-                "description": "Hunter C-20",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 36168,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_36168.jpg",
-                "name": "Деобиа Опарей",
-                "enName": "Deobia Oparei",
-                "description": "Boastful Loki",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 15446,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_15446.jpg",
-                "name": "Ричард Э. Грант",
-                "enName": "Richard E. Grant",
-                "description": "Classic Loki",
-                "profession": "актеры",
-                "enProfession": "actor"
-            },
-            {
-                "id": 1211979,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1211979.jpg",
-                "name": "Натали Энн Холт",
-                "enName": "Natalie Holt",
-                "description": null,
-                "profession": "композиторы",
-                "enProfession": "composer"
-            },
-            {
-                "id": 1986464,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1986464.jpg",
-                "name": "Касра Фарахани",
-                "enName": "Kasra Farahani",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 2400071,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2400071.jpg",
-                "name": "Лорен Абиунесс",
-                "enName": "Lauren Abiouness",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 2983929,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2983929.jpg",
-                "name": "Марли Арнольд",
-                "enName": "Marlie Arnold",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 2035933,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2035933.jpg",
-                "name": "Лорел Бергман",
-                "enName": "Laurel Bergman",
-                "description": null,
-                "profession": "художники",
-                "enProfession": "designer"
-            },
-            {
-                "id": 1955667,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1955667.jpg",
-                "name": "Кейт Херрон",
-                "enName": "Kate Herron",
-                "description": null,
-                "profession": "режиссеры",
-                "enProfession": "director"
-            },
-            {
-                "id": 2484489,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2484489.jpg",
-                "name": "Джастин Бенсон",
-                "enName": "Justin Benson",
-                "description": null,
-                "profession": "режиссеры",
-                "enProfession": "director"
-            },
-            {
-                "id": 1213784,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1213784.jpg",
-                "name": "Аарон Мурхед",
-                "enName": "Aaron Moorhead",
-                "description": null,
-                "profession": "режиссеры",
-                "enProfession": "director"
-            },
-            {
-                "id": 4054832,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4054832.jpg",
-                "name": null,
-                "enName": "Dan DeLeeuw",
-                "description": null,
-                "profession": "режиссеры",
-                "enProfession": "director"
-            },
-            {
-                "id": 4345632,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4345632.jpg",
-                "name": null,
-                "enName": "Emma McCleave",
-                "description": null,
-                "profession": "монтажеры",
-                "enProfession": "editor"
-            },
-            {
-                "id": 2222436,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2222436.jpg",
-                "name": "Каллум Росс",
-                "enName": "Calum Ross",
-                "description": null,
-                "profession": "монтажеры",
-                "enProfession": "editor"
-            },
-            {
-                "id": 2002954,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2002954.jpg",
-                "name": "Пол Цукер",
-                "enName": "Paul Zucker",
-                "description": null,
-                "profession": "монтажеры",
-                "enProfession": "editor"
-            },
-            {
-                "id": 1880634,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1880634.jpg",
-                "name": "Отем Дюральд",
-                "enName": "Autumn Durald Arkapaw",
-                "description": null,
-                "profession": "операторы",
-                "enProfession": "operator"
-            },
-            {
-                "id": 1837608,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_1837608.jpg",
-                "name": "Исаак Бауман",
-                "enName": "Isaac Bauman",
-                "description": null,
-                "profession": "операторы",
-                "enProfession": "operator"
-            },
-            {
-                "id": 2198875,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_2198875.jpg",
-                "name": "Оливер Лонкрэйн",
-                "enName": "Oliver Loncraine",
-                "description": null,
-                "profession": "операторы",
-                "enProfession": "operator"
-            },
-            {
-                "id": 55053,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_55053.jpg",
-                "name": "Виктория Алонсо",
-                "enName": "Victoria Alonso",
-                "description": null,
-                "profession": "продюсеры",
-                "enProfession": "producer"
-            },
-            {
-                "id": 30360,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_30360.jpg",
-                "name": "Луис Д’Эспозито",
-                "enName": "Louis D'Esposito",
-                "description": null,
-                "profession": "продюсеры",
-                "enProfession": "producer"
-            },
-            {
-                "id": 8283,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_8283.jpg",
-                "name": "Кевин Файги",
-                "enName": "Kevin Feige",
-                "description": null,
-                "profession": "продюсеры",
-                "enProfession": "producer"
-            },
-            {
-                "id": 455708,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_455708.jpg",
-                "name": "Сара Финн",
-                "enName": "Sarah Finn",
-                "description": null,
-                "profession": "продюсеры",
-                "enProfession": "producer"
-            },
-            {
-                "id": 4569409,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_4569409.jpg",
-                "name": "Майкл Уолдрон",
-                "enName": "Michael Waldron",
-                "description": null,
-                "profession": "редакторы",
-                "enProfession": "writer"
-            },
-            {
-                "id": 8242,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_8242.jpg",
-                "name": "Стэн Ли",
-                "enName": "Stan Lee",
-                "description": null,
-                "profession": "редакторы",
-                "enProfession": "writer"
-            },
-            {
-                "id": 29954,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_29954.jpg",
-                "name": "Джек Кёрби",
-                "enName": "Jack Kirby",
-                "description": null,
-                "profession": "редакторы",
-                "enProfession": "writer"
-            },
-            {
-                "id": 465916,
-                "photo": "https://st.kp.yandex.net/images/actor_iphone/iphone360_465916.jpg",
-                "name": "Ларри Либер",
-                "enName": "Larry Lieber",
-                "description": null,
-                "profession": "редакторы",
-                "enProfession": "writer"
-            }
-        ],
-        "budget": {},
-        "movieLength": null,
-        "shortDescription": null,
-        "fees": {
-            "world": {},
-            "russia": {},
-            "usa": {}
-        },
-        "similarMovies": [
-            {
-                "id": 1203040,
-                "name": "Ванда/Вижн",
-                "enName": null,
-                "alternativeName": "WandaVision",
-                "type": "tv-series",
-                "poster": {
-                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/02a9860f-bc9a-420b-9901-b418c22cf963/orig",
-                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/02a9860f-bc9a-420b-9901-b418c22cf963/x1000"
-                }
-            },
-            {
-                "id": 1254069,
-                "name": "Соколиный глаз",
-                "enName": null,
-                "alternativeName": "Hawkeye",
-                "type": "tv-series",
-                "poster": {
-                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/0c28bbf6-742b-46b7-b2e8-99330220e738/orig",
-                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/0c28bbf6-742b-46b7-b2e8-99330220e738/x1000"
-                }
-            },
-            {
-                "id": 1322324,
-                "name": "Всё везде и сразу",
-                "enName": null,
-                "alternativeName": "Everything Everywhere All at Once",
-                "type": "movie",
-                "poster": {
-                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/7b756b66-ae33-46c6-be5f-03c3577a7f8b/orig",
-                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/7b756b66-ae33-46c6-be5f-03c3577a7f8b/x1000"
-                }
-            },
-            {
-                "id": 1219909,
-                "name": "Доктор Стрэндж: В мультивселенной безумия",
-                "enName": null,
-                "alternativeName": "Doctor Strange in the Multiverse of Madness",
-                "type": "movie",
-                "poster": {
-                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/18bc685e-9c23-4b97-9cc3-8a2b17a0c9ad/orig",
-                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/18bc685e-9c23-4b97-9cc3-8a2b17a0c9ad/x1000"
-                }
-            },
-            {
-                "id": 1209203,
-                "name": "Сокол и Зимний Солдат",
-                "enName": null,
-                "alternativeName": "The Falcon and the Winter Soldier",
-                "type": "tv-series",
-                "poster": {
-                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/c4e5b7e4-37a8-4b47-a921-006b4996fbd1/orig",
-                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/c4e5b7e4-37a8-4b47-a921-006b4996fbd1/x1000"
-                }
-            },
-            {
-                "id": 1261534,
-                "name": "Что, если...?",
-                "enName": null,
-                "alternativeName": "What If...?",
-                "type": "animated-series",
-                "poster": {
-                    "url": "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/f0033120-7bda-478c-84bb-7ea5c9f30a8e/orig",
-                    "previewUrl": "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/f0033120-7bda-478c-84bb-7ea5c9f30a8e/x1000"
-                }
-            }
-        ],
-        "sequelsAndPrequels": [],
-        "ageRating": null,
-        "logo": {
-            "url": "https://imagetmdb.com/t/p/original/bWH0RYn6O7y0dKhLlzBOOAhu5eW.png"
         },
     },
 ]

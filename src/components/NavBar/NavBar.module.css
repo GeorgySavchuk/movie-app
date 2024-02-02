@@ -93,6 +93,16 @@
     height: 26px;
     cursor: pointer;
 }
+.accountLogin {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.accountLogin p {
+    color: #49c5b6;
+    font-size: 17px;
+}
 .accountLogo svg {
     width: 100%;
     height: 100%;
@@ -137,6 +147,9 @@
     }
     .modalSearchContainer {
         width: 350px;
+    }
+    .accountInfo {
+        display: none;
     }
 }
 @media (max-width: 370px) {

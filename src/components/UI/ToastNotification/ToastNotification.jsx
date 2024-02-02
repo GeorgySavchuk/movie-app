@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import classes from "../ToastNotification/ToastNotification.module.css"
-const ToastNotification = ({ isActive, onClose, type }) => {
+const ToastNotification = ({ isActive, onClose, message }) => {
     const [isProgressActive, setIsProgressActive] = useState(false);
     useEffect(() => {
         let timer1;
@@ -29,7 +29,7 @@ const ToastNotification = ({ isActive, onClose, type }) => {
         <div className={`${classes.toast} ${isActive ? classes.toastActive : ''}`}>
             <div className={classes.toastContent}>
                 <div className={classes.message}>
-                    <span className={classes.text}>{`${type} добавлен в избранное`}</span>
+                    <span className={classes.text}>{message}</span>
                 </div>
             </div>
             <div className={`${classes.progress} ${isProgressActive ? classes.progressActive : ''}`}></div>

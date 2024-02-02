@@ -33,7 +33,7 @@ const MovieCard = (props) => {
             <div className="movie__info">
                 <span style={{color, display: 'flex', justifyContent:'center', alignItems: 'center'}}>{rating}</span>
                 <h3>{`${props.name}(${props.year})`}</h3>
-                {props.shortDescription ? <p>{window.innerWidth > 425 &&window.innerWidth <= 1340 ? props.description.slice(0, props.shortDescription.length / 3) + "…" : props.shortDescription}</p> : <br/>}
+                {props.shortDescription ? <p>{window.innerWidth > 425 &&window.innerWidth <= 1340 ? props.description?.slice(0, props.shortDescription.length / 3) + "…" : props.shortDescription}</p> : <br/>}
                 <a className="movie__btn" onClick={handleImageClick}>
                     Подробнее
                 </a>

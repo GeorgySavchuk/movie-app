@@ -1,12 +1,18 @@
 import React, {useState} from 'react';
-import { useForm, Controller } from 'react-hook-form';
-import classes from './Login.module.css';
-import { useNavigate } from 'react-router-dom';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-import { useDispatch } from 'react-redux';
-import { setAuth } from '../../store/slices/authSlice';
-import { PulseLoader } from 'react-spinners';
-const Login = () => {
+import {useNavigate} from "react-router-dom";
+import classes from './Registration.module.css';
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    updateProfile,
+    GoogleAuthProvider
+} from "firebase/auth";
+import {useDispatch} from "react-redux";
+import {setAuth} from "../../store/slices/authSlice";
+import {PulseLoader} from "react-spinners";
+import {Controller, useForm} from "react-hook-form";
+
+const Registration = () => {
     const [isLoading, setIsLoading] = useState(false)
     const {
         handleSubmit,
@@ -14,16 +20,21 @@ const Login = () => {
         setError,
         control } = useForm();
     let navigate = useNavigate()
-    const dispatch = useDispatch()
     const auth = getAuth()
-    const confirmLogin = async (data) => {
+    const dispatch = useDispatch()
+    const provider = new GoogleAuthProvider();
+    const confirmRegistration = async (data) => {
         try{
             setIsLoading(true)
-            const {user} = await signInWithEmailAndPassword(auth, data.email, data.password)
-            dispatch(setAuth({isAuth: true, user}))
+            await createUserWithEmailAndPassword(auth, data.email, data.password)
+            console.log(auth.currentUser)
+            await updateProfile(auth.currentUser, {
+                displayName: data.userName
+            })
+            dispatch(setAuth({isAuth: true, user: auth.currentUser}))
             navigate('/')
         } catch(err) {
-            setError('login', { message: 'Неправильный email или пароль'});
+            setError('registration', { message: err.message});
         } finally {
             setIsLoading(false)
         }
@@ -38,8 +49,8 @@ const Login = () => {
                 <div className={classes.square} style={{'--i': 4}}></div>
                 <div className={classes.container}>
                     <div className={classes.form}>
-                        <h2>Логин</h2>
-                        <form action="" onSubmit={handleSubmit(confirmLogin)}>
+                        <h2>Регистрация</h2>
+                        <form action="" onSubmit={handleSubmit(confirmRegistration)}>
                             <div className={classes.input__box}>
                                 <Controller
                                     name="email"
@@ -59,10 +70,29 @@ const Login = () => {
                                             value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                                             message: "Некорректный email"
                                         }
-                                }}
+                                    }}
                                 />
                             </div>
                             {errors.email && <p className={classes.error}>{errors.email.message}</p>}
+                            <div className={classes.input__box}>
+                                <Controller
+                                    name="userName"
+                                    control={control}
+                                    defaultValue=""
+                                    render={({ field }) => (
+                                        <input
+                                            type="text"
+                                            placeholder="Логин"
+                                            autoComplete="off"
+                                            {...field}
+                                        />
+                                    )}
+                                    rules={{
+                                        required: "Данное поле обязательно",
+                                    }}
+                                />
+                            </div>
+                            {errors.userName && <p className={classes.error}>{errors.userName.message}</p>}
                             <div className={classes.input__box}>
                                 <Controller
                                     name="password"
@@ -95,18 +125,18 @@ const Login = () => {
                                     isLoading
                                         ? <PulseLoader
                                             color="#141414"
-                                            size={10}
+                                            size={8}
                                         />
-                                        : <p>Войти</p>
+                                        : <p>Создать аккаунт</p>
                                 }
                                 </button>
                             </div>
-                            {errors.login && <p className={classes.error}>{errors.login.message}</p>}
-                            <p className={classes.forget}>Ещё нет аккаунта?
+                            {errors.registration && <p className={classes.error}>{errors.registration.message}</p>}
+                            <p className={classes.forget}>Уже есть аккаунт?
                                 <a href="" onClick={e => {
                                     e.preventDefault()
-                                    navigate('/registration')
-                                }}> Зарегистрироваться</a>
+                                    navigate('/login')
+                                }}> Войти</a>
                             </p>
                         </form>
                     </div>
@@ -116,4 +146,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Registration;

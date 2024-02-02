@@ -13,9 +13,6 @@ const DropDownItem = ({img, text, onClick, isOpen, isActive}) => {
         case "Сериалы":
             path = "/serials";
             break;
-        case "Избранное":
-            path = "/favourites";
-            break;
     }
     return (
         <li className={`${classes.dropDownItem} ${isOpen ? classes.active : ''}`}>

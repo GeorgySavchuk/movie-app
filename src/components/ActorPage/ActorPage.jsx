@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import styles from './ActorPage.module.css'
-import {fetchMovieById} from "../../API/myApi";
+import {getMovieById} from "../../API/mirkinoService";
 import {Oval} from "react-loader-spinner";
 import classes from "../Films/Films.module.css";
 import MovieCard from "../UI/MovieCard/MovieCard";
@@ -28,7 +28,7 @@ const ActorPage = () => {
         let fetchedMovies = []
         let total = 0
         for (let i = lastIndex; i < movies.length && total < 36; ++i) {
-            const fetchedMovie = await fetchMovieById(movies[i].id)
+            const fetchedMovie = await getMovieById(movies[i].id)
             fetchedMovie.poster !== null && fetchedMovie.poster.url !== null && fetchedMovies.push(fetchedMovie)
             fetchedMovie.poster !== null && fetchedMovie.poster.url !== null && total++
             setLastIndex(i + 1)
@@ -39,7 +39,6 @@ const ActorPage = () => {
     useEffect(() => {
         document.title = `Мир Кино | ${params.actorName}`
         window.scroll(0, 0)
-        console.log(actor)
     }, []);
     useEffect(() => {
         setIsLoading(true)

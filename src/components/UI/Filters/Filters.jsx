@@ -30,8 +30,7 @@ const Filters = ({appendGenreToHeader, appendYearToHeader, setCurrentYear, setCu
         "2000-2009",
         "1990-1999",
         "1980-1989",
-        "1970-1979",
-        "1960-1969",
+        "1974-1979",
     ])
     const [sortList] = useState([
         "Рекомендуемые",
@@ -93,14 +92,16 @@ const Filters = ({appendGenreToHeader, appendYearToHeader, setCurrentYear, setCu
         setCurrentRating(rating)
         setIsRatingsSelectorsVisible(false)
         setCurrentPage(0)
-        setRating(`${rating.charAt(rating.length - 1)}-10`)
+        rating === "Любой рейтинг"
+            ? setRating("1-10")
+            : setRating(`${rating.charAt(rating.length - 1)}-10`)
     }
     const handleYearsReleaseChange = (yearsRelease, isConfirmed = false) => {
         setCurrentYearsRelease(yearsRelease)
         setIsYearsReleaseSelectorsVisible(false)
         setCurrentPage(0)
         if(yearsRelease === "Все годы") {
-            setCurrentYear("1860-2024")
+            setCurrentYear("1874-2024")
         } else {
             setCurrentYear(yearsRelease)
         }

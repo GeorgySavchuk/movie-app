@@ -5,6 +5,8 @@ import Favourites from "../components/Favourites/Favourites";
 import MoviePage from "../components/MoviePage/MoviePage";
 import Login from "../components/Login/Login";
 import ActorPage from "../components/ActorPage/ActorPage";
+import Registration from "../components/Registration/Registration";
+import UserAccount from "../components/UserAccount/UserAccount";
 
 export const routes = [
     {path: "/", element: <Home/>},
@@ -13,5 +15,7 @@ export const routes = [
     {path: "/favourites", element: <Favourites/>},
     {path: "/movies/:name", element: <MoviePage/>},
     {path: "/login", element: <Login/>},
-    {path: "/:actorName", element: <ActorPage/>}
+    {path: "/registration", element: <Registration/>},
+    {path: "/:actorName", element: <ActorPage/>},
+    {path: "/account", element: <UserAccount/>},
 ]

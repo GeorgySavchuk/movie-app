@@ -10,11 +10,8 @@
     font-family: circeRegular, sans-serif;
 }
 .actorItem {
-    /*padding-top: 8px;*/
     padding: 20px 0;
     width: calc(11% - 15px);
-    /*width: 180px;*/
-    /*height: 180px;*/
     position: relative;
     margin-right: 5px;
     cursor: pointer;

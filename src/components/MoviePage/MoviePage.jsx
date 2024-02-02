@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import classes from './MoviePage.module.css'
 import {minutesToHoursAndMinutes} from "../../utils/minutesToHoursAndMinutes";
-import {fetchMovieById} from "../../API/myApi";
+import {getMovieById} from "../../API/mirkinoService";
 import MovieCard from "../UI/MovieCard/MovieCard";
 import {useFavourites} from "../../hooks/useFavourites";
 import ToastNotification from "../UI/ToastNotification/ToastNotification";
@@ -14,6 +14,7 @@ import {Oval} from "react-loader-spinner";
 import MoviePlayer from "../MoviePlayer/MoviePlayer";
 import MoviePlayerLayout from "../MoviePlayerLayout/MoviePlayerLayout";
 import ActorsCast from "../ActorsCast/ActorsCast";
+import {useSelector} from "react-redux";
 const MoviePage = () => {
     const navigate = useNavigate()
     const params = useParams();
@@ -31,10 +32,11 @@ const MoviePage = () => {
     const rightArrow = useRef()
     const [delta, setDelta] = useState(0)
     const [isMoviePlayerOpen, setIsMoviePlayerOpen] = useState(false)
-    const fetchSimilarMovies = async similarMovies => {
+    const {isAuth} = useSelector(state => state.authReducer)
+    const fetchSimilarMovies = async (similarMovies) => {
         let fetchedMovies = []
         for (let i = 0; i < similarMovies.length; ++i) {
-            const fetchedMovie = await fetchMovieById(similarMovies[i].id)
+            const fetchedMovie = await getMovieById(similarMovies[i].id)
             fetchedMovies.push(fetchedMovie)
         }
         return fetchedMovies
@@ -42,13 +44,12 @@ const MoviePage = () => {
     useEffect(() => {
         document.title = `Мир Кино | ${params.name}`
         window.scroll(0, 0)
-        console.log(imageProps)
     }, [])
     useEffect(() => setDelta(0))
     useEffect(() => {
      setImageProps(JSON.parse(localStorage.getItem(`${decodeURIComponent(window.location.pathname).split('/').slice(2).join('/')}`)))
     },[params.name]);
-    useEffect(() => {
+    useEffect( () => {
         setIsLoading(true)
         setCurrentProps({
             ...imageProps,
@@ -71,6 +72,10 @@ const MoviePage = () => {
             })
     }, [imageProps])
     const setFavourite = () => {
+        if(!isAuth) {
+            navigate('/login')
+            return
+        }
         toggleFavourite(imageProps)
         window.scroll(0, 0)
         if (!isFavourite(imageProps)) setIsToastVisible(true)
@@ -166,7 +171,7 @@ const MoviePage = () => {
                     <Modal visible={isModalVisible} trailers={imageProps?.videos?.trailers}
                            setVisible={setIsModalVisible}/>
                     <ToastNotification isActive={isToastVisible} onClose={() => setIsToastVisible(false)}
-                                       type={imageProps.type === "movie" ? "Фильм" : "Сериал"}/>
+                                       message={`${imageProps.type === "movie" ? "Фильм" : "Сериал"} добавлен в избранное`}/>
                     <div className={classes.backdropContainer}>
                         <div className={classes.imageContainer}>
                             <img

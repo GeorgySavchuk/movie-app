@@ -1,0 +1,59 @@
+.userAccount {
+    padding: 35px 72px 20px 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.pageTitle {
+    color: hsla(0,0%,100%,.9);
+    font-size: 30px;
+}
+.userName {
+    color: hsla(0,0%,100%,.9);
+    font-size: 25px;
+    border-bottom: 3px solid #49c5b6;
+    padding-bottom: 10px;
+}
+.accountBtns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.userFavourites, .settings, .exit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    cursor: pointer;
+}
+.userFavourites:hover, .settings:hover, .exit:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+.userFavourites svg, .settings svg, .exit svg {
+    width: 50%;
+    height: 50%;
+}
+@media (max-width: 460px){
+    .userAccount {
+        padding: 35px 20px 20px 20px;
+    }
+    .userFavourites, .settings, .exit {
+        width: 75px;
+        height: 75px;
+    }
+}
+@media (max-width: 768px) and (min-width: 460px) {
+    .userAccount {
+        padding: 35px 30px 20px 30px;
+    }
+}
+@media (max-width: 1200px) and (min-width: 769px) {
+    .userAccount {
+        padding: 35px 40px 20px 40px;
+    }
+}
