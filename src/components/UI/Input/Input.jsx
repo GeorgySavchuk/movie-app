@@ -5,7 +5,7 @@ import {useDebounce} from "../../../hooks/useDebounce";
 import {getMovieByName} from "../../../API/mirkinoService";
 import SearchMovieList from "../../SearchMoviesList/SearchMovieList";
 import {useNavigate} from "react-router-dom";
-import {useImageProps} from "../../../Context/useImageProps";
+import {useMovieProps} from "../../../Context/useMovieProps";
 import {Oval} from "react-loader-spinner";
 const Input = (props) => {
     let [input, setInput] = useState('')
@@ -14,7 +14,7 @@ const Input = (props) => {
     let [isVisible, setIsVisible] = useState('hidden')
     let [isLoading, setIsLoading] = useState(true);
     const navigate = useNavigate()
-    const {currentProps} = useImageProps()
+    const {currentProps} = useMovieProps()
     useEffect(() => {
         setIsLoading(true)
         setSearchedMovies([]);

@@ -7,7 +7,7 @@ import MovieCard from "../UI/MovieCard/MovieCard";
 import {useFavourites} from "../../hooks/useFavourites";
 import ToastNotification from "../UI/ToastNotification/ToastNotification";
 import Modal from "../UI/Modal/Modal";
-import {useImageProps} from "../../Context/useImageProps";
+import {useMovieProps} from "../../Context/useMovieProps";
 import { FaChevronRight } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
 import {Oval} from "react-loader-spinner";
@@ -19,7 +19,7 @@ const MoviePage = () => {
     const navigate = useNavigate()
     const params = useParams();
     const [imageProps, setImageProps] = useState(JSON.parse(localStorage.getItem(`${decodeURIComponent(window.location.pathname).split('/').slice(2).join('/')}`)))
-    const {setCurrentProps} = useImageProps()
+    const {setCurrentProps} = useMovieProps()
     const {isFavourite, toggleFavourite} = useFavourites();
     const [similarMovies, setSimilarMovies] = useState([])
     const [isToastVisible, setIsToastVisible] = useState(false);
