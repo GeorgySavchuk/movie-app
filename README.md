@@ -8,7 +8,7 @@ Frontend приложение для поиска и просмотра филь
 
 Этот проект использует следующие технологии:
 
-JavaScript, React, CSS Modules, Redux Toolkit, Firebase, React-hook-form
+JavaScript, React, CSS Modules, Redux Toolkit, Firebase Authentication, React-hook-form
 
 ## Содействие
 
