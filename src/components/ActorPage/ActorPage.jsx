@@ -57,27 +57,31 @@ const ActorPage = () => {
     return (
         <div className={styles.actorPage}>
             <div className={styles.actorInfo}>
-                <div className={styles.actorItem} key={actor.name}>
-                    <div className={styles.actorPhoto}>
-                        <img src={actor.photo} loading={"lazy"} draggable={false}/>
+                <div className={styles.actorPhoto}>
+                    <img src={actor.photo} loading={"lazy"} draggable={false}/>
+                </div>
+                <div className={styles.title}>
+                    <h1>{actor.name}</h1>
+                    <span>{actor.enName}</span>
+                </div>
+                <div className={styles.mainInfo}>
+                    <div className={styles.actorCareer}>
+                        <span
+                            style={{color: "hsla(0,0%,100%,.6)", minWidth: '145px', fontSize: '14px'}}>Карьера: </span>
+                        <span style={{color: "hsla(0,0%,100%,.9)", fontSize: '14px'}}>{printActorCareer()}</span>
+                    </div>
+                    <div className={styles.dateOfBirth}>
+                        <span style={{
+                            color: "hsla(0,0%,100%,.6)",
+                            minWidth: '145px',
+                            fontSize: '14px'
+                        }}>Дата рождения: </span>
+                        <span style={{color: "hsla(0,0%,100%,.9)", fontSize: '14px'}}>{printDateOfBirth()}</span>
                     </div>
                 </div>
-                <div className={styles.mainInfoContainer}>
-                    <div className={styles.title}>
-                        <h1>{actor.name}</h1>
-                        <span>{actor.enName}</span>
-                    </div>
-                    <div className={styles.mainInfo}>
-                        <div className={styles.actorCareer}>
-                            <span style={{color: "hsla(0,0%,100%,.6)", minWidth: '145px', fontSize: '14px'}}>Карьера: </span>
-                            <span style={{color: "hsla(0,0%,100%,.9)", fontSize: '14px'}}>{printActorCareer()}</span>
-                        </div>
-                        <div className={styles.dateOfBirth}>
-                            <span style={{color: "hsla(0,0%,100%,.6)", minWidth: '145px', fontSize: '14px'}}>Дата рождения: </span>
-                            <span style={{color: "hsla(0,0%,100%,.9)", fontSize: '14px'}}>{printDateOfBirth()}</span>
-                        </div>
-                    </div>
-                </div>
+                {/*<div className={styles.mainInfoContainer}>
+
+                </div>*/}
             </div>
             <div className={styles.actorFilmography}>
                 <h1>Фильмография</h1>

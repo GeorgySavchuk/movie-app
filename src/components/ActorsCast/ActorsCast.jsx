@@ -12,25 +12,23 @@ const ActorsCast = ({actors}) => {
         navigate(`/${encodedName}`);
     }
     return (
-        <div style={{position: "relative", width: "100%", height: '100%'}}>
-            <div className={classes.actorsCastSlider}>
-                {actors.map(actor =>
-                        actor.enProfession === "actor" &&
-                        <div className={classes.actorItem} key={actor.name} onClick={() => handleImageClick(actor)}>
-                            <div className={classes.actorInfo}>
-                                <div className={classes.actorPhoto}>
-                                    <img src={actor.photo} loading={"lazy"} draggable={false}/>
-                                </div>
-                                <div className={classes.actorName}>
-                                    <span>{actor.name}</span>
-                                </div>
-                                <div className={classes.profession}>
-                                    <span>{actor.description}</span>
-                                </div>
-                            </div>
+        <div className={classes.actorsCastSlider}>
+            {actors.map(actor =>
+                actor.enProfession === "actor" &&
+                <div className={classes.actorItem} key={actor.name} onClick={() => handleImageClick(actor)}>
+                    <div className={classes.actorInfo}>
+                        <div className={classes.actorPhoto}>
+                            <img src={actor.photo} loading={"lazy"} draggable={false}/>
                         </div>
-                )}
-            </div>
+                        <div className={classes.actorName}>
+                            <span>{actor.name}</span>
+                        </div>
+                        <div className={classes.profession}>
+                            <span>{actor.description}</span>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

@@ -501,7 +501,7 @@ input[type="file"] {
         left: 40px;
         right: 40px;
     }
-    .similarMovies h1 {
+    .similarMovies h1, .actorsCast h1 {
         padding-left: 40px;
     }
     .similarMoviesSlider {
@@ -586,7 +586,7 @@ input[type="file"] {
     .infoContainer {
         left: 20px;
     }
-    .similarMovies h1 {
+    .similarMovies h1, .actorsCast h1 {
         padding-left: 20px;
     }
     .similarMoviesSlider {
@@ -610,8 +610,6 @@ input[type="file"] {
     .backdropContainer::after {
         bottom: 60%;
     }
-}
-@media (max-width: 426px) {
     .infoContainer {
         gap: 7px;
         top: 220px;

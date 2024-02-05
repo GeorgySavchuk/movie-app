@@ -1,15 +1,19 @@
 .actorsCastSlider {
-    padding: 20px 80px;
+    margin: 0 80px;
     position: relative;
-    /*height: 100%;*/
+    height: 100%;
     display: flex;
     align-items: flex-start;
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
     font-family: circeRegular, sans-serif;
 }
+.actorsCastSlider::-webkit-scrollbar {
+    height: 0;
+}
 .actorItem {
+    flex-shrink: 0;
     padding: 20px 0;
     width: calc(11% - 15px);
     position: relative;
@@ -32,7 +36,7 @@
     padding-bottom: 100%;
     overflow: hidden;
     margin: 0 auto 15px;
-    border-radius: 50%;
+    border-radius: 100%;
     border: 1px solid hsla(0,0%,100%,.1);
 }
 .actorPhoto > img {
@@ -65,58 +69,31 @@
     font-size: 12px;
     color: hsla(0,0%,100%,.6);
 }
-.similarMoviesLeftArrowContainer {
-    position: absolute;
-    top: 40%;
-    left: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 4;
-    backdrop-filter: blur(13px);
-    background: hsla(258,4%,55%,.32);
-    width: 47px;
-    height: 84px;
-    box-shadow: 1px 2px 10px -1px rgb(0 0 0 / 30%);
-    transition: filter .3s ease, opacity .3s ease;
-    border-radius: 8px;
-    cursor: pointer;
-    opacity: 0;
+@media (max-width: 1200px) {
+    .actorItem {
+        width: calc(12.5% - 12px);
+    }
 }
-.similarMoviesLeftArrowContainer:hover, .similarMoviesRightArrowContainer:hover {
-    filter: brightness(.8);
+@media (max-width: 1024px) {
+    .actorItem {
+        width: calc(16.7% - 12px);
+    }
+    .actorsCastSlider {
+        margin: 0 40px;
+    }
 }
-.similarMoviesRightArrowContainer:hover {
-    opacity: 1;
+@media (max-width: 768px) {
+    .actorItem {
+        width: calc(20% - 7px);
+    }
 }
-.similarMoviesLeftArrowContainer:hover {
-    opacity: 1;
+@media (max-width: 576px) {
+    .actorItem {
+        width: calc(33.4% - 24px);
+    }
 }
-.similarMoviesLeftArrow {
-    height: 25px;
-    width: 25px;
-    color: white;
-}
-.similarMoviesRightArrowContainer {
-    position: absolute;
-    top: 40%;
-    right: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 4;
-    backdrop-filter: blur(13px);
-    background: hsla(258,4%,55%,.32);
-    width: 47px;
-    height: 84px;
-    box-shadow: 1px 2px 10px -1px rgb(0 0 0 / 30%);
-    transition: filter .3s ease, opacity .3s ease;
-    border-radius: 8px;
-    cursor: pointer;
-    opacity: 0;
-}
-.similarMoviesRightArrow {
-    height: 25px;
-    width: 25px;
-    color: white;
+@media (max-width: 500px) {
+    .actorsCastSlider {
+        margin: 0 20px;
+    }
 }
