@@ -300,7 +300,7 @@ const MoviePage = () => {
                             </div>
                         </div>
                     </div>
-                    {imageProps?.similarMovies?.length &&
+                    {similarMovies?.length !== 0 &&
                         <div className={classes.similarMovies}>
                             <h1>Похожее</h1>
                             <div className={classes.similarMoviesLeftArrowContainer} onClick={handlePrevClick} style={{display: !isArrowsVisible && 'none'}} ref={leftArrow} onMouseEnter={hoverLeftArrow} onMouseLeave={hideArrows}>
